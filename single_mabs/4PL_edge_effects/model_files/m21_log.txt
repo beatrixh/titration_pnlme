@@ -1,0 +1,9 @@
+[2026-07-31 20:38:45] m21 :: 306.1 MB
+[2026-07-31 20:38:45] project loaded :: 306.1 MB
+[2026-07-31 20:38:55] initial values configured :: 291.7 MB
+[2026-07-31 20:38:56] starting runPopulationParameterEstimation :: 292.2 MB
+[2026-07-31 21:37:22] finished runPopulationParameterEstimation :: 294.8 MB
+[2026-07-31 21:37:23] finished runConditionalModeEstimation :: 295.6 MB
+[2026-07-31 21:37:44] finished runLogLikelihoodEstimation :: 338.8 MB
+[2026-07-31 21:37:44] saved project :: 339.9 MB
+[2026-07-31 21:37:44] COMPLETE :: 339.9 MB

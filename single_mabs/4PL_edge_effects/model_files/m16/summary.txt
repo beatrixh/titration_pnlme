@@ -1,0 +1,170 @@
+********************************************************************************
+*                         4PL_edge_effects_m16.mlxtran                         *
+*                         July 31, 2026 at 18:51:06                            *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects -------------------------------------
+U_pop                                   :         1
+L_pop                                   :  3.14e-16
+beta_L_goes_down_True                   :  5.61e-13
+m_pop                                   :     0.641
+beta_m_goes_down_True                   :     0.842
+beta_m_mab_virus_55_0_65          :      4.71
+beta_m_mab_virus_55_0_69          :    -0.907
+beta_m_mab_virus_55_0_319          :   -0.0798
+beta_m_mab_virus_55_0_162          :    -0.694
+beta_m_mab_virus_55_0_218          :    -0.398
+beta_m_mab_virus_55_0_174          :    -0.487
+beta_m_mab_virus_55_0_322          :     -0.26
+beta_m_mab_virus_55_0_292     :    -0.965
+beta_m_mab_virus_55_0_274         :   -0.0964
+beta_m_mab_virus_55_0_103    :    0.0713
+beta_m_mab_virus_55_0_276        :    -0.109
+beta_m_mab_virus_32_0_65            :    -0.467
+beta_m_mab_virus_32_0_69            :     0.138
+beta_m_mab_virus_32_0_319            :     0.107
+beta_m_mab_virus_32_0_162            :   -0.0329
+beta_m_mab_virus_32_0_218            :    -0.454
+beta_m_mab_virus_32_0_174            :      0.16
+beta_m_mab_virus_32_0_322            :      -1.1
+beta_m_mab_virus_32_0_292       :     0.278
+beta_m_mab_virus_32_0_274           :     0.049
+beta_m_mab_virus_32_0_103      :     0.156
+beta_m_mab_virus_32_0_276          :     0.185
+beta_m_mab_virus_22_0_65       :    -0.101
+beta_m_mab_virus_22_0_69       :     0.153
+beta_m_mab_virus_22_0_319       :    0.0347
+beta_m_mab_virus_22_0_162       :    0.0538
+beta_m_mab_virus_22_0_218       :  -0.00402
+beta_m_mab_virus_22_0_174       :    0.0792
+beta_m_mab_virus_22_0_322       :    -0.311
+beta_m_mab_virus_22_0_292  :  -0.00518
+beta_m_mab_virus_22_0_274      :     0.034
+beta_m_mab_virus_22_0_103 :    0.0202
+beta_m_mab_virus_22_0_276     :     0.272
+beta_m_mab_virus_69_0_65               :    -0.185
+beta_m_mab_virus_69_0_69               :    -0.495
+beta_m_mab_virus_69_0_319               :    -0.355
+beta_m_mab_virus_69_0_162               :    -0.517
+beta_m_mab_virus_69_0_218               :    0.0828
+beta_m_mab_virus_69_0_174               :      1.01
+beta_m_mab_virus_69_0_322               :    -0.807
+beta_m_mab_virus_69_0_292          :    -0.504
+beta_m_mab_virus_69_0_274              :    -0.759
+beta_m_mab_virus_69_0_103         :     0.789
+beta_m_mab_virus_69_0_276             :     0.458
+e_pop                                   :         1
+beta_e_goes_down_True                   :         0
+alpha_pop                               :     0.142
+beta_alpha_run_id_84               :  1.34e-06
+beta_alpha_run_id_719               :  2.21e-10
+beta_alpha_run_id_488               :  9.79e-06
+beta_alpha_run_id_847               : -2.64e-05
+beta_alpha_run_id_474               :  8.62e-15
+beta_alpha_run_id_462               : -3.18e-05
+beta_alpha_run_id_75               :     0.668
+beta_alpha_run_id_291               : -2.51e-07
+beta_alpha_run_id_77               :  8.83e-05
+beta_alpha_run_id_322               : -1.34e-05
+beta_alpha_run_id_963               :     0.373
+beta_alpha_run_id_1241               : -3.45e-13
+beta_alpha_run_id_1056               :    -0.608
+beta_alpha_run_id_1159               :   -0.0649
+beta_alpha_run_id_1017               : -0.000243
+beta_alpha_run_id_1197               :  1.21e-05
+beta_alpha_run_id_745               :  4.29e-08
+beta_alpha_run_id_1043               :   1.3e-11
+beta_alpha_run_id_1260               :  -2.3e-11
+beta_alpha_run_id_1042               :   2.8e-06
+beta_alpha_run_id_863               :  1.07e-05
+beta_alpha_run_id_152               :  1.38e-07
+k_pop                                   :  3.47e-16
+beta_k_run_id_84                   : -5.41e-13
+beta_k_run_id_719                   :  9.62e-07
+beta_k_run_id_488                   :  3.85e-07
+beta_k_run_id_847                   :   3.7e-09
+beta_k_run_id_474                   :  4.11e-13
+beta_k_run_id_462                   :  8.32e-13
+beta_k_run_id_75                   :  6.41e-11
+beta_k_run_id_291                   : -2.84e-11
+beta_k_run_id_77                   : -8.84e-08
+beta_k_run_id_322                   :  8.09e-12
+beta_k_run_id_963                   :  5.07e-08
+beta_k_run_id_1241                   : -4.86e-12
+beta_k_run_id_1056                   :  2.13e-12
+beta_k_run_id_1159                   :  8.45e-09
+beta_k_run_id_1017                   :  1.49e-08
+beta_k_run_id_1197                   :  1.44e-08
+beta_k_run_id_745                   :  -1.6e-13
+beta_k_run_id_1043                   :  1.41e-10
+beta_k_run_id_1260                   :  1.65e-09
+beta_k_run_id_1042                   :  3.01e-08
+beta_k_run_id_863                   :  9.31e-09
+beta_k_run_id_152                   :  1.62e-06
+
+Standard Deviation of the Random Effects ----------
+omega_m                                 :  4.77e-08
+omega_e                                 :      2.88
+
+Error Model Parameters ----------------------------
+a                                       :   0.00253
+b                                       :     0.156
+
+Elapsed time (seconds):  1.6e+03
+CPU time     (seconds):  2.4e+03
+Exploratory phase iterations:      912 (Autostop)
+Smoothing phase iterations:        200 (Stopped at the maximum number of iterations)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+U     :             1             1             1             1             1           nan
+L     :      3.14e-16      3.14e-16      3.14e-16      3.14e-16      3.14e-16           nan
+m     :         0.286         0.387         0.696          1.41           165           100
+e     :         0.106             1             1          1.02           815          51.5
+alpha :        0.0773         0.142         0.142         0.142         0.277           nan
+k     :      3.47e-16      3.47e-16      3.47e-16      3.47e-16      3.47e-16           nan
+
+Elapsed time (seconds):    0.082
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       -5576.84
+Akaike Information Criteria               (AIC) :       -5376.84
+Corrected Bayesian Information Criteria  (BICc) :       -4896.88
+Bayesian Information Criteria             (BIC) :       -4952.82
+
+Elapsed time                          (seconds) :          16.01
+CPU time                              (seconds) :          23.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.447
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 513
+Number of observations (rlu_norm): 1504
+Number of doses: 0
+

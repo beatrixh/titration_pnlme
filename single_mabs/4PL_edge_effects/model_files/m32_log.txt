@@ -1,0 +1,13 @@
+[2026-08-02 10:07:55] m32 :: 329.5 MB
+[2026-08-02 10:07:55] project loaded :: 329.5 MB
+[2026-08-02 10:08:01] initial values configured :: 330.5 MB
+[2026-08-02 10:08:02] starting runPopulationParameterEstimation :: 331.3 MB
+[2026-08-02 10:10:20] m32 :: 331.0 MB
+[2026-08-02 10:10:20] project loaded :: 331.1 MB
+[2026-08-02 10:10:26] initial values configured :: 332.1 MB
+[2026-08-02 10:10:26] starting runPopulationParameterEstimation :: 333.0 MB
+[2026-08-02 11:14:12] finished runPopulationParameterEstimation :: 334.1 MB
+[2026-08-02 11:14:13] finished runConditionalModeEstimation :: 334.2 MB
+[2026-08-02 11:14:31] finished runLogLikelihoodEstimation :: 536.2 MB
+[2026-08-02 11:14:31] saved project :: 536.4 MB
+[2026-08-02 11:14:31] COMPLETE (total runtime 64.2 min) :: 536.4 MB

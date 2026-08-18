@@ -1,0 +1,12 @@
+[2026-08-08 23:07:14] m18 :: 297.7 MB
+[2026-08-08 23:07:14] project loaded :: 297.7 MB
+[2026-08-08 23:07:14] initial values configured :: 297.7 MB
+[2026-08-08 23:07:14] FAILED after 0.0 min: no applicable method for 'rows_update' applied to an object of class "list" :: 297.7 MB
+[2026-08-09 00:57:45] m18 :: 382.2 MB
+[2026-08-09 00:57:45] project loaded :: 382.2 MB
+[2026-08-09 00:57:45] starting runPopulationParameterEstimation :: 382.2 MB
+[2026-08-09 02:41:54] finished runPopulationParameterEstimation :: 382.2 MB
+[2026-08-09 02:41:54] finished runConditionalModeEstimation :: 382.2 MB
+[2026-08-09 02:41:54] finished runLogLikelihoodEstimation :: 382.2 MB
+[2026-08-09 02:41:55] saved project :: 382.2 MB
+[2026-08-09 02:41:55] COMPLETE (total runtime 104.2 min) :: 382.2 MB

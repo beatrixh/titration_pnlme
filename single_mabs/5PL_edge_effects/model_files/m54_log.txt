@@ -1,0 +1,8 @@
+[2026-08-02 07:47:06] m54 :: 673.1 MB
+[2026-08-02 07:47:06] project loaded :: 673.1 MB
+[2026-08-02 07:47:15] initial values configured :: 673.1 MB
+[2026-08-02 07:47:16] starting runPopulationParameterEstimation :: 673.1 MB
+[2026-08-02 07:48:07] m54 :: 672.5 MB
+[2026-08-02 07:48:07] project loaded :: 672.5 MB
+[2026-08-02 07:48:17] initial values configured :: 672.5 MB
+[2026-08-02 07:48:17] starting runPopulationParameterEstimation :: 672.5 MB

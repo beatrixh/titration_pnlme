@@ -1,0 +1,8 @@
+[2026-08-11 19:08:16] m71 :: 330.4 MB
+[2026-08-11 19:08:16] project loaded :: 330.4 MB
+[2026-08-11 19:08:16] starting runPopulationParameterEstimation :: 330.7 MB
+[2026-08-11 19:46:27] finished runPopulationParameterEstimation :: 333.1 MB
+[2026-08-11 19:46:27] finished runConditionalModeEstimation :: 333.6 MB
+[2026-08-11 19:46:44] finished runLogLikelihoodEstimation :: 455.9 MB
+[2026-08-11 19:46:46] saved project :: 456.2 MB
+[2026-08-11 19:46:46] COMPLETE (total runtime 38.5 min) :: 456.2 MB

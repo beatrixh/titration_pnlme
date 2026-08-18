@@ -1,0 +1,18 @@
+[2026-08-02 06:05:45] m17 :: 543.9 MB
+[2026-08-02 06:05:45] project loaded :: 543.9 MB
+[2026-08-02 06:05:53] initial values configured :: 543.9 MB
+[2026-08-02 06:05:53] starting runPopulationParameterEstimation :: 543.9 MB
+[2026-08-02 06:19:25] m17 :: 543.5 MB
+[2026-08-02 06:19:25] project loaded :: 543.5 MB
+[2026-08-02 06:19:32] initial values configured :: 543.5 MB
+[2026-08-02 06:19:32] starting runPopulationParameterEstimation :: 543.5 MB
+[2026-08-02 08:15:24] finished runPopulationParameterEstimation :: 543.9 MB
+[2026-08-02 08:15:24] finished runConditionalModeEstimation :: 543.9 MB
+[2026-08-02 08:15:43] finished runLogLikelihoodEstimation :: 543.9 MB
+[2026-08-02 08:15:43] saved project :: 543.9 MB
+[2026-08-02 08:15:43] COMPLETE (total runtime 130.0 min) :: 543.9 MB
+[2026-08-02 08:32:24] finished runPopulationParameterEstimation :: 543.5 MB
+[2026-08-02 08:32:25] finished runConditionalModeEstimation :: 543.5 MB
+[2026-08-02 08:32:43] finished runLogLikelihoodEstimation :: 543.5 MB
+[2026-08-02 08:32:44] saved project :: 543.5 MB
+[2026-08-02 08:32:44] COMPLETE (total runtime 133.3 min) :: 543.5 MB

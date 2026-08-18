@@ -1,0 +1,303 @@
+********************************************************************************
+*                         m123_fitted.mlxtran                                  *
+*                         August 10, 2026 at 08:09:10                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects -------------------------------------
+L_pop                                   :       718
+beta_L_goes_down_True                   : -3.04e-05
+beta_L_mab_virus_55_0_65          : -2.28e-05
+beta_L_mab_virus_55_0_69          : -4.11e-05
+beta_L_mab_virus_55_0_319          : -3.89e-05
+beta_L_mab_virus_55_0_162          :  1.41e-06
+beta_L_mab_virus_55_0_218          : -8.19e-05
+beta_L_mab_virus_55_0_174          : -0.000131
+beta_L_mab_virus_55_0_322          : -1.28e-05
+beta_L_mab_virus_55_0_292     : -3.31e-05
+beta_L_mab_virus_55_0_274         :  9.55e-05
+beta_L_mab_virus_55_0_103    :  2.95e-06
+beta_L_mab_virus_55_0_276        : -1.96e-05
+beta_L_mab_virus_32_0_65            :  1.76e-06
+beta_L_mab_virus_32_0_69            : -9.94e-05
+beta_L_mab_virus_32_0_319            :  2.63e-05
+beta_L_mab_virus_32_0_162            :    0.0001
+beta_L_mab_virus_32_0_218            : -1.67e-05
+beta_L_mab_virus_32_0_174            :  4.07e-05
+beta_L_mab_virus_32_0_322            :  -3.7e-06
+beta_L_mab_virus_32_0_292       : -0.000172
+beta_L_mab_virus_32_0_274           : -2.88e-05
+beta_L_mab_virus_32_0_103      : -0.000166
+beta_L_mab_virus_32_0_276          :  2.16e-06
+beta_L_mab_virus_22_0_65       :  3.38e-05
+beta_L_mab_virus_22_0_69       : -5.52e-07
+beta_L_mab_virus_22_0_319       :  1.39e-05
+beta_L_mab_virus_22_0_162       :  3.34e-06
+beta_L_mab_virus_22_0_218       :  1.03e-05
+beta_L_mab_virus_22_0_174       : -7.24e-05
+beta_L_mab_virus_22_0_322       : -0.000108
+beta_L_mab_virus_22_0_292  : -7.78e-05
+beta_L_mab_virus_22_0_274      :  -1.2e-05
+beta_L_mab_virus_22_0_103 :  0.000948
+beta_L_mab_virus_22_0_276     : -0.000147
+beta_L_mab_virus_69_0_65               : -3.54e-06
+beta_L_mab_virus_69_0_69               : -1.16e-05
+beta_L_mab_virus_69_0_319               : -2.04e-05
+beta_L_mab_virus_69_0_162               : -1.56e-05
+beta_L_mab_virus_69_0_218               :  3.91e-05
+beta_L_mab_virus_69_0_174               : -3.09e-05
+beta_L_mab_virus_69_0_322               :  -1.5e-07
+beta_L_mab_virus_69_0_292          : -3.69e-06
+beta_L_mab_virus_69_0_274              : -4.49e-05
+beta_L_mab_virus_69_0_103         : -2.83e-06
+beta_L_mab_virus_69_0_276             :  5.31e-05
+m_pop                                   :      1.67
+beta_m_goes_down_True                   :    -0.904
+beta_m_mab_virus_55_0_65          :    0.0471
+beta_m_mab_virus_55_0_69          :    -0.405
+beta_m_mab_virus_55_0_319          :    -0.104
+beta_m_mab_virus_55_0_162          :    -0.222
+beta_m_mab_virus_55_0_218          :   -0.0776
+beta_m_mab_virus_55_0_174          :    -0.138
+beta_m_mab_virus_55_0_322          :    0.0182
+beta_m_mab_virus_55_0_292     :     -0.39
+beta_m_mab_virus_55_0_274         :    0.0755
+beta_m_mab_virus_55_0_103    :     0.048
+beta_m_mab_virus_55_0_276        :   -0.0531
+beta_m_mab_virus_32_0_65            :    0.0908
+beta_m_mab_virus_32_0_69            :   0.00284
+beta_m_mab_virus_32_0_319            :     0.214
+beta_m_mab_virus_32_0_162            :   -0.0382
+beta_m_mab_virus_32_0_218            :     -0.24
+beta_m_mab_virus_32_0_174            :     0.485
+beta_m_mab_virus_32_0_322            :     -0.43
+beta_m_mab_virus_32_0_292       :    0.0338
+beta_m_mab_virus_32_0_274           :    0.0715
+beta_m_mab_virus_32_0_103      :   0.00811
+beta_m_mab_virus_32_0_276          :   -0.0389
+beta_m_mab_virus_22_0_65       :     0.205
+beta_m_mab_virus_22_0_69       :     0.115
+beta_m_mab_virus_22_0_319       :    0.0603
+beta_m_mab_virus_22_0_162       :    0.0664
+beta_m_mab_virus_22_0_218       :     0.176
+beta_m_mab_virus_22_0_174       :    0.0752
+beta_m_mab_virus_22_0_322       :    -0.227
+beta_m_mab_virus_22_0_292  :    0.0454
+beta_m_mab_virus_22_0_274      :    0.0721
+beta_m_mab_virus_22_0_103 :    0.0602
+beta_m_mab_virus_22_0_276     :     0.242
+beta_m_mab_virus_69_0_65               :    -0.942
+beta_m_mab_virus_69_0_69               :   -0.0652
+beta_m_mab_virus_69_0_319               :     0.586
+beta_m_mab_virus_69_0_162               :    -0.139
+beta_m_mab_virus_69_0_218               :     0.129
+beta_m_mab_virus_69_0_174               :     0.569
+beta_m_mab_virus_69_0_322               :   -0.0421
+beta_m_mab_virus_69_0_292          :      1.42
+beta_m_mab_virus_69_0_274              :     0.731
+beta_m_mab_virus_69_0_103         :     0.822
+beta_m_mab_virus_69_0_276             :    -0.496
+e_pop                                   :    0.0538
+beta_e_goes_down_True                   :  0.000253
+beta_e_mab_virus_55_0_65          : -3.78e-05
+beta_e_mab_virus_55_0_69          :      -0.1
+beta_e_mab_virus_55_0_319          :    0.0523
+beta_e_mab_virus_55_0_162          : -7.21e-05
+beta_e_mab_virus_55_0_218          :    0.0406
+beta_e_mab_virus_55_0_174          :   2.7e-05
+beta_e_mab_virus_55_0_322          :  5.33e-05
+beta_e_mab_virus_55_0_292     :    0.0498
+beta_e_mab_virus_55_0_274         : -2.62e-05
+beta_e_mab_virus_55_0_103    :   -0.0387
+beta_e_mab_virus_55_0_276        :    0.0784
+beta_e_mab_virus_32_0_65            :  0.000243
+beta_e_mab_virus_32_0_69            :  6.48e-05
+beta_e_mab_virus_32_0_319            :  1.43e-05
+beta_e_mab_virus_32_0_162            : -6.82e-05
+beta_e_mab_virus_32_0_218            :    -5e-05
+beta_e_mab_virus_32_0_174            :    0.0253
+beta_e_mab_virus_32_0_322            :     0.166
+beta_e_mab_virus_32_0_292       : -8.33e-06
+beta_e_mab_virus_32_0_274           :  6.27e-05
+beta_e_mab_virus_32_0_103      :  1.02e-05
+beta_e_mab_virus_32_0_276          :  6.88e-05
+beta_e_mab_virus_22_0_65       :    0.0775
+beta_e_mab_virus_22_0_69       :  4.31e-05
+beta_e_mab_virus_22_0_319       :  4.41e-05
+beta_e_mab_virus_22_0_162       :  1.42e-05
+beta_e_mab_virus_22_0_218       :    -0.178
+beta_e_mab_virus_22_0_174       :  9.56e-05
+beta_e_mab_virus_22_0_322       :   -0.0211
+beta_e_mab_virus_22_0_292  :  2.46e-05
+beta_e_mab_virus_22_0_274      :  1.38e-05
+beta_e_mab_virus_22_0_103 :    0.0358
+beta_e_mab_virus_22_0_276     : -3.55e-05
+beta_e_mab_virus_69_0_65               :  1.44e-07
+beta_e_mab_virus_69_0_69               : -6.58e-06
+beta_e_mab_virus_69_0_319               : -5.24e-06
+beta_e_mab_virus_69_0_162               : -3.45e-07
+beta_e_mab_virus_69_0_218               : -7.78e-06
+beta_e_mab_virus_69_0_174               : -2.28e-05
+beta_e_mab_virus_69_0_322               : -5.65e-06
+beta_e_mab_virus_69_0_292          : -1.21e-05
+beta_e_mab_virus_69_0_274              : -2.15e-05
+beta_e_mab_virus_69_0_103         : -6.69e-06
+beta_e_mab_virus_69_0_276             : -2.94e-05
+s_pop                                   :      11.5
+beta_s_goes_down_True                   :   -0.0126
+beta_s_mab_virus_55_0_65          :      1.98
+beta_s_mab_virus_55_0_69          :     -1.16
+beta_s_mab_virus_55_0_319          :       3.5
+beta_s_mab_virus_55_0_162          :     -1.16
+beta_s_mab_virus_55_0_218          :      3.23
+beta_s_mab_virus_55_0_174          :      2.16
+beta_s_mab_virus_55_0_322          :      -1.4
+beta_s_mab_virus_55_0_292     :     -1.49
+beta_s_mab_virus_55_0_274         :    -0.478
+beta_s_mab_virus_55_0_103    :     0.341
+beta_s_mab_virus_55_0_276        :    -0.278
+beta_s_mab_virus_32_0_65            :    -0.856
+beta_s_mab_virus_32_0_69            :      1.72
+beta_s_mab_virus_32_0_319            :      4.25
+beta_s_mab_virus_32_0_162            :     0.144
+beta_s_mab_virus_32_0_218            :     0.507
+beta_s_mab_virus_32_0_174            :      5.74
+beta_s_mab_virus_32_0_322            :    -0.969
+beta_s_mab_virus_32_0_292       :      2.55
+beta_s_mab_virus_32_0_274           :      1.13
+beta_s_mab_virus_32_0_103      :      2.49
+beta_s_mab_virus_32_0_276          :      2.32
+beta_s_mab_virus_22_0_65       :       2.7
+beta_s_mab_virus_22_0_69       :     0.602
+beta_s_mab_virus_22_0_319       :      1.79
+beta_s_mab_virus_22_0_162       :     0.222
+beta_s_mab_virus_22_0_218       :      2.99
+beta_s_mab_virus_22_0_174       :       2.9
+beta_s_mab_virus_22_0_322       :   0.00816
+beta_s_mab_virus_22_0_292  :     0.662
+beta_s_mab_virus_22_0_274      :      1.41
+beta_s_mab_virus_22_0_103 :      2.61
+beta_s_mab_virus_22_0_276     :      2.13
+beta_s_mab_virus_69_0_65               :     0.688
+beta_s_mab_virus_69_0_69               :   0.00146
+beta_s_mab_virus_69_0_319               :     0.429
+beta_s_mab_virus_69_0_162               :      1.29
+beta_s_mab_virus_69_0_218               :     0.399
+beta_s_mab_virus_69_0_174               :    -0.228
+beta_s_mab_virus_69_0_322               :     -1.81
+beta_s_mab_virus_69_0_292          :      1.32
+beta_s_mab_virus_69_0_274              :      0.44
+beta_s_mab_virus_69_0_103         :    -0.391
+beta_s_mab_virus_69_0_276             :     0.316
+alpha_pop                               :      6.39
+beta_alpha_run_id_84               :  -0.00019
+beta_alpha_run_id_719               :  3.34e-05
+beta_alpha_run_id_488               :  2.88e-05
+beta_alpha_run_id_847               :  1.13e-05
+beta_alpha_run_id_474               :    -6e-07
+beta_alpha_run_id_462               :  2.23e-05
+beta_alpha_run_id_75               :  1.26e-07
+beta_alpha_run_id_291               : -5.16e-05
+beta_alpha_run_id_77               :  7.12e-05
+beta_alpha_run_id_322               :  2.39e-05
+beta_alpha_run_id_963               : -9.12e-08
+beta_alpha_run_id_1241               : -6.29e-05
+beta_alpha_run_id_1056               : -4.43e-06
+beta_alpha_run_id_1159               : -5.39e-05
+beta_alpha_run_id_1017               : -9.84e-05
+beta_alpha_run_id_1197               : -7.02e-05
+beta_alpha_run_id_745               :  -4.7e-05
+beta_alpha_run_id_1043               : -4.23e-05
+beta_alpha_run_id_1260               : -0.000159
+beta_alpha_run_id_1042               : -9.07e-05
+beta_alpha_run_id_863               :   3.4e-06
+beta_alpha_run_id_152               :  0.000212
+k_pop                                   :      5.14
+beta_k_run_id_84                   :  2.33e-05
+beta_k_run_id_719                   :  1.78e-06
+beta_k_run_id_488                   :  8.06e-06
+beta_k_run_id_847                   : -1.37e-05
+beta_k_run_id_474                   : -3.95e-05
+beta_k_run_id_462                   :  2.77e-05
+beta_k_run_id_75                   :     8e-05
+beta_k_run_id_291                   :  2.42e-05
+beta_k_run_id_77                   :  1.02e-05
+beta_k_run_id_322                   : -1.76e-05
+beta_k_run_id_963                   :  2.51e-05
+beta_k_run_id_1241                   : -3.43e-06
+beta_k_run_id_1056                   : -7.19e-06
+beta_k_run_id_1159                   :  0.000116
+beta_k_run_id_1017                   :  2.65e-05
+beta_k_run_id_1197                   : -1.59e-07
+beta_k_run_id_745                   : -1.53e-06
+beta_k_run_id_1043                   :  4.56e-06
+beta_k_run_id_1260                   : -3.93e-06
+beta_k_run_id_1042                   :  4.66e-06
+beta_k_run_id_863                   : -7.34e-05
+beta_k_run_id_152                   : -0.000153
+
+Standard Deviation of the Random Effects ----------
+omega_m                                 :  1.35e-05
+omega_s                                 :  9.65e-06
+
+Error Model Parameters ----------------------------
+a                                       :       458
+b                                       :     0.115
+
+Elapsed time (seconds):  4.1e+03
+CPU time     (seconds):  4.2e+03
+Exploratory phase iterations:      500 (Stopped at the maximum number of iterations/auto-stop criteria have not been reached)
+Smoothing phase iterations:        149 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+L     :           718           718           718           718           718           nan
+m     :         0.333         0.829           1.6          2.25          3.09          99.9
+e     :         0.045        0.0538        0.0538        0.0538        0.0635           nan
+s     :          1.87          10.8          17.6          41.8      3.53e+03          99.9
+alpha :          6.39          6.39          6.39          6.39          6.39           nan
+k     :          5.14          5.14          5.14          5.14          5.14           nan
+
+Elapsed time (seconds):     0.14
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       27824.68
+Akaike Information Criteria               (AIC) :       28292.68
+Corrected Bayesian Information Criteria  (BICc) :       29437.64
+Bayesian Information Criteria             (BIC) :       29284.90
+
+Elapsed time                          (seconds) :          25.32
+CPU time                              (seconds) :          25.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.155
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 513
+Number of observations (rlu): 1504
+Number of doses: 0
+

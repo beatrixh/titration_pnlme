@@ -1,0 +1,41 @@
+DESCRIPTION:
+
+[LONGITUDINAL]
+input={L_gap, 
+	m, 
+	e, 
+	alpha, 
+	k, 
+	plate_col, 
+	plate_row, 
+	mean_vc, 
+	mean_cc, 
+	sample_binary, 
+	cc_binary, 
+	vc_binary
+}
+plate_col = {use=regressor}
+plate_row = {use=regressor}
+mean_cc = {use=regressor}
+mean_vc = {use=regressor}
+binary_sample = {use=regressor}
+binary_cc = {use=regressor}
+binary_vc = {use=regressor}
+
+PK:
+
+EQUATION:
+dist_multi_edge = alpha*(exp(-k*plate_row) + exp(-k*(9 - row)) + exp(-k*col) + exp(-k*(13-col)))
+
+edge = alpha*exp(-k*dist_multi_edge) 
+
+U = mean_vc 
+L = mean_cc + exp(L_gap)
+
+f_sample = (L  + (U-L)/(1 + exp(m*(log(t) - log(e))))) 
+
+f = binary_sample*f_sample + binary_cc*mean_cc + binary_vc*mean_vc 
+f_edge = f*(1 - edge) 
+
+OUTPUT: output = {f_edge}
+

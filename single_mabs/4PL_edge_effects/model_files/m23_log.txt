@@ -1,0 +1,13 @@
+[2026-07-31 19:51:35] m23 :: 203.5 MB
+[2026-07-31 19:51:35] project loaded :: 203.5 MB
+[2026-07-31 19:51:53] initial values configured :: 204.5 MB
+[2026-07-31 19:51:54] starting runPopulationParameterEstimation :: 206.2 MB
+[2026-08-01 23:29:08] m23 :: 203.6 MB
+[2026-08-01 23:29:08] project loaded :: 203.6 MB
+[2026-08-01 23:29:13] initial values configured :: 204.2 MB
+[2026-08-01 23:29:13] starting runPopulationParameterEstimation :: 205.9 MB
+[2026-08-02 03:33:18] finished runPopulationParameterEstimation :: 212.7 MB
+[2026-08-02 03:33:18] finished runConditionalModeEstimation :: 214.0 MB
+[2026-08-02 03:33:18] finished runLogLikelihoodEstimation :: 254.1 MB
+[2026-08-02 03:33:18] saved project :: 257.0 MB
+[2026-08-02 03:33:18] COMPLETE :: 257.0 MB

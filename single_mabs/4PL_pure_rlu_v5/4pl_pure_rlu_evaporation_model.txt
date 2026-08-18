@@ -1,0 +1,44 @@
+DESCRIPTION:
+
+[LONGITUDINAL]
+input={L_gap, 
+	m, 
+	e, 
+	alpha, 
+	k, 
+	plate_col, 
+	plate_row, 
+	mean_vc, 
+	mean_cc, 
+	sample_binary, 
+	cc_binary, 
+	vc_binary
+}
+plate_col = {use=regressor}
+plate_row = {use=regressor}
+mean_cc = {use=regressor}
+mean_vc = {use=regressor}
+binary_sample = {use=regressor}
+binary_cc = {use=regressor}
+binary_vc = {use=regressor}
+
+PK:
+
+EQUATION:
+dist_edge = min(
+ min(plate_row, 9-plate_row), min(plate_col, 13-plate_col) 
+) 
+
+vc_effect = 1 - alpha_vc*exp(-k*dist_edge)
+evaporation = 1/(1 - beta*exp(-k*dist_edge))
+
+U = mean_vc/vc_effect
+L = mean_cc + exp(L_gap)
+
+t_adjusted = t*evaporation
+
+f_sample = (L  + (U-L)/(1 + exp(m*(log(t_adjusted) - log(e))))) 
+
+f = binary_sample*f_sample + binary_cc*mean_cc + binary_vc*mean_vc 
+
+OUTPUT: output = {f}

@@ -1,0 +1,7 @@
+parameters,shrinkage_mode
+U_offset,nan
+L,nan
+m,41.9413
+e,99.999
+alpha,nan
+k,nan

@@ -1,0 +1,8 @@
+[2026-08-12 01:01:46] m121 :: 545.3 MB
+[2026-08-12 01:01:46] project loaded :: 545.3 MB
+[2026-08-12 01:01:46] starting runPopulationParameterEstimation :: 545.3 MB
+[2026-08-12 01:20:10] finished runPopulationParameterEstimation :: 545.3 MB
+[2026-08-12 01:20:10] finished runConditionalModeEstimation :: 545.3 MB
+[2026-08-12 01:20:27] finished runLogLikelihoodEstimation :: 545.3 MB
+[2026-08-12 01:20:27] saved project :: 545.5 MB
+[2026-08-12 01:20:27] COMPLETE (total runtime 18.7 min) :: 545.5 MB

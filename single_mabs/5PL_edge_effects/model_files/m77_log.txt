@@ -1,0 +1,8 @@
+[2026-08-02 09:30:52] m77 :: 543.1 MB
+[2026-08-02 09:30:52] project loaded :: 543.1 MB
+[2026-08-02 09:30:59] initial values configured :: 543.1 MB
+[2026-08-02 09:31:00] starting runPopulationParameterEstimation :: 543.1 MB
+[2026-08-02 09:58:08] m77 :: 541.7 MB
+[2026-08-02 09:58:08] project loaded :: 541.7 MB
+[2026-08-02 09:58:15] initial values configured :: 541.7 MB
+[2026-08-02 09:58:16] starting runPopulationParameterEstimation :: 541.7 MB

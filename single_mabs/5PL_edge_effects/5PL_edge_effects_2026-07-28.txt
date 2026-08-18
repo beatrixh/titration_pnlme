@@ -1,0 +1,27 @@
+DESCRIPTION:
+
+[LONGITUDINAL]
+input={U, L, m, e, s, alpha, k, virus_cc, plate_col, plate_row}
+plate_col = {use=regressor}
+plate_row = {use=regressor}
+virus_cc = {use=regressor}
+
+PK:
+
+EQUATION:
+
+f = virus_cc*(L + (U-L)/(1 + exp(m*(log(t) + log(e))))^s)
+
+row = plate_row
+col = plate_col
+
+dist_edge = min(
+	min(row, 9-row),
+    min(col, 13-col)
+)
+
+edge = alpha*exp(-k*dist_edge)
+f_edge = f*(1 - edge)
+
+OUTPUT:
+output = {f_edge}
