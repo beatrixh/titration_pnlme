@@ -50,7 +50,7 @@ ERROR: failed to lock directory ‘/home/bhaddock/R/x86_64-pc-linux-gnu-library/
 Try removing ‘/home/bhaddock/R/x86_64-pc-linux-gnu-library/4.4/00LOCK-ps’
 
 The downloaded source packages are in
-	‘/tmp/RtmpMyBYI2/downloaded_packages’
+	‘/tmp/Rtmp0FEuId/downloaded_packages’
 Warning message:
 In install.packages("ps") :
   installation of package ‘ps’ had non-zero exit status
@@ -72,12 +72,13 @@ The following objects are masked from ‘package:base’:
     intersect, setdiff, setequal, union
 
 > 
-> models_dir <- "/home/bhaddock/repos/bnAb_pnlme/single_mabs/4PL_pure_rlu/model_files"
+> models_dir <- "/home/bhaddock/repos/bnAb_pnlme/single_mabs/4PL_pure_rlu_v3/model_files"
 > model_files <- list.files(models_dir, pattern = "^4PL_m[0-9]+\\.mlxtran$")
 > model_names <- sub("^4PL_(m[0-9]+)\\.mlxtran$", "\\1", model_files)
 > model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 > 
-> model_names <- paste0("m", 65:128)
+> # model_names <- paste0("m", 65:128)
+> model_names <- c("m59")
 > 
 > run_one_model <- function(model_name, models_dir) {
 +   library(lixoftConnectors)
@@ -170,7 +171,7 @@ The following objects are masked from ‘package:base’:
 +   invisible(model_name)
 + }
 > 
-> n_workers <- 6 
+> n_workers <- 1
 > cl <- makeCluster(n_workers)
 > 
 > results <- tryCatch(
@@ -182,5 +183,5 @@ The following objects are masked from ‘package:base’:
 + )
 > 
 > proc.time()
-     user    system   elapsed 
-   17.310     1.038 24556.694 
+   user  system elapsed 
+ 17.703   1.053  24.793 
