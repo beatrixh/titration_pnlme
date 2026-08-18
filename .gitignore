@@ -1,0 +1,9 @@
+single_mabs/input_data/*
+*.csv
+
+# Monolix's binary project cache -- can't be safely text-retagged and isn't
+# meant for human/public consumption anyway (see retag_repo.py's
+# BINARY_SKIP_DIR_NAMES/BINARY_SKIP_SUFFIXES for the same exclusion list
+# applied during retagging).
+**/.Internals/
+*.dat
