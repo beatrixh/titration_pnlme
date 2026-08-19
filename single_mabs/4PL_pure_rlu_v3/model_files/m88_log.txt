@@ -1,0 +1,9 @@
+[2026-08-18 21:21:39] m88 :: 853.5 MB
+[2026-08-18 21:21:39] project loaded :: 853.5 MB
+[2026-08-18 21:21:39] starting runPopulationParameterEstimation :: 853.5 MB
+[2026-08-19 04:12:08] m88 :: 721.1 MB
+[2026-08-19 04:12:08] project loaded :: 721.1 MB
+[2026-08-19 04:12:08] starting runPopulationParameterEstimation :: 721.1 MB
+[2026-08-19 09:26:41] m88 :: 364.7 MB
+[2026-08-19 09:26:41] project loaded :: 364.7 MB
+[2026-08-19 09:26:41] starting runPopulationParameterEstimation :: 365.0 MB

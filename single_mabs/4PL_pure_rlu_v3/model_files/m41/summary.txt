@@ -1,0 +1,144 @@
+********************************************************************************
+*                         4PL_m41.mlxtran                                      *
+*                         August 19, 2026 at 05:39:53                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+L_gap_pop                 :           9.27
+beta_L_gap_goes_down_True :          -6.74
+m_pop                     :           4.37
+beta_m_goes_down_True     :         -0.666
+e_pop                     :          0.142
+beta_e_goes_down_True     :      -2.76e-05
+alpha_pop                 :          0.364
+beta_alpha_run_id_1042    :       2.36e-05
+beta_alpha_run_id_1043    :        3.2e-05
+beta_alpha_run_id_1056    :      -1.72e-07
+beta_alpha_run_id_1099    :       1.51e-08
+beta_alpha_run_id_1159    :          0.247
+beta_alpha_run_id_1197    :          0.276
+beta_alpha_run_id_1241    :       2.41e-05
+beta_alpha_run_id_1260    :          0.207
+beta_alpha_run_id_152     :       8.24e-06
+beta_alpha_run_id_183     :       -3.4e-05
+beta_alpha_run_id_291     :      -5.18e-07
+beta_alpha_run_id_297     :       3.25e-08
+beta_alpha_run_id_322     :       3.12e-06
+beta_alpha_run_id_394     :       7.21e-07
+beta_alpha_run_id_411     :          8e-07
+beta_alpha_run_id_433     :          0.186
+beta_alpha_run_id_462     :       3.81e-05
+beta_alpha_run_id_474     :       1.64e-08
+beta_alpha_run_id_488     :      -6.75e-10
+beta_alpha_run_id_491     :       3.62e-06
+beta_alpha_run_id_555     :      -1.79e-07
+beta_alpha_run_id_611     :      -4.26e-05
+beta_alpha_run_id_705     :      -5.15e-06
+beta_alpha_run_id_719     :      -8.35e-06
+beta_alpha_run_id_745     :       5.33e-08
+beta_alpha_run_id_75      :       2.65e-06
+beta_alpha_run_id_77      :       3.98e-08
+beta_alpha_run_id_783     :      -1.18e-06
+beta_alpha_run_id_84      :      -2.89e-05
+beta_alpha_run_id_847     :      -4.72e-09
+beta_alpha_run_id_863     :       2.49e-05
+beta_alpha_run_id_963     :      -2.56e-08
+k_pop                     :          0.945
+beta_k_run_id_1042        :      -6.29e-05
+beta_k_run_id_1043        :      -8.68e-06
+beta_k_run_id_1056        :       9.91e-08
+beta_k_run_id_1099        :       1.32e-05
+beta_k_run_id_1159        :      -3.84e-08
+beta_k_run_id_1197        :      -6.67e-06
+beta_k_run_id_1241        :      -8.35e-05
+beta_k_run_id_1260        :       -5.5e-05
+beta_k_run_id_152         :      -4.53e-06
+beta_k_run_id_183         :       3.63e-05
+beta_k_run_id_291         :      -1.22e-05
+beta_k_run_id_297         :       1.78e-05
+beta_k_run_id_322         :       6.72e-07
+beta_k_run_id_394         :       6.48e-07
+beta_k_run_id_411         :       -1.5e-06
+beta_k_run_id_433         :      -1.61e-07
+beta_k_run_id_462         :      -5.67e-05
+beta_k_run_id_474         :       8.84e-09
+beta_k_run_id_488         :       9.01e-07
+beta_k_run_id_491         :      -9.91e-05
+beta_k_run_id_555         :      -1.29e-08
+beta_k_run_id_611         :       6.35e-05
+beta_k_run_id_705         :       0.000207
+beta_k_run_id_719         :      -9.61e-07
+beta_k_run_id_745         :      -2.27e-06
+beta_k_run_id_75          :       1.57e-07
+beta_k_run_id_77          :       4.17e-05
+beta_k_run_id_783         :       3.21e-05
+beta_k_run_id_84          :      -1.49e-05
+beta_k_run_id_847         :       2.15e-05
+beta_k_run_id_863         :      -1.83e-08
+beta_k_run_id_963         :      -6.26e-05
+
+Standard Deviation of the Random Effects -
+omega_L_gap               :           4.16
+omega_m                   :           3.34
+
+Error Model Parameters -------------------
+a                         :       2.22e-16
+b                         :          0.324
+
+Elapsed time (seconds):  2.7e+03
+CPU time     (seconds):  2.7e+03
+Exploratory phase iterations:      299 (Autostop)
+Smoothing phase iterations:        124 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+L_gap :          1.19          3.27          9.27          9.27          11.1          59.1
+m     :         0.142          3.69          4.37          4.37          11.6          40.8
+e     :         0.142         0.142         0.142         0.142         0.142           nan
+alpha :         0.364         0.364         0.364         0.364         0.639           nan
+k     :         0.945         0.945         0.945         0.945         0.946           nan
+
+Elapsed time (seconds):      0.2
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       61465.78
+Akaike Information Criteria               (AIC) :       61617.78
+Corrected Bayesian Information Criteria  (BICc) :       62073.24
+Bayesian Information Criteria             (BIC) :       61980.36
+
+Elapsed time                          (seconds) :          46.79
+CPU time                              (seconds) :          47.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.774
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 872
+Number of observations (rlu): 3168
+Number of doses: 0
+

@@ -1,0 +1,6 @@
+[2026-08-18 23:08:34] m23 :: 858.2 MB
+[2026-08-18 23:08:34] project loaded :: 858.2 MB
+[2026-08-18 23:08:34] starting runPopulationParameterEstimation :: 858.2 MB
+[2026-08-19 09:26:42] m23 :: 361.0 MB
+[2026-08-19 09:26:42] project loaded :: 361.0 MB
+[2026-08-19 09:26:42] starting runPopulationParameterEstimation :: 361.3 MB

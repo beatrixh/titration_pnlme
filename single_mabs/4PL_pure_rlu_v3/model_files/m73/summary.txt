@@ -1,0 +1,140 @@
+********************************************************************************
+*                         4PL_m73.mlxtran                                      *
+*                         August 19, 2026 at 06:23:10                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+L_gap_pop              :               3.3
+m_pop                  :              2.48
+e_pop                  :             0.133
+alpha_pop              :             0.172
+beta_alpha_run_id_1042 :          9.48e-08
+beta_alpha_run_id_1043 :          5.19e-07
+beta_alpha_run_id_1056 :         -1.45e-06
+beta_alpha_run_id_1099 :          2.56e-05
+beta_alpha_run_id_1159 :          1.29e-06
+beta_alpha_run_id_1197 :         -3.65e-06
+beta_alpha_run_id_1241 :             0.312
+beta_alpha_run_id_1260 :             0.371
+beta_alpha_run_id_152  :          1.49e-06
+beta_alpha_run_id_183  :          4.26e-06
+beta_alpha_run_id_291  :             0.354
+beta_alpha_run_id_297  :         -1.58e-06
+beta_alpha_run_id_322  :         -1.86e-06
+beta_alpha_run_id_394  :         -1.56e-06
+beta_alpha_run_id_411  :          1.25e-05
+beta_alpha_run_id_433  :         -5.95e-05
+beta_alpha_run_id_462  :             0.213
+beta_alpha_run_id_474  :         -3.53e-06
+beta_alpha_run_id_488  :          5.69e-07
+beta_alpha_run_id_491  :          3.74e-06
+beta_alpha_run_id_555  :          3.96e-06
+beta_alpha_run_id_611  :             -2.17
+beta_alpha_run_id_705  :          9.86e-07
+beta_alpha_run_id_719  :         -6.12e-07
+beta_alpha_run_id_745  :          1.06e-07
+beta_alpha_run_id_75   :          2.93e-06
+beta_alpha_run_id_77   :         -3.66e-06
+beta_alpha_run_id_783  :         -7.38e-07
+beta_alpha_run_id_84   :          0.000102
+beta_alpha_run_id_847  :          1.11e-06
+beta_alpha_run_id_863  :         -8.79e-07
+beta_alpha_run_id_963  :          3.33e-06
+k_pop                  :             0.653
+beta_k_run_id_1042     :         -5.54e-06
+beta_k_run_id_1043     :         -4.16e-06
+beta_k_run_id_1056     :          1.44e-07
+beta_k_run_id_1099     :         -2.18e-06
+beta_k_run_id_1159     :          1.04e-05
+beta_k_run_id_1197     :            -0.894
+beta_k_run_id_1241     :         -4.38e-06
+beta_k_run_id_1260     :         -3.12e-05
+beta_k_run_id_152      :         -7.09e-06
+beta_k_run_id_183      :          5.89e-07
+beta_k_run_id_291      :         -8.45e-05
+beta_k_run_id_297      :          3.44e-07
+beta_k_run_id_322      :          1.81e-07
+beta_k_run_id_394      :          4.66e-06
+beta_k_run_id_411      :          3.32e-06
+beta_k_run_id_433      :         -7.06e-06
+beta_k_run_id_462      :         -1.55e-05
+beta_k_run_id_474      :         -1.16e-09
+beta_k_run_id_488      :          2.39e-06
+beta_k_run_id_491      :          1.04e-06
+beta_k_run_id_555      :         -9.89e-06
+beta_k_run_id_611      :         -2.82e-09
+beta_k_run_id_705      :          1.55e-06
+beta_k_run_id_719      :         -2.63e-07
+beta_k_run_id_745      :         -1.44e-06
+beta_k_run_id_75       :          9.85e-07
+beta_k_run_id_77       :          0.000136
+beta_k_run_id_783      :          3.39e-06
+beta_k_run_id_84       :         -3.88e-06
+beta_k_run_id_847      :         -3.65e-06
+beta_k_run_id_863      :         -7.16e-06
+beta_k_run_id_963      :          -5.5e-07
+
+Standard Deviation of the Random Effects -
+omega_m                :              2.32
+
+Error Model Parameters -------------------
+a                      :          2.22e-16
+b                      :             0.418
+
+Elapsed time (seconds):  2.6e+03
+CPU time     (seconds):  2.6e+03
+Exploratory phase iterations:      211 (Autostop)
+Smoothing phase iterations:        200 (Stopped at the maximum number of iterations)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+L_gap :           3.3           3.3           3.3           3.3           3.3           nan
+m     :      -0.00677          2.42          2.48          2.48          7.48          41.6
+e     :         0.133         0.133         0.133         0.133         0.133           nan
+alpha :            -2         0.172         0.172         0.172         0.543           nan
+k     :        -0.242         0.653         0.653         0.653         0.653           nan
+
+Elapsed time (seconds):    0.087
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       62376.04
+Akaike Information Criteria               (AIC) :       62520.04
+Corrected Bayesian Information Criteria  (BICc) :       62955.13
+Bayesian Information Criteria             (BIC) :       62863.54
+
+Elapsed time                          (seconds) :          40.44
+CPU time                              (seconds) :          41.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.272
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 872
+Number of observations (rlu): 3168
+Number of doses: 0
+
