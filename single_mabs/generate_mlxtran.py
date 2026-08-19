@@ -283,6 +283,12 @@ def main() -> None:
     )
     parser.add_argument("--no-fix-u", action="store_true", help="let U_pop float instead of FIXED=1")
     parser.add_argument(
+        "--exclude", nargs="*", default=[],
+        help="model names to skip, e.g. when one of them is being used as --template "
+             "and shouldn't be regenerated/overwritten. Applies whether 'models' is --all "
+             "or an explicit list.",
+    )
+    parser.add_argument(
         "models", nargs="+",
         help="model names to generate (e.g. m0 m14 m192), or '--all' for every model in the tracker",
     )
@@ -300,6 +306,8 @@ def main() -> None:
                 f"available: {sorted(model_configs)}"
             )
         model_names = args.models
+
+    model_names = [m for m in model_names if m not in args.exclude]
 
     for model_name in model_names:
         generate_one(
