@@ -6,15 +6,28 @@ from pathlib import Path
 import openpyxl
 import pandas as pd
 
-PROJECTS = {
-    "4PL": Path("/mnt/c/Users/bhaddock/repos/titration_pnlme/single_mabs/4PL_edge_effects"),
-    "5PL": Path("/mnt/c/Users/bhaddock/repos/titration_pnlme/single_mabs/5PL_edge_effects"),
-    "4PL_pure_rlu": Path("/mnt/c/Users/bhaddock/repos/titration_pnlme/single_mabs/4PL_pure_rlu"),
-    "5PL_pure_rlu": Path("/mnt/c/Users/bhaddock/repos/titration_pnlme/single_mabs/5PL_pure_rlu"),
-    "4PL_pure_rlu_v2": Path("/mnt/c/Users/bhaddock/repos/titration_pnlme/single_mabs/4PL_pure_rlu_v2"),
-    "5PL_pure_rlu_v2": Path("/mnt/c/Users/bhaddock/repos/titration_pnlme/single_mabs/5PL_pure_rlu_v2"),
-    "4PL_pure_rlu_larger_data": Path("/mnt/c/Users/bhaddock/repos/titration_pnlme/single_mabs/4PL_pure_rlu_larger_data"),
-}
+BASE_DIR = Path("/mnt/c/Users/bhaddock/repos/titration_pnlme/single_mabs")
+
+
+def _discover_projects() -> dict[str, Path]:
+    """Every subdirectory of BASE_DIR with a model_tracker.xlsx is a known
+    project, keyed by its directory name -- so new ones (e.g. a future
+    4PL_pure_rlu_v3) show up automatically with no edits needed here.
+    "4PL"/"5PL" are kept as short aliases for the two names people actually
+    type instead of the full "*_edge_effects" directory name.
+    """
+    projects = {
+        p.name: p for p in BASE_DIR.iterdir()
+        if p.is_dir() and (p / "model_tracker.xlsx").exists()
+    }
+    if "4PL_edge_effects" in projects:
+        projects["4PL"] = projects["4PL_edge_effects"]
+    if "5PL_edge_effects" in projects:
+        projects["5PL"] = projects["5PL_edge_effects"]
+    return projects
+
+
+PROJECTS = _discover_projects()
 
 EFFECT_LABEL = {
     "Random effect": "random",
@@ -95,7 +108,7 @@ def build_report(project: str) -> pd.DataFrame:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Report AIC/BICc across all completed models for a project.")
-    parser.add_argument("project", choices=list(PROJECTS), help="which project to report on")
+    parser.add_argument("project", choices=sorted(PROJECTS), help="which project to report on")
     args = parser.parse_args()
 
     result = build_report(args.project)

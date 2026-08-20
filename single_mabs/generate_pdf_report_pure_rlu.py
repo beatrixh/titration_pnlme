@@ -31,6 +31,19 @@ def dist_edge(plate_row: pd.Series, plate_col: pd.Series) -> pd.Series:
     )
 
 
+# v3's structural model (4pl_pure_rlu_v3/4pl_pure_rlu_model.txt) uses
+# log(t) - log(e), the opposite sign from every other pure_rlu project's
+# log(t) + log(e) (logistic_4pl/icp_4pl, imported from
+# generate_pdf_model_report). Reusing those unmodified for a v3 model would
+# silently flip the fitted curve's orientation, so v3 gets its own pair.
+def logistic_4pl_v3(t, U, L, m, e):
+    return L + (U - L) / (1 + np.exp(m * (np.log(t) - np.log(e))))
+
+
+def icp_4pl_v3(p, U, L, m, e):
+    return ((U - L) / (1 - p - L) - 1) ** (1 / m) * e
+
+
 def project_family(project: str) -> str:
     """Strip a leading 4PL_/5PL_ so e.g. '4PL_pure_rlu_v2' and
     '5PL_pure_rlu_v2' group together, but not with plain 'pure_rlu' (v1)."""
@@ -69,7 +82,9 @@ def resolve_data_csv(fitted_mlxtran: Path) -> Path:
 # logistic term: f = virus_cc*(L + (U-L)/(1+exp(...))**s).
 # ---------------------------------------------------------------------------
 
-def build_corrected_data(data: pd.DataFrame, params: pd.DataFrame, pl: str, has_u_offset: bool) -> pd.DataFrame:
+def build_corrected_data(
+    data: pd.DataFrame, params: pd.DataFrame, pl: str, has_u_offset: bool, has_l_gap: bool
+) -> pd.DataFrame:
     """Per-observation plate-edge correction.
 
     For each 'sample'/'vc' row (virus_cc==1), compute the model's own
@@ -84,7 +99,16 @@ def build_corrected_data(data: pd.DataFrame, params: pd.DataFrame, pl: str, has_
 
     'cc' rows (virus_cc==0, background wells) pass through unmodified --
     they aren't part of the fitted dose-response curve.
+
+    has_l_gap (v3 and later) delegates to _build_corrected_data_l_gap below,
+    whose model shape is different enough (L derived from L_gap, U = mean_vc
+    with edge NOT folded in, and an explicit binary_sample/binary_cc/
+    binary_vc split instead of virus_cc) that it isn't a minor variant of
+    this function -- it's a different formula end to end.
     """
+    if has_l_gap:
+        return _build_corrected_data_l_gap(data, params)
+
     cols = ["id", "L_mode", "m_mode", "e_mode", "alpha_mode", "k_mode"]
     if pl == "5PL":
         cols.append("s_mode")
@@ -115,7 +139,47 @@ def build_corrected_data(data: pd.DataFrame, params: pd.DataFrame, pl: str, has_
     return merged[keep]
 
 
-def calc_params_ics(data: pd.DataFrame, params: pd.DataFrame, pl: str, has_u_offset: bool) -> pd.DataFrame:
+def _build_corrected_data_l_gap(data: pd.DataFrame, params: pd.DataFrame) -> pd.DataFrame:
+    """v3's model shape: L = mean_cc + exp(L_gap) (derived, not estimated
+    directly), U = mean_vc (no edge folded in -- edge instead multiplies
+    the *whole* f afterward: f_edge = f*(1-edge)), and sample/cc/vc rows
+    are split explicitly via specrole rather than inferred from virus_cc.
+
+    Because edge doesn't enter L or U here, the edge=0 'center' prediction
+    is simply the un-multiplied f_sample -- no separate U_center term is
+    needed the way v1/v2 need one.
+    """
+    cols = ["id", "L_gap_mode", "m_mode", "e_mode", "alpha_mode", "k_mode"]
+    merged = data.merge(params[cols], left_on="monolix_id_update", right_on="id", how="inner")
+
+    merged["dist_edge"] = dist_edge(merged.plate_row, merged.plate_col)
+    edge = merged.alpha_mode * np.exp(-merged.k_mode * merged.dist_edge)
+
+    L_row = merged.mean_cc + np.exp(merged.L_gap_mode)
+    U_row = merged.mean_vc
+    # cc/vc rows have concentration==0 (no dose applied) and produce a
+    # log(0) warning here even though their D is discarded below via
+    # np.where (only specrole=='sample' rows use it).
+    with np.errstate(divide="ignore"):
+        D = 1 / (1 + np.exp(merged.m_mode * (np.log(merged.concentration) - np.log(merged.e_mode))))
+
+    f_center_pred = L_row + (U_row - L_row) * D
+    f_edge_pred = f_center_pred * (1 - edge)
+    residual = merged.rlu - f_edge_pred
+
+    merged["rlu_edge_corrected"] = np.where(
+        merged.specrole == "sample", f_center_pred + residual, merged.rlu
+    )
+    keep = [
+        "run_id", "mab_virus", "plate_row", "plate_col", "specrole",
+        "concentration", "rlu", "rlu_edge_corrected",
+    ]
+    return merged[keep]
+
+
+def calc_params_ics(
+    data: pd.DataFrame, params: pd.DataFrame, pl: str, has_u_offset: bool, has_l_gap: bool
+) -> pd.DataFrame:
     """Canonical (plate-center, edge=0) per-mab_virus curve + IC50/IC80.
 
     Per the requested convention: normalize between this curve's own fitted
@@ -127,7 +191,14 @@ def calc_params_ics(data: pd.DataFrame, params: pd.DataFrame, pl: str, has_u_off
     generate_pdf_model_report) apply directly. L_raw/U_raw are kept around
     for annotating the real fitted magnitudes and for normalizing the
     scatter data in plot_fit_grid.
+
+    has_l_gap (v3+) delegates to _calc_params_ics_l_gap: L is derived from
+    L_gap rather than estimated directly, and IC50/80 use icp_4pl_v3 to
+    match that model's opposite log(t)/log(e) sign.
     """
+    if has_l_gap:
+        return _calc_params_ics_l_gap(data, params)
+
     mean_vc_by_run = data[["run_id", "mean_vc"]].drop_duplicates()
     p = params.merge(mean_vc_by_run, on="run_id", how="left")
 
@@ -168,9 +239,40 @@ def calc_params_ics(data: pd.DataFrame, params: pd.DataFrame, pl: str, has_u_off
     return mab_virus_params
 
 
-def summarize_raw_params(params: pd.DataFrame, pl: str) -> pd.DataFrame:
+def _calc_params_ics_l_gap(data: pd.DataFrame, params: pd.DataFrame) -> pd.DataFrame:
+    mean_vc_by_run = data[["run_id", "mean_vc"]].drop_duplicates()
+    mean_cc_by_run = data[["run_id", "mean_cc"]].drop_duplicates()
+    p = params.merge(mean_vc_by_run, on="run_id", how="left").merge(mean_cc_by_run, on="run_id", how="left")
+    p["L_row"] = p.mean_cc + np.exp(p.L_gap_mode)
+
+    grouped = p.groupby("mab_virus")
+    values = {
+        "mab_virus": p.mab_virus,
+        "e": grouped.e_mode.transform(lambda x: np.exp(np.mean(np.log(x)))),
+        "m": grouped.m_mode.transform("mean"),
+        "L_raw": grouped.L_row.transform("mean"),
+        "U_raw": grouped.mean_vc.transform("mean"),
+    }
+    mab_virus_params = pd.DataFrame(values).drop_duplicates().reset_index(drop=True)
+    mab_virus_params["U"] = 1.0
+    mab_virus_params["L"] = 0.0
+    mab_virus_params["ic50"] = mab_virus_params.apply(
+        lambda row: icp_4pl_v3(0.5, row.U, row.L, row.m, row.e), axis=1
+    )
+    mab_virus_params["ic80"] = mab_virus_params.apply(
+        lambda row: icp_4pl_v3(0.8, row.U, row.L, row.m, row.e), axis=1
+    )
+    return mab_virus_params
+
+
+def summarize_raw_params(data: pd.DataFrame, params: pd.DataFrame, pl: str, has_l_gap: bool) -> pd.DataFrame:
     """Per-mab_virus fitted parameter values, uncorrected -- used for the boxplot."""
-    p = params.copy()
+    if has_l_gap:
+        mean_cc_by_run = data[["run_id", "mean_cc"]].drop_duplicates()
+        p = params.merge(mean_cc_by_run, on="run_id", how="left")
+        p["L_mode"] = p.mean_cc + np.exp(p.L_gap_mode)
+    else:
+        p = params.copy()
     p["e_mode_geommean"] = p.groupby("mab_virus").e_mode.transform(lambda x: np.exp(np.mean(np.log(x))))
     cols = ["mab_virus", "L_mode", "m_mode", "e_mode_geommean"]
     if pl == "5PL":
@@ -182,8 +284,9 @@ def summarize_raw_params(params: pd.DataFrame, pl: str) -> pd.DataFrame:
 # Plotting
 # ---------------------------------------------------------------------------
 
-def build_toggle_table(report_row: pd.Series, pl: str, has_u_offset: bool) -> pd.DataFrame:
-    params = (["U_offset"] if has_u_offset else []) + ["L", "m", "e"] + (["s"] if pl == "5PL" else []) + ["alpha", "k"]
+def build_toggle_table(report_row: pd.Series, pl: str, has_u_offset: bool, has_l_gap: bool) -> pd.DataFrame:
+    l_param = "L_gap" if has_l_gap else "L"
+    params = (["U_offset"] if has_u_offset else []) + [l_param, "m", "e"] + (["s"] if pl == "5PL" else []) + ["alpha", "k"]
     rows = []
     for p in params:
         row = {
@@ -202,12 +305,14 @@ def build_toggle_table(report_row: pd.Series, pl: str, has_u_offset: bool) -> pd
     return df[[c for c in col_order if c in df.columns]]
 
 
-def plot_info_page(model_label: str, report_row: pd.Series, pl: str, has_u_offset: bool) -> plt.Figure:
+def plot_info_page(
+    model_label: str, report_row: pd.Series, pl: str, has_u_offset: bool, has_l_gap: bool
+) -> plt.Figure:
     fig = plt.figure(figsize=(8.5, 11))
     fig.text(0.5, 0.95, model_label, ha="center", fontsize=20, weight="bold")
     fig.text(0.5, 0.915, f"BICc = {report_row['BICc']:.2f}    AIC = {report_row['AIC']:.2f}", ha="center", fontsize=12)
 
-    table_df = build_toggle_table(report_row, pl, has_u_offset)
+    table_df = build_toggle_table(report_row, pl, has_u_offset, has_l_gap)
     ax_table = fig.add_axes((0.08, 0.55, 0.84, 0.3))
     ax_table.axis("off")
     tbl = ax_table.table(
@@ -221,7 +326,15 @@ def plot_info_page(model_label: str, report_row: pd.Series, pl: str, has_u_offse
     tbl.set_fontsize(10)
     tbl.scale(1, 1.8)
 
-    if has_u_offset:
+    if has_l_gap:
+        note = (
+            "Note: L is not directly estimated -- it is derived as\n"
+            "L = mean_cc + exp(L_gap), using the L_gap row above. U is also not\n"
+            "estimated -- it is simply mean_vc. Unlike other pure_rlu variants,\n"
+            "edge is not folded into U here: edge multiplies the whole prediction\n"
+            "afterward (f_edge = f * (1 - edge))."
+        )
+    elif has_u_offset:
         note = (
             "Note: U itself is still not directly estimated -- it is derived as\n"
             "U = mean_vc * (1 - edge) - exp(U_offset), using the U_offset row above."
@@ -235,7 +348,9 @@ def plot_info_page(model_label: str, report_row: pd.Series, pl: str, has_u_offse
     return fig
 
 
-def plot_fit_grid(plot_params: pd.DataFrame, corrected_data: pd.DataFrame, pl: str) -> plt.Figure:
+def plot_fit_grid(
+    plot_params: pd.DataFrame, corrected_data: pd.DataFrame, pl: str, has_l_gap: bool
+) -> plt.Figure:
     n = plot_params.mab_virus.nunique()
     ncols = 4
     nrows = int(np.ceil(n / ncols))
@@ -245,13 +360,20 @@ def plot_fit_grid(plot_params: pd.DataFrame, corrected_data: pd.DataFrame, pl: s
     axes = np.atleast_1d(axes).flatten()
     t = np.exp(np.linspace(np.log(1e-4), np.log(5e1), 10_000))
 
+    # v3 (has_l_gap) has an explicit 'vc' specrole that isn't part of the
+    # dose-response curve either, so it must be excluded by name rather than
+    # by "everything that isn't cc" the way v1/v2 do it.
+    role_mask = (
+        (corrected_data.specrole == "sample") if has_l_gap else (corrected_data.specrole != "cc")
+    )
+
     for ax, (_, row) in zip(axes, plot_params.iterrows()):
         mv = row.mab_virus
-        dat = corrected_data.loc[
-            (corrected_data.mab_virus == mv) & (corrected_data.specrole != "cc")
-        ].copy()
+        dat = corrected_data.loc[(corrected_data.mab_virus == mv) & role_mask].copy()
         if pl == "5PL":
             y = logistic_5pl(t, row.U, row.L, row.m, row.e, row.s)
+        elif has_l_gap:
+            y = logistic_4pl_v3(t, row.U, row.L, row.m, row.e)
         else:
             y = logistic_4pl(t, row.U, row.L, row.m, row.e)
         ax.plot(t, 1 - y, linewidth=2, color="red")
@@ -282,6 +404,10 @@ def plot_fit_grid(plot_params: pd.DataFrame, corrected_data: pd.DataFrame, pl: s
             bbox=dict(facecolor="white", edgecolor="gray", alpha=0.8, boxstyle="round,pad=0.3"),
         )
         ax.set_xscale("log")
+        # Without this, a degenerate ic50/ic80 (e.g. from a near-zero m
+        # blowing up the 1/m exponent in icp_4pl_v3) drags the axis out to
+        # absurd values for the whole grid, since axes share x.
+        ax.set_xlim(t.min(), t.max())
         ax.set_title(mv, fontsize=9)
 
     for ax in axes[n:]:
@@ -344,22 +470,23 @@ def main() -> None:
     model_dir = PROJECTS[project] / "model_files" / args.model
     params = pd.read_csv(model_dir / "IndividualParameters" / "estimatedIndividualParameters.txt")
     has_u_offset = "U_offset_mode" in params.columns
+    has_l_gap = "L_gap_mode" in params.columns
 
     data_csv = args.data_csv or resolve_data_csv(model_dir / f"{args.model}_fitted.mlxtran")
     data = pd.read_csv(data_csv)
 
-    raw_params = summarize_raw_params(params, pl)
-    plot_params = calc_params_ics(data, params, pl, has_u_offset)
-    corrected_data = build_corrected_data(data, params, pl, has_u_offset)
+    raw_params = summarize_raw_params(data, params, pl, has_l_gap)
+    plot_params = calc_params_ics(data, params, pl, has_u_offset, has_l_gap)
+    corrected_data = build_corrected_data(data, params, pl, has_u_offset, has_l_gap)
 
     output = args.output or Path(f"{project}_{args.model}_report.pdf")
 
     with PdfPages(output) as pdf:
         for fig in (
-            plot_info_page(f"{project} {args.model}", report_row, pl, has_u_offset),
+            plot_info_page(f"{project} {args.model}", report_row, pl, has_u_offset, has_l_gap),
             plot_design_matrix(report, f"{project} {args.model}"),
             plot_param_boxplots(raw_params, pl),
-            plot_fit_grid(plot_params, corrected_data, pl),
+            plot_fit_grid(plot_params, corrected_data, pl, has_l_gap),
         ):
             pdf.savefig(fig, bbox_inches="tight")
             plt.close(fig)
