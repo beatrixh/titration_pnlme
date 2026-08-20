@@ -13,11 +13,24 @@ library(dplyr)
 
 models_dir <- "/home/bhaddock/repos/titration_pnlme/single_mabs/4PL_pure_rlu_v3/model_files"
 model_files <- list.files(models_dir, pattern = "^4PL_m[0-9]+\\.mlxtran$")
-model_names <- sub("^4PL_(m[0-9]+)\\.mlxtran$", "\\1", model_files)
-model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
+all_model_names <- sub("^4PL_(m[0-9]+)\\.mlxtran$", "\\1", model_files)
+all_model_names <- all_model_names[order(as.integer(sub("^m", "", all_model_names)))]
 
-# model_names <- paste0("m", 65:128)
-model_names <- c("m88", "m7", "m23", "m87", "m19", "m71", "m83", "m20", "m110", "m126", "m57", "m122", "m106")
+# A model counts as complete once its _complete.flag exists (written at the
+# end of a successful run_one_model call below) -- scan for these up front
+# so a rerun only picks up outstanding models instead of redoing everything.
+is_complete <- file.exists(file.path(models_dir, all_model_names, "_complete.flag"))
+model_names <- all_model_names[!is_complete]
+
+cat(sprintf(
+  "[%s] %d/%d models already complete; %d outstanding: %s\n",
+  format(Sys.time(), "%Y-%m-%d %H:%M:%S"),
+  sum(is_complete), length(all_model_names), length(model_names),
+  paste(model_names, collapse = ", ")
+))
+
+# To further restrict the outstanding set (e.g. a manual subset), filter
+# model_names here, e.g.: model_names <- intersect(model_names, c("m59"))
 
 run_one_model <- function(model_name, models_dir) {
   library(lixoftConnectors)
