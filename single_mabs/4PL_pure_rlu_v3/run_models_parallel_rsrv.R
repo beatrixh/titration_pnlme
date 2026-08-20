@@ -11,13 +11,13 @@ library(ps)
 library(parallel)
 library(dplyr)
 
-models_dir <- "/home/bhaddock/repos/bnAb_pnlme/single_mabs/4PL_pure_rlu_v3/model_files"
+models_dir <- "/home/bhaddock/repos/titration_pnlme/single_mabs/4PL_pure_rlu_v3/model_files"
 model_files <- list.files(models_dir, pattern = "^4PL_m[0-9]+\\.mlxtran$")
 model_names <- sub("^4PL_(m[0-9]+)\\.mlxtran$", "\\1", model_files)
 model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 
 # model_names <- paste0("m", 65:128)
-model_names <- c("m59")
+model_names <- c("m88", "m7", "m23", "m87", "m19", "m71", "m83", "m20", "m110", "m126", "m57", "m122", "m106")
 
 run_one_model <- function(model_name, models_dir) {
   library(lixoftConnectors)
@@ -110,7 +110,7 @@ run_one_model <- function(model_name, models_dir) {
   invisible(model_name)
 }
 
-n_workers <- 1
+n_workers <- 5
 cl <- makeCluster(n_workers)
 
 results <- tryCatch(
