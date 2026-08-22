@@ -4,7 +4,6 @@
 # the same location, risking a corrupted/partial install.
 install.packages("/usr/local/Lixoft/MonolixSuite2024R1/connectors/lixoftConnectors.tar.gz",
                  repos = NULL, type="source", INSTALL_opts ="--no-multiarch")
-install.packages("ps")
 
 library(lixoftConnectors)
 library(ps)
@@ -31,6 +30,8 @@ cat(sprintf(
 
 # To further restrict the outstanding set (e.g. a manual subset), filter
 # model_names here, e.g.: model_names <- intersect(model_names, c("m59"))
+
+model_names <- c("m2","m5","m100","m120","m116")
 
 run_one_model <- function(model_name, models_dir) {
   library(lixoftConnectors)
@@ -123,7 +124,7 @@ run_one_model <- function(model_name, models_dir) {
   invisible(model_name)
 }
 
-n_workers <- 5
+n_workers <- 4 
 cl <- makeCluster(n_workers)
 
 results <- tryCatch(
