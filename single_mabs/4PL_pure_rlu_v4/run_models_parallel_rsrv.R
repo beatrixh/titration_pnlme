@@ -4,19 +4,21 @@
 # the same location, risking a corrupted/partial install.
 install.packages("/usr/local/Lixoft/MonolixSuite2024R1/connectors/lixoftConnectors.tar.gz",
                  repos = NULL, type="source", INSTALL_opts ="--no-multiarch")
-install.packages("ps")
 
 library(lixoftConnectors)
 library(ps)
 library(parallel)
 library(dplyr)
 
-models_dir <- "/home/bhaddock/repos/bnAb_pnlme/single_mabs/4PL_pure_rlu/model_files"
+models_dir <- "/home/bhaddock/repos/titration_pnlme/single_mabs/4PL_pure_rlu_v4/model_files"
 model_files <- list.files(models_dir, pattern = "^4PL_m[0-9]+\\.mlxtran$")
 model_names <- sub("^4PL_(m[0-9]+)\\.mlxtran$", "\\1", model_files)
 model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 
 model_names <- paste0("m", 65:128)
+model_names <- c("m127", "m15", "m47", "m111", "m107", "m43", "m44", "m108", "m112", "m75", "m123", "m27", "m91", "m99", "m55", "m100", "m103", "m39", "m40", "m119", "m52", "m115", "m67", "m51", "m0", "m4", "m116", "m3", "m87", "m7", "m128")
+model_names <- c("m55", "m100", "m39", "m40", "m119", "m52", "m115", "m67", "m51", "m0", "m4", "m116", "m3", "m87", "m7", "m128")
+
 
 run_one_model <- function(model_name, models_dir) {
   library(lixoftConnectors)
@@ -109,7 +111,7 @@ run_one_model <- function(model_name, models_dir) {
   invisible(model_name)
 }
 
-n_workers <- 6 
+n_workers <- 4 
 cl <- makeCluster(n_workers)
 
 results <- tryCatch(

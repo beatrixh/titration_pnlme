@@ -1,0 +1,9 @@
+[2026-08-21 18:07:32] m119 :: 363.3 MB
+[2026-08-21 18:07:32] project loaded :: 363.3 MB
+[2026-08-21 18:07:32] starting runPopulationParameterEstimation :: 363.6 MB
+[2026-08-21 23:22:48] m119 :: 851.5 MB
+[2026-08-21 23:22:48] project loaded :: 851.5 MB
+[2026-08-21 23:22:48] starting runPopulationParameterEstimation :: 851.5 MB
+[2026-08-22 11:00:42] m119 :: 363.4 MB
+[2026-08-22 11:00:42] project loaded :: 363.4 MB
+[2026-08-22 11:00:42] starting runPopulationParameterEstimation :: 363.7 MB

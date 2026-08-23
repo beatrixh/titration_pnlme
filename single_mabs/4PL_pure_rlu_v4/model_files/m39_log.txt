@@ -1,0 +1,6 @@
+[2026-08-21 22:12:36] m39 :: 847.9 MB
+[2026-08-21 22:12:36] project loaded :: 847.9 MB
+[2026-08-21 22:12:36] starting runPopulationParameterEstimation :: 847.9 MB
+[2026-08-22 11:00:43] m39 :: 356.8 MB
+[2026-08-22 11:00:43] project loaded :: 356.8 MB
+[2026-08-22 11:00:43] starting runPopulationParameterEstimation :: 357.1 MB

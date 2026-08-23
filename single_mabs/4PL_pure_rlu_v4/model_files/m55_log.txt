@@ -1,0 +1,6 @@
+[2026-08-21 20:16:27] m55 :: 715.7 MB
+[2026-08-21 20:16:27] project loaded :: 715.7 MB
+[2026-08-21 20:16:27] starting runPopulationParameterEstimation :: 715.7 MB
+[2026-08-22 11:00:42] m55 :: 361.1 MB
+[2026-08-22 11:00:42] project loaded :: 361.1 MB
+[2026-08-22 11:00:42] starting runPopulationParameterEstimation :: 361.4 MB
