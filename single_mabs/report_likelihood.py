@@ -15,11 +15,22 @@ def _discover_projects() -> dict[str, Path]:
     4PL_pure_rlu_v3) show up automatically with no edits needed here.
     "4PL"/"5PL" are kept as short aliases for the two names people actually
     type instead of the full "*_edge_effects" directory name.
+
+    Some projects (e.g. 4PL_plate_fit) nest their versions one level deeper
+    (4PL_plate_fit/v2, /v3, ...) instead of the flat *_v2/*_v3 sibling-directory
+    convention used elsewhere -- those are discovered too and keyed as
+    "{parent}_{child}" (e.g. "4PL_plate_fit_v2") to match that convention.
     """
     projects = {
         p.name: p for p in BASE_DIR.iterdir()
         if p.is_dir() and (p / "model_tracker.xlsx").exists()
     }
+    for parent in BASE_DIR.iterdir():
+        if not parent.is_dir():
+            continue
+        for child in parent.iterdir():
+            if child.is_dir() and (child / "model_tracker.xlsx").exists():
+                projects[f"{parent.name}_{child.name}"] = child
     if "4PL_edge_effects" in projects:
         projects["4PL"] = projects["4PL_edge_effects"]
     if "5PL_edge_effects" in projects:
