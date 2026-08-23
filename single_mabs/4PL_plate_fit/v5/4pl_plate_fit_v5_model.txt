@@ -2,6 +2,7 @@ DESCRIPTION:
 
 [LONGITUDINAL]
 input={
+	U,
 	L,
 	L_gap,
 	h, 
@@ -12,7 +13,7 @@ input={
 	plate_row,
 	binary_cc,
 	binary_vc,
-	binary_sample,
+	binary_sample
 }
 plate_col = {use=regressor}
 plate_row = {use=regressor}
