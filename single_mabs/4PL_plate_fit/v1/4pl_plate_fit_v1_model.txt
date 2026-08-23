@@ -1,0 +1,67 @@
+DESCRIPTION:
+
+[LONGITUDINAL]
+input={L_gap, 
+	h, 
+	f, 
+	alpha, 
+	k, 
+	plate_col, 
+	plate_row,
+	vc_1,
+	vc_2,
+	vc_3,
+	vc_4,
+	vc_5,
+	vc_6,
+	vc_7,
+	vc_8,
+	cc_1,
+	cc_2,
+	cc_3,
+	cc_4,
+	cc_5,
+	cc_6,
+	cc_7,
+	cc_8,
+}
+plate_col = {use=regressor}
+plate_row = {use=regressor}
+vc_1 = {use=regressor}
+vc_2 = {use=regressor}
+vc_3 = {use=regressor}
+vc_4 = {use=regressor}
+vc_5 = {use=regressor}
+vc_6 = {use=regressor}
+vc_7 = {use=regressor}
+vc_8 = {use=regressor}
+cc_1 = {use=regressor}
+cc_2 = {use=regressor}
+cc_3 = {use=regressor}
+cc_4 = {use=regressor}
+cc_5 = {use=regressor}
+cc_6 = {use=regressor}
+cc_7 = {use=regressor}
+cc_8 = {use=regressor}
+
+PK:
+
+EQUATION:
+; this doesnt let the model really learn from the shape of the control wells? I think it would learn more if i remove the L_gap
+; but it's not penalized if the edge effects don't go through the vc points
+; could i instead have two 
+
+U_hypoth = (1/8)*(vc_1/(1-alpha*exp(-k))+vc_2/(1-alpha*exp(-2*k))+vc_3/(1-alpha*exp(-2*k))+vc_4/(1-alpha*exp(-2*k))+vc_5/(1-alpha*exp(-2*k))+vc_6/(1-alpha*exp(-2*k))+vc_7/(1-alpha*exp(-2*k))+vc_8/(1-alpha*exp(-k)))
+plate_L_hypoth = (1/8)*(cc_1/(1-alpha*exp(-k))+cc_2/(1-alpha*exp(-2*k))+cc_3/(1-alpha*exp(-2*k))+cc_4/(1-alpha*exp(-2*k))+cc_5/(1-alpha*exp(-2*k))+cc_6/(1-alpha*exp(-2*k))+cc_7/(1-alpha*exp(-2*k))+cc_8/(1-alpha*exp(-k)))
+L_hypoth = plate_L_hypoth + exp(L_gap)
+
+RLU_hypoth = L_hypoth + (U_hypoth-L_hypoth)/(1 + exp(h*(log(t) - log(f))))
+
+dist_edge = min(
+ min(plate_row, 9-plate_row), min(plate_col, 13-plate_col) 
+) 
+RLU_experimental = RLU_hypoth*(1-alpha*exp(-k*dist_edge))
+
+
+OUTPUT: 
+output = {RLU_experimental}
