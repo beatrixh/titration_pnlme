@@ -1,0 +1,3 @@
+[2026-08-22 21:06:43] m0 :: 370.6 MB
+[2026-08-22 21:06:43] project loaded :: 370.6 MB
+[2026-08-22 21:06:43] starting runPopulationParameterEstimation :: 370.9 MB
