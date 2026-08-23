@@ -32,7 +32,7 @@ E_ij = 1 - alpha*exp(-k*d_ij)
 
 RLU_vc = U*E_ij
 RLU_cc = L*E_ij
-RLU_sample = (L+exp(L_gap) + (U-(L+exp(L_gap)))/(1 + exp(h*(log(t) - log(f)))))*E_ij
+RLU_sample = (L + (U-(L+exp(L_gap)))/(1 + exp(h*(log(t) - log(f)))))*E_ij
 
 RLU_all = binary_vc*RLU_vc + binary_cc*RLU_cc + binary_sample*RLU_sample
 

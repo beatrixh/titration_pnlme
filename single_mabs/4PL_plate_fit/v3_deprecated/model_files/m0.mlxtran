@@ -20,10 +20,6 @@ binary_sample = {use=regressor}
 
 <MODEL>
 
-[POPULATION]
-DEFINITION:
-L_gap_pop = {distribution=logNormal, typical=4, sd=2}
-
 [COVARIATE]
 input = {goes_down, mab_virus, run_id}
 
@@ -60,7 +56,7 @@ data = 'rlu'
 model = rlu
 
 <PARAMETER>
-L_gap_pop = {value=3.672, method=MAP}
+L_gap_pop = {value=3.672, method=MLE}
 L_pop = {value=788.8, method=MLE}
 U_pop = {value=54091, method=MLE}
 a = {value=1, method=MLE}

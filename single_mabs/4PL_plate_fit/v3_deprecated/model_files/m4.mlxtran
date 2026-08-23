@@ -20,10 +20,6 @@ binary_sample = {use=regressor}
 
 <MODEL>
 
-[POPULATION]
-DEFINITION:
-L_gap_pop = {distribution=logNormal, typical=4, sd=2}
-
 [COVARIATE]
 input = {goes_down, mab_virus, run_id}
 
@@ -126,7 +122,7 @@ beta_L_run_id_84 = {value=0, method=MLE}
 beta_L_run_id_847 = {value=0, method=MLE}
 beta_L_run_id_863 = {value=0, method=MLE}
 beta_L_run_id_963 = {value=0, method=MLE}
-L_gap_pop = {value=3.672, method=MAP}
+L_gap_pop = {value=3.672, method=MLE}
 omega_L_gap = {value=1, method=MLE}
 beta_L_gap_mab_virus_22_0_162 = {value=0, method=MLE}
 beta_L_gap_mab_virus_22_0_174 = {value=0, method=MLE}
