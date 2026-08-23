@@ -20,10 +20,6 @@ binary_sample = {use=regressor}
 
 <MODEL>
 
-[POPULATION]
-DEFINITION:
-L_gap_pop = {distribution=logNormal, typical=3, sd=2}
-
 [COVARIATE]
 input = {goes_down, mab_virus, run_id}
 
@@ -60,11 +56,11 @@ data = 'rlu'
 model = rlu
 
 <PARAMETER>
-L_gap_pop = {value=0.000146, method=MAP}
-L_pop = {value=5861, method=MLE}
-U_pop = {value=394030, method=MLE}
+L_gap_pop = {value=0.00031, method=MLE}
+L_pop = {value=3145, method=MLE}
+U_pop = {value=211597, method=MLE}
 a = {value=1, method=MLE}
-alpha_pop = {value=0.262, method=MLE}
+alpha_pop = {value=0.244, method=MLE}
 b = {value=0.3, method=MLE}
 beta_L_gap_goes_down_True = {value=0, method=MLE}
 beta_L_gap_mab_virus_22_0_162 = {value=0, method=MLE}
@@ -435,9 +431,9 @@ beta_k_run_id_847 = {value=0, method=MLE}
 beta_k_run_id_863 = {value=0, method=MLE}
 beta_k_run_id_963 = {value=0, method=MLE}
 c = {value=1, method=FIXED}
-f_pop = {value=0.541, method=MLE}
+f_pop = {value=0.543, method=MLE}
 h_pop = {value=1.544, method=MLE}
-k_pop = {value=0.0363, method=MLE}
+k_pop = {value=0.0514, method=MLE}
 omega_L_gap = {value=1, method=MLE}
 omega_f = {value=1, method=MLE}
 omega_h = {value=1, method=MLE}

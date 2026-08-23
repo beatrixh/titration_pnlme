@@ -20,6 +20,10 @@ binary_sample = {use=regressor}
 
 <MODEL>
 
+[POPULATION]
+DEFINITION:
+L_gap_pop = {distribution=logNormal, typical=3, sd=2}
+
 [COVARIATE]
 input = {goes_down, mab_virus, run_id}
 
@@ -89,7 +93,7 @@ beta_U_run_id_84 = {value=0, method=MLE}
 beta_U_run_id_847 = {value=0, method=MLE}
 beta_U_run_id_863 = {value=0, method=MLE}
 beta_U_run_id_963 = {value=0, method=MLE}
-L_pop = {value=3145, method=MLE}
+L_pop = {value=5861, method=MLE}
 beta_L_run_id_1042 = {value=0, method=MLE}
 beta_L_run_id_1043 = {value=0, method=MLE}
 beta_L_run_id_1056 = {value=0, method=MLE}
@@ -122,7 +126,7 @@ beta_L_run_id_84 = {value=0, method=MLE}
 beta_L_run_id_847 = {value=0, method=MLE}
 beta_L_run_id_863 = {value=0, method=MLE}
 beta_L_run_id_963 = {value=0, method=MLE}
-L_gap_pop = {value=0.00031, method=MLE}
+L_gap_pop = {value=0.000146, method=MAP}
 omega_L_gap = {value=1, method=MLE}
 beta_L_gap_mab_virus_22_0_162 = {value=0, method=MLE}
 beta_L_gap_mab_virus_22_0_174 = {value=0, method=MLE}
@@ -207,9 +211,9 @@ beta_L_gap_goes_down_True = {value=0, method=MLE}
 h_pop = {value=1.544, method=MLE}
 omega_h = {value=1, method=MLE}
 beta_h_goes_down_True = {value=0, method=MLE}
-f_pop = {value=0.543, method=MLE}
+f_pop = {value=0.541, method=MLE}
 omega_f = {value=1, method=MLE}
-alpha_pop = {value=0.244, method=MLE}
+alpha_pop = {value=0.262, method=MLE}
 beta_alpha_run_id_1042 = {value=0, method=MLE}
 beta_alpha_run_id_1043 = {value=0, method=MLE}
 beta_alpha_run_id_1056 = {value=0, method=MLE}
@@ -242,7 +246,7 @@ beta_alpha_run_id_84 = {value=0, method=MLE}
 beta_alpha_run_id_847 = {value=0, method=MLE}
 beta_alpha_run_id_863 = {value=0, method=MLE}
 beta_alpha_run_id_963 = {value=0, method=MLE}
-k_pop = {value=0.0514, method=MLE}
+k_pop = {value=0.0363, method=MLE}
 beta_k_run_id_1042 = {value=0, method=MLE}
 beta_k_run_id_1043 = {value=0, method=MLE}
 beta_k_run_id_1056 = {value=0, method=MLE}
