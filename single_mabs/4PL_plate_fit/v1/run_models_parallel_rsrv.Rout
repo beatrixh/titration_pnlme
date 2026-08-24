@@ -17,8 +17,6 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
-[Previously saved workspace restored]
-
 > # Installed once here, sequentially, before any workers are spun up --
 > # install.packages() writes to a shared library path, so running it inside
 > # run_one_model() would have every worker try to install concurrently into
@@ -167,5 +165,5 @@ The following objects are masked from ‘package:base’:
 + )
 > 
 > proc.time()
-   user  system elapsed 
- 16.373   0.942  21.870 
+    user   system  elapsed 
+  16.299    1.001 2619.870 
