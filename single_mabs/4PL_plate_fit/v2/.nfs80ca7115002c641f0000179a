@@ -162,3 +162,6 @@ The following objects are masked from ‘package:base’:
 +   ),
 +   finally = stopCluster(cl)
 + )
+Error in unserialize(socklist[[n]]) : error reading from connection
+Calls: tryCatch ... recvOneData -> recvOneData.SOCKcluster -> unserialize
+Execution halted

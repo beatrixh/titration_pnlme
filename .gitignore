@@ -1,7 +1,7 @@
 single_mabs/input_data/*
 *.csv
 *figures/
-*.nfs*
+.nfs*
 
 # Monolix's binary project cache -- can't be safely text-retagged and isn't
 # meant for human/public consumption anyway (see retag_repo.py's
