@@ -23,7 +23,7 @@ input={L_gap,
 	cc_5,
 	cc_6,
 	cc_7,
-	cc_8,
+	cc_8
 }
 plate_col = {use=regressor}
 plate_row = {use=regressor}
@@ -52,7 +52,9 @@ EQUATION:
 ; could i instead have two 
 
 U_hypoth = (1/8)*(vc_1/(1-alpha*exp(-k))+vc_2/(1-alpha*exp(-2*k))+vc_3/(1-alpha*exp(-2*k))+vc_4/(1-alpha*exp(-2*k))+vc_5/(1-alpha*exp(-2*k))+vc_6/(1-alpha*exp(-2*k))+vc_7/(1-alpha*exp(-2*k))+vc_8/(1-alpha*exp(-k)))
+
 plate_L_hypoth = (1/8)*(cc_1/(1-alpha*exp(-k))+cc_2/(1-alpha*exp(-2*k))+cc_3/(1-alpha*exp(-2*k))+cc_4/(1-alpha*exp(-2*k))+cc_5/(1-alpha*exp(-2*k))+cc_6/(1-alpha*exp(-2*k))+cc_7/(1-alpha*exp(-2*k))+cc_8/(1-alpha*exp(-k)))
+
 L_hypoth = plate_L_hypoth + exp(L_gap)
 
 RLU_hypoth = L_hypoth + (U_hypoth-L_hypoth)/(1 + exp(h*(log(t) - log(f))))
