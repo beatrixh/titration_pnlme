@@ -14,10 +14,6 @@ EFFECT_TO_COVARIATE = {
     "run_id fixed effect": "run_id",
 }
 
-# U_pop is held FIXED at 1 regardless of CONFIG, matching this project's
-# assay-normalization convention. Pass --no-fix-u to let U_pop float instead.
-FIX_U_POP_AT_1 = True
-
 
 def sanitize(level: str) -> str:
     # Mlxtran identifiers must be ASCII alphanumeric/underscore -- anything
@@ -194,28 +190,31 @@ def build_parameter_block(
     config: dict,
     categories: dict[str, list[str]],
     existing: dict[str, tuple[str, str]],
-    fix_u_pop_at_1: bool,
 ) -> str:
     lines = ["<PARAMETER>"]
+    emitted: set[str] = set()
 
     def emit(name: str, default_value: str, default_method: str) -> None:
         value, method = existing.get(name, (default_value, default_method))
         lines.append(f"{name} = {{value={value}, method={method}}}")
+        emitted.add(name)
 
     for p in param_order:
-        if p == "U" and fix_u_pop_at_1:
-            lines.append("U_pop = {value=1, method=FIXED}")
-        else:
-            emit(f"{p}_pop", "1", "MLE")
+        emit(f"{p}_pop", "1", "MLE")
         if config[p]["variability"]:
             emit(f"omega_{p}", "1", "MLE")
         for cov in config[p]["covariates"]:
             for lvl in categories[cov][1:]:
                 emit(beta_name(p, cov, lvl), "0", "MLE")
 
-    for name, default in [("a", ("1", "MLE")), ("b", ("1", "MLE")), ("c", ("1", "FIXED"))]:
-        value, method = existing.get(name, default)
-        lines.append(f"{name} = {{value={value}, method={method}}}")
+    # Anything else the template's own <PARAMETER> block declares (error
+    # model params like a/b, or whatever else it has) is copied verbatim, in
+    # the template's own order -- no assumption about which names or how
+    # many there are, and nothing is added that the template doesn't
+    # already have.
+    for name, (value, method) in existing.items():
+        if name not in emitted:
+            lines.append(f"{name} = {{value={value}, method={method}}}")
 
     return "\n".join(lines)
 
@@ -228,7 +227,6 @@ def generate_one(
     tracker: Path,
     output_dir: Path,
     prefix: str,
-    fix_u_pop_at_1: bool,
 ) -> None:
     missing = [p for p in param_order if p not in config]
     if missing:
@@ -250,7 +248,7 @@ def generate_one(
     existing = extract_existing_parameters(text)
 
     new_individual = build_individual_block(param_order, config, categories, distributions)
-    new_parameter = build_parameter_block(param_order, config, categories, existing, fix_u_pop_at_1)
+    new_parameter = build_parameter_block(param_order, config, categories, existing)
 
     individual_start = text.index("[INDIVIDUAL]")
     individual_end = text.index("[LONGITUDINAL]")
@@ -281,7 +279,6 @@ def main() -> None:
         help="filename prefix for generated files, e.g. '5PL_edge_effects_' -> "
              "'5PL_edge_effects_m0.mlxtran'. Defaults to no prefix ('m0.mlxtran').",
     )
-    parser.add_argument("--no-fix-u", action="store_true", help="let U_pop float instead of FIXED=1")
     parser.add_argument(
         "--exclude", nargs="*", default=[],
         help="model names to skip, e.g. when one of them is being used as --template "
@@ -318,7 +315,6 @@ def main() -> None:
             args.tracker,
             args.output_dir,
             args.prefix,
-            fix_u_pop_at_1=not args.no_fix_u,
         )
 
 
