@@ -1,0 +1,5 @@
+[2026-08-27 00:15:09] m13 :: 412.3 MB
+[2026-08-27 00:15:09] project loaded :: 412.3 MB
+[2026-08-27 00:15:09] starting runPopulationParameterEstimation :: 412.3 MB
+[2026-08-27 00:16:08] finished runPopulationParameterEstimation :: 412.3 MB
+[2026-08-27 00:16:08] finished runConditionalModeEstimation :: 412.3 MB
