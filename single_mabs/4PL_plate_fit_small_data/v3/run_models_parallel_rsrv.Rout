@@ -162,3 +162,7 @@ The following objects are masked from ‘package:base’:
 +   ),
 +   finally = stopCluster(cl)
 + )
+> 
+> proc.time()
+   user  system elapsed 
+ 15.590   1.036 675.938 

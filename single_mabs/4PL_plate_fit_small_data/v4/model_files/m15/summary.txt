@@ -1,0 +1,105 @@
+********************************************************************************
+*                         m15.mlxtran                                          *
+*                         August 27, 2026 at 00:19:18                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+U_pop                     :       9.05e+04
+beta_U_run_id_1197        :      -0.000423
+beta_U_run_id_152         :          -3.69
+beta_U_run_id_411         :      -3.69e+04
+beta_U_run_id_705         :      -7.63e+04
+L_pop                     :            684
+beta_L_mab_virus_22_0_292 :           96.2
+beta_L_mab_virus_22_0_322 :             20
+beta_L_mab_virus_28_0_103 :         -0.156
+beta_L_mab_virus_28_0_292 :           96.6
+beta_L_mab_virus_28_0_322 :           19.8
+beta_L_mab_virus_6_0_233  :           32.5
+beta_L_mab_virus_65_0_103 :        -0.0946
+beta_L_mab_virus_65_0_292 :           96.6
+beta_L_mab_virus_65_0_322 :           19.7
+beta_L_mab_virus_69_0_103 :          -2.92
+beta_L_mab_virus_69_0_233 :           30.7
+beta_L_mab_virus_69_0_274 :           30.5
+beta_L_mab_virus_69_0_292 :           93.9
+beta_L_mab_virus_69_0_322 :           17.1
+beta_L_mab_virus_70_0_274 :           33.2
+beta_L_run_id_1197        :           96.7
+beta_L_run_id_152         :           76.7
+beta_L_run_id_411         :           63.7
+beta_L_run_id_705         :           63.1
+h_pop                     :          0.153
+f_pop                     :              1
+alpha_pop                 :          0.328
+beta_alpha_run_id_1197    :       5.56e-08
+beta_alpha_run_id_152     :      -3.16e-09
+beta_alpha_run_id_411     :      -0.000104
+beta_alpha_run_id_705     :           0.63
+
+Standard Deviation of the Random Effects -
+omega_L                   :       7.07e-08
+omega_h                   :        1.1e-07
+omega_f                   :           3.93
+
+Error Model Parameters -------------------
+a                         :       2.22e-16
+b                         :          0.718
+
+Elapsed time (seconds):       49
+CPU time     (seconds):       64
+Exploratory phase iterations:      229 (Autostop)
+Smoothing phase iterations:        143 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+U     :      1.43e+04      5.37e+04      9.05e+04      9.05e+04      9.05e+04           nan
+L     :           777           777           778           780           780           100
+h     :         0.153         0.153         0.153         0.153         0.153           100
+f     :      0.000726         0.244             1             1          18.9          49.5
+alpha :         0.328         0.328         0.328         0.328         0.958           nan
+
+Elapsed time (seconds):    0.064
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       10176.05
+Akaike Information Criteria               (AIC) :       10250.05
+Corrected Bayesian Information Criteria  (BICc) :       10375.74
+Bayesian Information Criteria             (BIC) :       10356.15
+
+Elapsed time                          (seconds) :           6.66
+CPU time                              (seconds) :           8.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 8.578
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 130
+Number of observations (rlu): 480
+Number of doses: 0
+
