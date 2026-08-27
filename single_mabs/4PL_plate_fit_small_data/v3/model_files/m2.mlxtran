@@ -32,15 +32,16 @@ mab_virus = {type=categorical, categories={'22.0|103', '22.0|292', '22.0|322', '
 run_id = {type=categorical, categories={'1159', '1197', '152', '411', '705'}}
 
 [INDIVIDUAL]
-input = {U_pop, L_pop, omega_L, h_pop, omega_h, f_pop, omega_f, alpha_pop, goes_down, beta_U_goes_down_True, beta_f_goes_down_True, mab_virus, beta_U_mab_virus_22_0_292, beta_U_mab_virus_22_0_322, beta_U_mab_virus_28_0_103, beta_U_mab_virus_28_0_292, beta_U_mab_virus_28_0_322, beta_U_mab_virus_6_0_233, beta_U_mab_virus_65_0_103, beta_U_mab_virus_65_0_292, beta_U_mab_virus_65_0_322, beta_U_mab_virus_69_0_103, beta_U_mab_virus_69_0_233, beta_U_mab_virus_69_0_274, beta_U_mab_virus_69_0_292, beta_U_mab_virus_69_0_322, beta_U_mab_virus_70_0_274, beta_L_mab_virus_22_0_292, beta_L_mab_virus_22_0_322, beta_L_mab_virus_28_0_103, beta_L_mab_virus_28_0_292, beta_L_mab_virus_28_0_322, beta_L_mab_virus_6_0_233, beta_L_mab_virus_65_0_103, beta_L_mab_virus_65_0_292, beta_L_mab_virus_65_0_322, beta_L_mab_virus_69_0_103, beta_L_mab_virus_69_0_233, beta_L_mab_virus_69_0_274, beta_L_mab_virus_69_0_292, beta_L_mab_virus_69_0_322, beta_L_mab_virus_70_0_274, beta_f_mab_virus_22_0_292, beta_f_mab_virus_22_0_322, beta_f_mab_virus_28_0_103, beta_f_mab_virus_28_0_292, beta_f_mab_virus_28_0_322, beta_f_mab_virus_6_0_233, beta_f_mab_virus_65_0_103, beta_f_mab_virus_65_0_292, beta_f_mab_virus_65_0_322, beta_f_mab_virus_69_0_103, beta_f_mab_virus_69_0_233, beta_f_mab_virus_69_0_274, beta_f_mab_virus_69_0_292, beta_f_mab_virus_69_0_322, beta_f_mab_virus_70_0_274, run_id, beta_U_run_id_1197, beta_U_run_id_152, beta_U_run_id_411, beta_U_run_id_705, beta_L_run_id_1197, beta_L_run_id_152, beta_L_run_id_411, beta_L_run_id_705, beta_alpha_run_id_1197, beta_alpha_run_id_152, beta_alpha_run_id_411, beta_alpha_run_id_705}
+input = {U_pop, omega_U, L_pop, omega_L, L_gap_pop, omega_L_gap, h_pop, omega_h, f_pop, omega_f, alpha_pop, goes_down, beta_U_goes_down_True, beta_L_gap_goes_down_True, beta_f_goes_down_True, mab_virus, beta_U_mab_virus_22_0_292, beta_U_mab_virus_22_0_322, beta_U_mab_virus_28_0_103, beta_U_mab_virus_28_0_292, beta_U_mab_virus_28_0_322, beta_U_mab_virus_6_0_233, beta_U_mab_virus_65_0_103, beta_U_mab_virus_65_0_292, beta_U_mab_virus_65_0_322, beta_U_mab_virus_69_0_103, beta_U_mab_virus_69_0_233, beta_U_mab_virus_69_0_274, beta_U_mab_virus_69_0_292, beta_U_mab_virus_69_0_322, beta_U_mab_virus_70_0_274, beta_L_mab_virus_22_0_292, beta_L_mab_virus_22_0_322, beta_L_mab_virus_28_0_103, beta_L_mab_virus_28_0_292, beta_L_mab_virus_28_0_322, beta_L_mab_virus_6_0_233, beta_L_mab_virus_65_0_103, beta_L_mab_virus_65_0_292, beta_L_mab_virus_65_0_322, beta_L_mab_virus_69_0_103, beta_L_mab_virus_69_0_233, beta_L_mab_virus_69_0_274, beta_L_mab_virus_69_0_292, beta_L_mab_virus_69_0_322, beta_L_mab_virus_70_0_274, beta_L_gap_mab_virus_22_0_292, beta_L_gap_mab_virus_22_0_322, beta_L_gap_mab_virus_28_0_103, beta_L_gap_mab_virus_28_0_292, beta_L_gap_mab_virus_28_0_322, beta_L_gap_mab_virus_6_0_233, beta_L_gap_mab_virus_65_0_103, beta_L_gap_mab_virus_65_0_292, beta_L_gap_mab_virus_65_0_322, beta_L_gap_mab_virus_69_0_103, beta_L_gap_mab_virus_69_0_233, beta_L_gap_mab_virus_69_0_274, beta_L_gap_mab_virus_69_0_292, beta_L_gap_mab_virus_69_0_322, beta_L_gap_mab_virus_70_0_274, beta_f_mab_virus_22_0_292, beta_f_mab_virus_22_0_322, beta_f_mab_virus_28_0_103, beta_f_mab_virus_28_0_292, beta_f_mab_virus_28_0_322, beta_f_mab_virus_6_0_233, beta_f_mab_virus_65_0_103, beta_f_mab_virus_65_0_292, beta_f_mab_virus_65_0_322, beta_f_mab_virus_69_0_103, beta_f_mab_virus_69_0_233, beta_f_mab_virus_69_0_274, beta_f_mab_virus_69_0_292, beta_f_mab_virus_69_0_322, beta_f_mab_virus_70_0_274, run_id, beta_U_run_id_1197, beta_U_run_id_152, beta_U_run_id_411, beta_U_run_id_705, beta_L_run_id_1197, beta_L_run_id_152, beta_L_run_id_411, beta_L_run_id_705, beta_alpha_run_id_1197, beta_alpha_run_id_152, beta_alpha_run_id_411, beta_alpha_run_id_705}
 
 goes_down = {type=categorical, categories={'False', 'True'}}
 mab_virus = {type=categorical, categories={'22.0|103', '22.0|292', '22.0|322', '28.0|103', '28.0|292', '28.0|322', '6.0|233', '65.0|103', '65.0|292', '65.0|322', '69.0|103', '69.0|233', '69.0|274', '69.0|292', '69.0|322', '70.0|274'}}
 run_id = {type=categorical, categories={'1159', '1197', '152', '411', '705'}}
 
 DEFINITION:
-U = {distribution=normal, typical=U_pop, covariate={mab_virus, goes_down, run_id}, coefficient={{0, beta_U_mab_virus_22_0_292, beta_U_mab_virus_22_0_322, beta_U_mab_virus_28_0_103, beta_U_mab_virus_28_0_292, beta_U_mab_virus_28_0_322, beta_U_mab_virus_6_0_233, beta_U_mab_virus_65_0_103, beta_U_mab_virus_65_0_292, beta_U_mab_virus_65_0_322, beta_U_mab_virus_69_0_103, beta_U_mab_virus_69_0_233, beta_U_mab_virus_69_0_274, beta_U_mab_virus_69_0_292, beta_U_mab_virus_69_0_322, beta_U_mab_virus_70_0_274}, {0, beta_U_goes_down_True}, {0, beta_U_run_id_1197, beta_U_run_id_152, beta_U_run_id_411, beta_U_run_id_705}}, no-variability}
+U = {distribution=normal, typical=U_pop, covariate={mab_virus, goes_down, run_id}, coefficient={{0, beta_U_mab_virus_22_0_292, beta_U_mab_virus_22_0_322, beta_U_mab_virus_28_0_103, beta_U_mab_virus_28_0_292, beta_U_mab_virus_28_0_322, beta_U_mab_virus_6_0_233, beta_U_mab_virus_65_0_103, beta_U_mab_virus_65_0_292, beta_U_mab_virus_65_0_322, beta_U_mab_virus_69_0_103, beta_U_mab_virus_69_0_233, beta_U_mab_virus_69_0_274, beta_U_mab_virus_69_0_292, beta_U_mab_virus_69_0_322, beta_U_mab_virus_70_0_274}, {0, beta_U_goes_down_True}, {0, beta_U_run_id_1197, beta_U_run_id_152, beta_U_run_id_411, beta_U_run_id_705}}, sd=omega_U}
 L = {distribution=normal, typical=L_pop, covariate={mab_virus, run_id}, coefficient={{0, beta_L_mab_virus_22_0_292, beta_L_mab_virus_22_0_322, beta_L_mab_virus_28_0_103, beta_L_mab_virus_28_0_292, beta_L_mab_virus_28_0_322, beta_L_mab_virus_6_0_233, beta_L_mab_virus_65_0_103, beta_L_mab_virus_65_0_292, beta_L_mab_virus_65_0_322, beta_L_mab_virus_69_0_103, beta_L_mab_virus_69_0_233, beta_L_mab_virus_69_0_274, beta_L_mab_virus_69_0_292, beta_L_mab_virus_69_0_322, beta_L_mab_virus_70_0_274}, {0, beta_L_run_id_1197, beta_L_run_id_152, beta_L_run_id_411, beta_L_run_id_705}}, sd=omega_L}
+L_gap = {distribution=logNormal, typical=L_gap_pop, covariate={mab_virus, goes_down}, coefficient={{0, beta_L_gap_mab_virus_22_0_292, beta_L_gap_mab_virus_22_0_322, beta_L_gap_mab_virus_28_0_103, beta_L_gap_mab_virus_28_0_292, beta_L_gap_mab_virus_28_0_322, beta_L_gap_mab_virus_6_0_233, beta_L_gap_mab_virus_65_0_103, beta_L_gap_mab_virus_65_0_292, beta_L_gap_mab_virus_65_0_322, beta_L_gap_mab_virus_69_0_103, beta_L_gap_mab_virus_69_0_233, beta_L_gap_mab_virus_69_0_274, beta_L_gap_mab_virus_69_0_292, beta_L_gap_mab_virus_69_0_322, beta_L_gap_mab_virus_70_0_274}, {0, beta_L_gap_goes_down_True}}, sd=omega_L_gap}
 h = {distribution=normal, typical=h_pop, sd=omega_h}
 f = {distribution=logNormal, typical=f_pop, covariate={mab_virus, goes_down}, coefficient={{0, beta_f_mab_virus_22_0_292, beta_f_mab_virus_22_0_322, beta_f_mab_virus_28_0_103, beta_f_mab_virus_28_0_292, beta_f_mab_virus_28_0_322, beta_f_mab_virus_6_0_233, beta_f_mab_virus_65_0_103, beta_f_mab_virus_65_0_292, beta_f_mab_virus_65_0_322, beta_f_mab_virus_69_0_103, beta_f_mab_virus_69_0_233, beta_f_mab_virus_69_0_274, beta_f_mab_virus_69_0_292, beta_f_mab_virus_69_0_322, beta_f_mab_virus_70_0_274}, {0, beta_f_goes_down_True}}, sd=omega_f}
 alpha = {distribution=normal, typical=alpha_pop, covariate=run_id, coefficient={0, beta_alpha_run_id_1197, beta_alpha_run_id_152, beta_alpha_run_id_411, beta_alpha_run_id_705}, no-variability}
@@ -48,7 +49,7 @@ alpha = {distribution=normal, typical=alpha_pop, covariate=run_id, coefficient={
 [LONGITUDINAL]
 input = {a, b}
 
-file = '../4pl_plate_fit_v4_model.txt'
+file = '../4pl_plate_fit_v3_model.txt'
 
 DEFINITION:
 rlu = {distribution=normal, prediction=RLU_all, errorModel=combined1(a, b)}
@@ -58,7 +59,8 @@ data = 'rlu'
 model = rlu
 
 <PARAMETER>
-U_pop = {value=53593, method=MLE}
+U_pop = {value=52967, method=MLE}
+omega_U = {value=0.00000004463134, method=MLE}
 beta_U_mab_virus_22_0_292 = {value=0.4043831, method=MLE}
 beta_U_mab_virus_22_0_322 = {value=0.03962814, method=MLE}
 beta_U_mab_virus_28_0_103 = {value=-0.1475214, method=MLE}
@@ -79,7 +81,7 @@ beta_U_run_id_1197 = {value=0, method=MLE}
 beta_U_run_id_152 = {value=0, method=MLE}
 beta_U_run_id_411 = {value=0, method=MLE}
 beta_U_run_id_705 = {value=0, method=MLE}
-L_pop = {value=780.2, method=MLE}
+L_pop = {value=768.6, method=MLE}
 omega_L = {value=0.00000003402097, method=MLE}
 beta_L_mab_virus_22_0_292 = {value=-0.4527789, method=MLE}
 beta_L_mab_virus_22_0_322 = {value=0.08869531, method=MLE}
@@ -100,9 +102,27 @@ beta_L_run_id_1197 = {value=0, method=MLE}
 beta_L_run_id_152 = {value=0, method=MLE}
 beta_L_run_id_411 = {value=0, method=MLE}
 beta_L_run_id_705 = {value=0, method=MLE}
-h_pop = {value=0.153, method=MLE}
+L_gap_pop = {value=0.0000563, method=MLE}
+omega_L_gap = {value=1, method=MLE}
+beta_L_gap_mab_virus_22_0_292 = {value=0, method=MLE}
+beta_L_gap_mab_virus_22_0_322 = {value=0, method=MLE}
+beta_L_gap_mab_virus_28_0_103 = {value=0, method=MLE}
+beta_L_gap_mab_virus_28_0_292 = {value=0, method=MLE}
+beta_L_gap_mab_virus_28_0_322 = {value=0, method=MLE}
+beta_L_gap_mab_virus_6_0_233 = {value=0, method=MLE}
+beta_L_gap_mab_virus_65_0_103 = {value=0, method=MLE}
+beta_L_gap_mab_virus_65_0_292 = {value=0, method=MLE}
+beta_L_gap_mab_virus_65_0_322 = {value=0, method=MLE}
+beta_L_gap_mab_virus_69_0_103 = {value=0, method=MLE}
+beta_L_gap_mab_virus_69_0_233 = {value=0, method=MLE}
+beta_L_gap_mab_virus_69_0_274 = {value=0, method=MLE}
+beta_L_gap_mab_virus_69_0_292 = {value=0, method=MLE}
+beta_L_gap_mab_virus_69_0_322 = {value=0, method=MLE}
+beta_L_gap_mab_virus_70_0_274 = {value=0, method=MLE}
+beta_L_gap_goes_down_True = {value=0, method=MLE}
+h_pop = {value=0.159, method=MLE}
 omega_h = {value=0.00000004483606, method=MLE}
-f_pop = {value=0.549, method=MLE}
+f_pop = {value=0.554, method=MLE}
 omega_f = {value=1.9920912, method=MLE}
 beta_f_mab_virus_22_0_292 = {value=0, method=MLE}
 beta_f_mab_virus_22_0_322 = {value=0, method=MLE}
@@ -120,7 +140,7 @@ beta_f_mab_virus_69_0_292 = {value=0, method=MLE}
 beta_f_mab_virus_69_0_322 = {value=0, method=MLE}
 beta_f_mab_virus_70_0_274 = {value=0, method=MLE}
 beta_f_goes_down_True = {value=0, method=MLE}
-alpha_pop = {value=0.126, method=MAP}
+alpha_pop = {value=0.0557, method=MAP}
 beta_alpha_run_id_1197 = {value=-0.1527015, method=MLE}
 beta_alpha_run_id_152 = {value=-0.2970724, method=MLE}
 beta_alpha_run_id_411 = {value=-0.1666982, method=MLE}
@@ -145,7 +165,6 @@ beta_h_mab_virus_69_0_322 = {value=0.5935659, method=MLE}
 beta_h_mab_virus_6_0_233 = {value=-0.02929297, method=MLE}
 beta_h_mab_virus_70_0_274 = {value=-0.7109421, method=MLE}
 c = {value=1, method=FIXED}
-omega_U = {value=0.00000004463134, method=MLE}
 
 <MONOLIX>
 
@@ -161,7 +180,7 @@ plots = {indfits = {selected = true}, parameterdistribution = {selected = true},
 
 [SETTINGS]
 GLOBAL:
-exportpath = 'm10'
+exportpath = 'm2'
 
 POPULATION:
 smoothingiterations = 500

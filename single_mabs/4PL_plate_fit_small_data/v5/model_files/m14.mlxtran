@@ -60,7 +60,7 @@ data = 'rlu'
 model = rlu
 
 <PARAMETER>
-U_pop = {value=1, method=FIXED}
+U_pop = {value=125886.45, method=MLE}
 omega_U = {value=0.00000004463134, method=MLE}
 beta_U_mab_virus_22_0_292 = {value=0.4043831, method=MLE}
 beta_U_mab_virus_22_0_322 = {value=0.03962814, method=MLE}
@@ -116,7 +116,56 @@ beta_alpha_run_id_411 = {value=-0.1666982, method=MLE}
 beta_alpha_run_id_705 = {value=0.6437941, method=MLE}
 a = {value=16.680857, method=MLE}
 b = {value=0.1030094, method=MLE}
+beta_L_goes_down_True = {value=-2.9203528, method=MLE}
+beta_L_mab_virus_22_0_292 = {value=-0.4527789, method=MLE}
+beta_L_mab_virus_22_0_322 = {value=0.08869531, method=MLE}
+beta_L_mab_virus_28_0_103 = {value=-0.1556333, method=MLE}
+beta_L_mab_virus_28_0_292 = {value=-0.09218795, method=MLE}
+beta_L_mab_virus_28_0_322 = {value=-0.1157286, method=MLE}
+beta_L_mab_virus_65_0_103 = {value=-0.09457715, method=MLE}
+beta_L_mab_virus_65_0_292 = {value=-0.1134675, method=MLE}
+beta_L_mab_virus_65_0_322 = {value=-0.2115537, method=MLE}
+beta_L_mab_virus_69_0_103 = {value=-2.9211081, method=MLE}
+beta_L_mab_virus_69_0_233 = {value=-2.8811286, method=MLE}
+beta_L_mab_virus_69_0_274 = {value=-2.5221643, method=MLE}
+beta_L_mab_virus_69_0_292 = {value=-2.7692877, method=MLE}
+beta_L_mab_virus_69_0_322 = {value=-2.8698067, method=MLE}
+beta_L_mab_virus_6_0_233 = {value=-1.0617878, method=MLE}
+beta_L_mab_virus_70_0_274 = {value=0.238799, method=MLE}
+beta_f_goes_down_True = {value=0, method=MLE}
+beta_f_mab_virus_22_0_292 = {value=0, method=MLE}
+beta_f_mab_virus_22_0_322 = {value=0, method=MLE}
+beta_f_mab_virus_28_0_103 = {value=0, method=MLE}
+beta_f_mab_virus_28_0_292 = {value=0, method=MLE}
+beta_f_mab_virus_28_0_322 = {value=0, method=MLE}
+beta_f_mab_virus_65_0_103 = {value=0, method=MLE}
+beta_f_mab_virus_65_0_292 = {value=0, method=MLE}
+beta_f_mab_virus_65_0_322 = {value=0, method=MLE}
+beta_f_mab_virus_69_0_103 = {value=0, method=MLE}
+beta_f_mab_virus_69_0_233 = {value=0, method=MLE}
+beta_f_mab_virus_69_0_274 = {value=0, method=MLE}
+beta_f_mab_virus_69_0_292 = {value=0, method=MLE}
+beta_f_mab_virus_69_0_322 = {value=0, method=MLE}
+beta_f_mab_virus_6_0_233 = {value=0, method=MLE}
+beta_f_mab_virus_70_0_274 = {value=0, method=MLE}
+beta_h_goes_down_True = {value=2.1036448, method=MLE}
+beta_h_mab_virus_22_0_292 = {value=-0.2066124, method=MLE}
+beta_h_mab_virus_22_0_322 = {value=-1.0881556, method=MLE}
+beta_h_mab_virus_28_0_103 = {value=-0.2194691, method=MLE}
+beta_h_mab_virus_28_0_292 = {value=-0.04966283, method=MLE}
+beta_h_mab_virus_28_0_322 = {value=-1.0329033, method=MLE}
+beta_h_mab_virus_65_0_103 = {value=-0.1753591, method=MLE}
+beta_h_mab_virus_65_0_292 = {value=-0.112635, method=MLE}
+beta_h_mab_virus_65_0_322 = {value=-1.0649177, method=MLE}
+beta_h_mab_virus_69_0_103 = {value=0.8867459, method=MLE}
+beta_h_mab_virus_69_0_233 = {value=1.1337618, method=MLE}
+beta_h_mab_virus_69_0_274 = {value=-0.5566211, method=MLE}
+beta_h_mab_virus_69_0_292 = {value=1.4195221, method=MLE}
+beta_h_mab_virus_69_0_322 = {value=0.5935659, method=MLE}
+beta_h_mab_virus_6_0_233 = {value=-0.02929297, method=MLE}
+beta_h_mab_virus_70_0_274 = {value=-0.7109421, method=MLE}
 c = {value=1, method=FIXED}
+omega_L = {value=0.00000003402097, method=MLE}
 
 <MONOLIX>
 

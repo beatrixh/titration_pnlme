@@ -48,7 +48,7 @@ alpha = {distribution=normal, typical=alpha_pop, covariate=run_id, coefficient={
 [LONGITUDINAL]
 input = {a, b}
 
-file = '../4pl_plate_fit_v4_model.txt'
+file = '../4pl_plate_fit_v2_model.txt'
 
 DEFINITION:
 rlu = {distribution=normal, prediction=RLU_all, errorModel=combined1(a, b)}
@@ -58,7 +58,7 @@ data = 'rlu'
 model = rlu
 
 <PARAMETER>
-U_pop = {value=53593, method=MLE}
+U_pop = {value=52969, method=MLE}
 beta_U_mab_virus_22_0_292 = {value=0.4043831, method=MLE}
 beta_U_mab_virus_22_0_322 = {value=0.03962814, method=MLE}
 beta_U_mab_virus_28_0_103 = {value=-0.1475214, method=MLE}
@@ -79,7 +79,7 @@ beta_U_run_id_1197 = {value=0, method=MLE}
 beta_U_run_id_152 = {value=0, method=MLE}
 beta_U_run_id_411 = {value=0, method=MLE}
 beta_U_run_id_705 = {value=0, method=MLE}
-L_pop = {value=780.2, method=MLE}
+L_pop = {value=769.4, method=MLE}
 omega_L = {value=0.00000003402097, method=MLE}
 beta_L_mab_virus_22_0_292 = {value=-0.4527789, method=MLE}
 beta_L_mab_virus_22_0_322 = {value=0.08869531, method=MLE}
@@ -100,9 +100,9 @@ beta_L_run_id_1197 = {value=0, method=MLE}
 beta_L_run_id_152 = {value=0, method=MLE}
 beta_L_run_id_411 = {value=0, method=MLE}
 beta_L_run_id_705 = {value=0, method=MLE}
-h_pop = {value=0.153, method=MLE}
+h_pop = {value=0.159, method=MLE}
 omega_h = {value=0.00000004483606, method=MLE}
-f_pop = {value=0.549, method=MLE}
+f_pop = {value=0.554, method=MLE}
 omega_f = {value=1.9920912, method=MLE}
 beta_f_mab_virus_22_0_292 = {value=0, method=MLE}
 beta_f_mab_virus_22_0_322 = {value=0, method=MLE}
@@ -120,7 +120,7 @@ beta_f_mab_virus_69_0_292 = {value=0, method=MLE}
 beta_f_mab_virus_69_0_322 = {value=0, method=MLE}
 beta_f_mab_virus_70_0_274 = {value=0, method=MLE}
 beta_f_goes_down_True = {value=0, method=MLE}
-alpha_pop = {value=0.126, method=MAP}
+alpha_pop = {value=0.0558, method=MAP}
 beta_alpha_run_id_1197 = {value=-0.1527015, method=MLE}
 beta_alpha_run_id_152 = {value=-0.2970724, method=MLE}
 beta_alpha_run_id_411 = {value=-0.1666982, method=MLE}

@@ -58,7 +58,7 @@ data = 'rlu'
 model = rlu
 
 <PARAMETER>
-U_pop = {value=1, method=FIXED}
+U_pop = {value=53593, method=MLE}
 beta_U_mab_virus_22_0_292 = {value=0.4043831, method=MLE}
 beta_U_mab_virus_22_0_322 = {value=0.03962814, method=MLE}
 beta_U_mab_virus_28_0_103 = {value=-0.1475214, method=MLE}
@@ -143,7 +143,9 @@ beta_alpha_run_id_411 = {value=-0.1666982, method=MLE}
 beta_alpha_run_id_705 = {value=0.6437941, method=MLE}
 a = {value=16.680857, method=MLE}
 b = {value=0.1030094, method=MLE}
+beta_L_goes_down_True = {value=-2.92035, method=MLE}
 c = {value=1, method=FIXED}
+omega_U = {value=0.00000004463134, method=MLE}
 
 <MONOLIX>
 
