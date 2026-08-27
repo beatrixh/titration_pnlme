@@ -1,0 +1,120 @@
+<DATAFILE>
+
+[FILEINFO]
+file={path='../../../input_data/retagged_data/five_plates_2026-08-26.csv'}
+delimiter = comma
+header={run_id, run_name, plate_row, plate_col, rlu, min_diff, specrole, run, virus_name, concentration, monolix_id, rlu_max, rlu_min, rlu_norm, virus_col, mab, mablot, mab_virus, goes_down, virus_cc, id_unique, monolix_id_update, id_unique_update, mean_vc, mean_cc, binary_vc, binary_cc, binary_sample}
+
+[CONTENT]
+run_id = {use=covariate, type=categorical}
+plate_row = {use=regressor}
+plate_col = {use=regressor}
+rlu = {use=observation, type=continuous}
+concentration = {use=time}
+mab_virus = {use=covariate, type=categorical}
+goes_down = {use=covariate, type=categorical}
+monolix_id_update = {use=identifier}
+binary_vc = {use=regressor}
+binary_cc = {use=regressor}
+binary_sample = {use=regressor}
+
+<MODEL>
+
+[POPULATION]
+DEFINITION:
+alpha_pop = {distribution=normal, typical=0.603, sd=1}
+
+[COVARIATE]
+input = {goes_down, mab_virus, run_id}
+
+goes_down = {type=categorical, categories={'False', 'True'}}
+mab_virus = {type=categorical, categories={'22.0|103', '22.0|292', '22.0|322', '28.0|103', '28.0|292', '28.0|322', '6.0|233', '65.0|103', '65.0|292', '65.0|322', '69.0|103', '69.0|233', '69.0|274', '69.0|292', '69.0|322', '70.0|274'}}
+run_id = {type=categorical, categories={'1159', '1197', '152', '411', '705'}}
+
+[INDIVIDUAL]
+input = {U_pop, omega_U, L_pop, omega_L, h_pop, omega_h, f_pop, omega_f, alpha_pop, mab_virus, beta_L_mab_virus_22_0_292, beta_L_mab_virus_22_0_322, beta_L_mab_virus_28_0_103, beta_L_mab_virus_28_0_292, beta_L_mab_virus_28_0_322, beta_L_mab_virus_6_0_233, beta_L_mab_virus_65_0_103, beta_L_mab_virus_65_0_292, beta_L_mab_virus_65_0_322, beta_L_mab_virus_69_0_103, beta_L_mab_virus_69_0_233, beta_L_mab_virus_69_0_274, beta_L_mab_virus_69_0_292, beta_L_mab_virus_69_0_322, beta_L_mab_virus_70_0_274, run_id, beta_U_run_id_1197, beta_U_run_id_152, beta_U_run_id_411, beta_U_run_id_705, beta_L_run_id_1197, beta_L_run_id_152, beta_L_run_id_411, beta_L_run_id_705, beta_alpha_run_id_1197, beta_alpha_run_id_152, beta_alpha_run_id_411, beta_alpha_run_id_705}
+
+mab_virus = {type=categorical, categories={'22.0|103', '22.0|292', '22.0|322', '28.0|103', '28.0|292', '28.0|322', '6.0|233', '65.0|103', '65.0|292', '65.0|322', '69.0|103', '69.0|233', '69.0|274', '69.0|292', '69.0|322', '70.0|274'}}
+run_id = {type=categorical, categories={'1159', '1197', '152', '411', '705'}}
+
+DEFINITION:
+U = {distribution=normal, typical=U_pop, covariate=run_id, coefficient={0, beta_U_run_id_1197, beta_U_run_id_152, beta_U_run_id_411, beta_U_run_id_705}, sd=omega_U}
+L = {distribution=normal, typical=L_pop, covariate={mab_virus, run_id}, coefficient={{0, beta_L_mab_virus_22_0_292, beta_L_mab_virus_22_0_322, beta_L_mab_virus_28_0_103, beta_L_mab_virus_28_0_292, beta_L_mab_virus_28_0_322, beta_L_mab_virus_6_0_233, beta_L_mab_virus_65_0_103, beta_L_mab_virus_65_0_292, beta_L_mab_virus_65_0_322, beta_L_mab_virus_69_0_103, beta_L_mab_virus_69_0_233, beta_L_mab_virus_69_0_274, beta_L_mab_virus_69_0_292, beta_L_mab_virus_69_0_322, beta_L_mab_virus_70_0_274}, {0, beta_L_run_id_1197, beta_L_run_id_152, beta_L_run_id_411, beta_L_run_id_705}}, sd=omega_L}
+h = {distribution=normal, typical=h_pop, sd=omega_h}
+f = {distribution=logNormal, typical=f_pop, sd=omega_f}
+alpha = {distribution=normal, typical=alpha_pop, covariate=run_id, coefficient={0, beta_alpha_run_id_1197, beta_alpha_run_id_152, beta_alpha_run_id_411, beta_alpha_run_id_705}, no-variability}
+
+[LONGITUDINAL]
+input = {a, b}
+
+file = '../4pl_plate_fit_v4_model.txt'
+
+DEFINITION:
+rlu = {distribution=normal, prediction=RLU_all, errorModel=combined1(a, b)}
+
+<FIT>
+data = 'rlu'
+model = rlu
+
+<PARAMETER>
+U_pop = {value=1, method=FIXED}
+omega_U = {value=0.00000004463134, method=MLE}
+beta_U_run_id_1197 = {value=0, method=MLE}
+beta_U_run_id_152 = {value=0, method=MLE}
+beta_U_run_id_411 = {value=0, method=MLE}
+beta_U_run_id_705 = {value=0, method=MLE}
+L_pop = {value=780.2, method=MLE}
+omega_L = {value=0.00000003402097, method=MLE}
+beta_L_mab_virus_22_0_292 = {value=-0.4527789, method=MLE}
+beta_L_mab_virus_22_0_322 = {value=0.08869531, method=MLE}
+beta_L_mab_virus_28_0_103 = {value=-0.1556333, method=MLE}
+beta_L_mab_virus_28_0_292 = {value=-0.09218795, method=MLE}
+beta_L_mab_virus_28_0_322 = {value=-0.1157286, method=MLE}
+beta_L_mab_virus_6_0_233 = {value=-1.06179, method=MLE}
+beta_L_mab_virus_65_0_103 = {value=-0.09457715, method=MLE}
+beta_L_mab_virus_65_0_292 = {value=-0.1134675, method=MLE}
+beta_L_mab_virus_65_0_322 = {value=-0.2115537, method=MLE}
+beta_L_mab_virus_69_0_103 = {value=-2.92111, method=MLE}
+beta_L_mab_virus_69_0_233 = {value=-2.88113, method=MLE}
+beta_L_mab_virus_69_0_274 = {value=-2.52216, method=MLE}
+beta_L_mab_virus_69_0_292 = {value=-2.76929, method=MLE}
+beta_L_mab_virus_69_0_322 = {value=-2.86981, method=MLE}
+beta_L_mab_virus_70_0_274 = {value=0.238799, method=MLE}
+beta_L_run_id_1197 = {value=0, method=MLE}
+beta_L_run_id_152 = {value=0, method=MLE}
+beta_L_run_id_411 = {value=0, method=MLE}
+beta_L_run_id_705 = {value=0, method=MLE}
+h_pop = {value=0.153, method=MLE}
+omega_h = {value=0.00000004483606, method=MLE}
+f_pop = {value=0.549, method=MLE}
+omega_f = {value=1.9920912, method=MLE}
+alpha_pop = {value=0.126, method=MAP}
+beta_alpha_run_id_1197 = {value=-0.1527015, method=MLE}
+beta_alpha_run_id_152 = {value=-0.2970724, method=MLE}
+beta_alpha_run_id_411 = {value=-0.1666982, method=MLE}
+beta_alpha_run_id_705 = {value=0.6437941, method=MLE}
+a = {value=16.680857, method=MLE}
+b = {value=0.1030094, method=MLE}
+c = {value=1, method=FIXED}
+
+<MONOLIX>
+
+[TASKS]
+populationParameters()
+individualParameters(method = {conditionalMean, conditionalMode })
+fim(run = false,method = StochasticApproximation)
+logLikelihood(method = ImportanceSampling)
+
+[PLOTS]
+run = true
+plots = {indfits = {selected = true}, parameterdistribution = {selected = true}, obspred = {selected = true}, covariancemodeldiagnosis = {selected = true}, covariatemodeldiagnosis = {selected = true}, vpc = {selected = true}, residualsscatter = {selected = true}, residualsdistribution = {selected = true}, randomeffects = {selected = true}, saemresults = {selected = true}}
+
+[SETTINGS]
+GLOBAL:
+exportpath = 'm7'
+
+POPULATION:
+smoothingiterations = 500
+exploratoryiterations = 2000
+simulatedannealingiterations = 2000
+
