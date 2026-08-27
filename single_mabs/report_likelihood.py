@@ -98,8 +98,7 @@ def read_criteria(model_name: str, models_dir: Path) -> dict:
 def build_report(project: str) -> pd.DataFrame:
     root = PROJECTS[project]
     models_dir = root / "model_files"
-    tracker_path = root / "model_tracker.xls
-x"
+    tracker_path = root / "model_tracker.xlsx"
     model_names = discover_models(models_dir)
     if not model_names:
         raise SystemExit(f"no completed models (with LogLikelihood/logLikelihood.txt) found in {models_dir}")
