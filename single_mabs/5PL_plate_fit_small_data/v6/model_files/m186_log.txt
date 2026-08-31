@@ -1,0 +1,5 @@
+[2026-08-31 12:51:06] m186 :: 424.3 MB
+[2026-08-31 12:51:06] project loaded :: 424.3 MB
+[2026-08-31 12:51:06] starting runPopulationParameterEstimation :: 424.3 MB
+[2026-08-31 13:16:01] finished runPopulationParameterEstimation :: 424.3 MB
+[2026-08-31 13:16:01] finished runConditionalModeEstimation :: 424.3 MB

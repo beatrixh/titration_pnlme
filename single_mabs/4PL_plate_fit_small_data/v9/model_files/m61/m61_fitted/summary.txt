@@ -1,0 +1,108 @@
+********************************************************************************
+*                         m61_fitted.mlxtran                                   *
+*                         August 31, 2026 at 13:03:23                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+f_pop                      :         0.117
+h_pop                      :          1.86
+beta_h_mab_virus_22_0_276  :      0.000284
+beta_h_mab_virus_22_0_292  :     -1.96e-13
+beta_h_mab_virus_22_0_322  :        -0.747
+beta_h_mab_virus_28_0_103  :      1.37e-08
+beta_h_mab_virus_28_0_276  :      -0.00227
+beta_h_mab_virus_28_0_292  :        0.0704
+beta_h_mab_virus_28_0_322  :        -0.727
+beta_h_mab_virus_32_0_292  :         0.136
+beta_h_mab_virus_55_0_292  :         -1.47
+beta_h_mab_virus_65_0_103  :       2.4e-10
+beta_h_mab_virus_65_0_276  :      6.15e-05
+beta_h_mab_virus_65_0_292  :       -0.0669
+beta_h_mab_virus_65_0_322  :        -0.715
+beta_h_mab_virus_69_0_103  :      1.15e-05
+beta_h_mab_virus_69_0_274  :      5.44e-09
+beta_h_mab_virus_69_0_276  :       0.00072
+beta_h_mab_virus_69_0_292  :        0.0141
+beta_h_mab_virus_69_0_322  :      -0.00311
+beta_h_mab_virus_70_0_274  :        -0.417
+L_gap_pop                  :         -24.2
+eta_alpha_pop              :     -1.11e-10
+beta_eta_alpha_run_id_1159 :        0.0447
+beta_eta_alpha_run_id_1197 :      -0.00035
+beta_eta_alpha_run_id_152  :     -7.17e-05
+beta_eta_alpha_run_id_411  :      3.04e-06
+beta_eta_alpha_run_id_462  :      -0.00689
+eta_U_pop                  :       -0.0108
+
+Standard Deviation of the Random Effects -
+omega_f                    :          1.06
+omega_L_gap                :      5.98e-07
+omega_eta_U                :          30.2
+
+Error Model Parameters -------------------
+acc                        :          40.6
+bcc                        :      2.22e-16
+asample                    :          36.7
+bsample                    :         0.147
+avc                        :      2.22e-16
+bvc                        :        0.0432
+
+Elapsed time (seconds):  2.1e+02
+CPU time     (seconds):  1.9e+02
+Exploratory phase iterations:      268 (Autostop)
+Smoothing phase iterations:        200 (Stopped at the maximum number of iterations)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                      min            Q1        median            Q3           max  shrinkage(%)
+f         :        0.0197        0.0581         0.117         0.264         0.604           8.6
+h         :         0.387          1.44          1.86          1.86          1.99           nan
+L_gap     :         -24.2         -24.2         -24.2         -24.2         -24.2           100
+eta_alpha :      -0.00689      -0.00035     -3.58e-05      3.04e-06        0.0447           nan
+eta_U     :        -0.311        -0.164        -0.106       -0.0169        0.0437          99.7
+
+Elapsed time (seconds):    0.062
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       10211.30
+Akaike Information Criteria               (AIC) :       10287.30
+Corrected Bayesian Information Criteria  (BICc) :       10446.59
+Bayesian Information Criteria             (BIC) :       10373.81
+
+Elapsed time                          (seconds) :           7.41
+CPU time                              (seconds) :           6.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.068
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 72
+Number of observations (obsid cc): 48
+Number of observations (obsid sample): 480
+Number of observations (obsid vc): 48
+Number of doses: 0
+

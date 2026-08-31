@@ -1,0 +1,5 @@
+[2026-08-31 13:08:04] m309 :: 426.9 MB
+[2026-08-31 13:08:04] project loaded :: 426.9 MB
+[2026-08-31 13:08:04] starting runPopulationParameterEstimation :: 426.9 MB
+[2026-08-31 13:16:04] finished runPopulationParameterEstimation :: 426.9 MB
+[2026-08-31 13:16:04] finished runConditionalModeEstimation :: 426.9 MB

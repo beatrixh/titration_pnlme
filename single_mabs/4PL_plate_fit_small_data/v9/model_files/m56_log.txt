@@ -1,0 +1,5 @@
+[2026-08-31 13:12:16] m56 :: 359.5 MB
+[2026-08-31 13:12:16] project loaded :: 359.5 MB
+[2026-08-31 13:12:16] starting runPopulationParameterEstimation :: 359.5 MB
+[2026-08-31 13:15:57] finished runPopulationParameterEstimation :: 359.5 MB
+[2026-08-31 13:15:57] finished runConditionalModeEstimation :: 359.5 MB
