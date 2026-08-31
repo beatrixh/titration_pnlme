@@ -119,7 +119,7 @@ run_one_model <- function(model_name, models_dir) {
   invisible(model_name)
 }
 
-n_workers <- 3 
+n_workers <- 3
 cl <- makeCluster(n_workers)
 
 results <- tryCatch(
