@@ -1,3 +1,8 @@
 [2026-08-31 12:14:25] m302 :: 425.7 MB
 [2026-08-31 12:14:25] project loaded :: 425.7 MB
 [2026-08-31 12:14:26] starting runPopulationParameterEstimation :: 425.7 MB
+[2026-08-31 12:19:29] finished runPopulationParameterEstimation :: 425.8 MB
+[2026-08-31 12:19:30] finished runConditionalModeEstimation :: 425.8 MB
+[2026-08-31 12:19:37] finished runLogLikelihoodEstimation :: 426.0 MB
+[2026-08-31 12:19:37] saved project :: 426.0 MB
+[2026-08-31 12:19:37] COMPLETE (total runtime 5.2 min) :: 426.0 MB
