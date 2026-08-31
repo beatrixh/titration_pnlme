@@ -1,0 +1,16 @@
+parameter,statistics(sa),p-value(sa)
+beta_U_mean_cc_643_5,1.65522,0.0979
+beta_U_mean_cc_654_75,nan,nan
+beta_U_mean_cc_695_25,2.44803,0.0144
+beta_U_mean_cc_713_75,0.385732,0.7
+beta_U_mean_cc_910_0,5.52391e-12,1
+beta_L_mean_cc_643_5,1.23008,0.219
+beta_L_mean_cc_654_75,0.799949,0.424
+beta_L_mean_cc_695_25,0.790318,0.429
+beta_L_mean_cc_713_75,4.52281e-10,1
+beta_L_mean_cc_910_0,9.21084,<2.2e-16
+beta_alpha_mean_cc_643_5,0.337807,0.736
+beta_alpha_mean_cc_654_75,nan,nan
+beta_alpha_mean_cc_695_25,nan,nan
+beta_alpha_mean_cc_713_75,nan,nan
+beta_alpha_mean_cc_910_0,2.35547,0.0185

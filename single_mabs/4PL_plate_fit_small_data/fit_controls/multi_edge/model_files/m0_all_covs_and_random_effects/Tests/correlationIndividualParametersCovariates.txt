@@ -1,0 +1,16 @@
+parameter,covariate,statistics,p-value,test
+U,beta_U_mean_cc_643_5,0,nan,t-Test
+U,beta_U_mean_cc_654_75,0,nan,t-Test
+U,beta_U_mean_cc_695_25,0,nan,t-Test
+U,beta_U_mean_cc_713_75,0,nan,t-Test
+U,beta_U_mean_cc_910_0,0,nan,t-Test
+L,beta_L_mean_cc_643_5,0,nan,t-Test
+L,beta_L_mean_cc_654_75,0,nan,t-Test
+L,beta_L_mean_cc_695_25,0,nan,t-Test
+L,beta_L_mean_cc_713_75,0,nan,t-Test
+L,beta_L_mean_cc_910_0,0,nan,t-Test
+alpha,beta_alpha_mean_cc_643_5,0,nan,t-Test
+alpha,beta_alpha_mean_cc_654_75,0,nan,t-Test
+alpha,beta_alpha_mean_cc_695_25,0,nan,t-Test
+alpha,beta_alpha_mean_cc_713_75,0,nan,t-Test
+alpha,beta_alpha_mean_cc_910_0,0,nan,t-Test

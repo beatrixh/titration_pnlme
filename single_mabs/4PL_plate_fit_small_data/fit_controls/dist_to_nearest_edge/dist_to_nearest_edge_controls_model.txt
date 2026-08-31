@@ -1,0 +1,20 @@
+DESCRIPTION:
+
+[LONGITUDINAL]
+input={U, L, alpha}
+
+PK:
+
+EQUATION:
+
+d_i2 = min(
+	min(t, 9-2), 2
+)
+
+E_i2 = 1 - alpha*(exp(-d_i2) - exp(-4.5))
+
+RLU_vc = U*E_i2
+RLU_cc = L
+
+OUTPUT:
+output = {RLU_cc, RLU_vc}

@@ -1,0 +1,115 @@
+********************************************************************************
+*                         m0_alpha_normal.mlxtran                              *
+*                         August 29, 2026 at 22:20:08                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------     se_sa    rse(%)   P2.5_sa  P97.5_sa
+U_pop       :                      1.2e+05       581     0.484  1.19e+05  1.21e+05
+L_pop       :                          709      38.5      5.43       634       785
+alpha_pop   :                        0.658     0.487        74    -0.297      1.61
+
+Standard Deviation of the Random Effects -
+omega_U     :                         40.2      72.3       180      6.52       248
+omega_L     :                         92.7      27.4      29.6      53.7       160
+omega_alpha :                         1.04     0.491      47.1     0.463      2.35
+
+Error Model Parameters -------------------
+acc         :                           43      35.2      81.7      12.9       143
+bcc         :                     0.000169    0.0499  2.95e+04  1.58e-06    0.0181
+avc         :                     1.79e+04   1.2e+04        67  6.22e+03  5.13e+04
+bvc         :                     2.22e-16     0.158  7.14e+16         0  2.11e-11
+
+Elapsed time (seconds):      1.4
+Exploratory phase iterations:      187 (Autostop)
+Smoothing phase iterations:        116 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Distribution ------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+U     :       1.2e+05       1.2e+05       1.2e+05       1.2e+05       1.2e+05          93.8
+L     :           639           646           676           714           906          -8.7
+alpha :        -0.319        -0.164         0.416          1.09          2.52         -4.54
+
+Elapsed time (seconds):     0.22
+Iterations:       69 (Autostop)
+
+ -------------------------------------------------------------------------------
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+U     :       1.2e+05       1.2e+05       1.2e+05       1.2e+05       1.2e+05          99.2
+L     :           638           645           676           714           905         -8.24
+alpha :         -0.32        -0.178         0.415          1.09          2.53         -4.94
+
+Elapsed time (seconds):    0.004
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE FISHER INFORMATION MATRIX ____________________________________
+
+
+Estimation of the Fisher information matrix by Stochastic Approximation --------
+
+Correlation Matrix :
+      U_pop         1
+      L_pop -0.080262         1
+  alpha_pop   0.13009 -0.004013         1
+    omega_U   0.62837 -0.046674  0.027368         1
+    omega_L  -0.08848 0.0013252-0.0017432 -0.077219         1
+omega_alpha  -0.13975  0.022377    0.2617  -0.25292  0.033457         1
+        acc  -0.39666  0.026376 -0.085486  -0.25084  0.053969-0.0052774         1
+        bcc   0.40927 -0.026843  0.088978   0.26487 -0.055917 0.0067589  -0.99085         1
+        avc -0.010807  0.015812    0.3876  -0.19303  0.027052   0.71467 -0.074185  0.078079         1
+        bvc  0.027372 -0.017756   -0.3896   0.20667  -0.02828  -0.73048  0.069165  -0.07297  -0.98625         1
+
+                               min       max   max/min
+Eigen values           :     0.009       2.9   3.2e+02
+
+Elapsed time (seconds):     0.72
+Iterations:      106 (Autostop)
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :        1610.32
+Akaike Information Criteria               (AIC) :        1630.32
+Corrected Bayesian Information Criteria  (BICc) :        1647.64
+Bayesian Information Criteria             (BIC) :        1628.24
+
+Elapsed time                          (seconds) :           0.78
+CPU time                              (seconds) :           0.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.005
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 6
+Number of observations (obsid cc): 48
+Number of observations (obsid vc): 48
+Number of doses: 0
+

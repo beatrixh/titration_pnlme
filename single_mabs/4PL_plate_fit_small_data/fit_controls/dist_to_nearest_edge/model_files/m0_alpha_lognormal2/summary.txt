@@ -1,0 +1,124 @@
+********************************************************************************
+*                         m0_alpha_lognormal2.mlxtran                          *
+*                         August 29, 2026 at 22:29:04                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------     se_sa    rse(%)   P2.5_sa  P97.5_sa
+U_pop                     :       1.19e+05   9.1e+03      7.65  1.01e+05  1.37e+05
+beta_U_mean_cc_643_5      :       2.58e+04  1.56e+04      60.4 -4.75e+03  5.63e+04
+beta_U_mean_cc_654_75     :       2.22e-07       nan         0       nan       nan
+beta_U_mean_cc_695_25     :      -2.48e+04  1.01e+04      40.8 -4.47e+04 -4.95e+03
+beta_U_mean_cc_713_75     :       3.94e+03  1.02e+04       259 -1.61e+04   2.4e+04
+beta_U_mean_cc_910_0      :      -1.41e-07  2.56e+04  1.81e+13 -5.02e+04  5.02e+04
+L_pop                     :            675      19.7      2.91       637       714
+beta_L_mean_cc_643_5      :          -31.6      25.7      81.3       -82      18.8
+beta_L_mean_cc_654_75     :          -20.4      25.5       125     -70.3      29.5
+beta_L_mean_cc_695_25     :           20.1      25.4       127     -29.8        70
+beta_L_mean_cc_713_75     :       1.45e-08        32  2.21e+11     -62.7      62.7
+beta_L_mean_cc_910_0      :            235      25.5      10.9       185       285
+alpha_pop                 :          0.899     0.497      55.3     0.359      2.25
+beta_alpha_mean_cc_643_5  :         -0.276     0.818       296     -1.88      1.33
+beta_alpha_mean_cc_654_75 :          -24.9       nan         0       nan       nan
+beta_alpha_mean_cc_695_25 :          -19.1       nan         0       nan       nan
+beta_alpha_mean_cc_713_75 :          -22.2       nan         0       nan       nan
+beta_alpha_mean_cc_910_0  :           1.09     0.463      42.5     0.183         2
+
+Error Model Parameters -------------------
+acc                       :             46        40      86.8      13.2       161
+bcc                       :       2.22e-16    0.0558  2.51e+16         0  1.77e-11
+avc                       :       1.57e+04       nan         0       nan       nan
+bvc                       :       2.22e-16    0.0491  2.21e+16         0  1.73e-11
+
+Elapsed time (seconds):       54
+Exploratory phase iterations:     1047 (Autostop)
+Smoothing phase iterations:          2 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+U     :      9.41e+04      1.19e+05      1.19e+05      1.23e+05      1.45e+05           nan
+L     :           643           655           675           695           910           nan
+alpha :      1.42e-11      1.97e-10         0.341         0.899          2.67           nan
+
+Elapsed time (seconds):    0.003
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE FISHER INFORMATION MATRIX ____________________________________
+
+
+Estimation of the Fisher information matrix by Stochastic Approximation --------
+
+Correlation Matrix :
+                    U_pop         1
+     beta_U_mean_cc_643_5    -0.608         1
+    beta_U_mean_cc_654_75       nan       nan       nan
+    beta_U_mean_cc_695_25  -0.83622   0.50776       nan         1
+    beta_U_mean_cc_713_75  -0.83908   0.50961       nan   0.70307         1
+     beta_U_mean_cc_910_0  -0.81883   0.50286       nan   0.67207   0.67636         1
+                    L_pop-3.7518e-10-6.5514e-10       nan3.2675e-103.1631e-102.9378e-10         1
+     beta_L_mean_cc_643_5-2.8934e-09  5.67e-08       nan2.3154e-092.3527e-093.0427e-09  -0.77128         1
+    beta_L_mean_cc_654_752.9739e-102.3755e-10       nan-2.5509e-10-2.5031e-10-2.3654e-10  -0.76849   0.59078         1
+    beta_L_mean_cc_695_25 4.927e-111.0327e-10       nan6.4664e-10-3.8253e-11-6.806e-11  -0.76596   0.58673   0.59052         1
+    beta_L_mean_cc_713_751.0104e-097.4437e-10       nan-8.6507e-10-8.5037e-10-8.0452e-10  -0.81025   0.62973   0.62032   0.61584         1
+     beta_L_mean_cc_910_02.9198e-104.0296e-10       nan-2.5281e-10-2.4601e-10-2.3003e-10  -0.76955    0.5928   0.59174   0.59017   0.62254         1
+                alpha_pop   0.76397   -0.4643       nan  -0.63936  -0.64147  -0.62171-5.2114e-10-1.9952e-094.0352e-10-8.3327e-121.3688e-094.0194e-10         1
+ beta_alpha_mean_cc_643_5  -0.47022   0.83701       nan   0.39261   0.39405   0.38955-7.1874e-106.5276e-082.4679e-101.5819e-107.6665e-104.3684e-10  -0.59753         1
+beta_alpha_mean_cc_654_75       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_alpha_mean_cc_695_25       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_alpha_mean_cc_713_75       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+ beta_alpha_mean_cc_910_0   -0.6888   0.41767       nan   0.57882   0.58036   0.64555 4.984e-101.6515e-09-3.847e-101.7706e-11-1.3046e-09-3.8394e-10   -0.9486    0.5644       nan       nan       nan         1
+                      acc1.4493e-10-8.665e-09       nan -2.34e-12-1.0922e-10-2.2977e-10    0.1919  -0.21078  -0.11818 -0.086105  -0.26668  -0.13647-1.0154e-10-9.9437e-09       nan       nan       nan1.3552e-10         1
+                      bcc-2.6644e-108.8601e-09       nan1.0251e-102.1108e-103.3023e-10  -0.10442   0.14479  0.050314  0.017721   0.15972   0.06895-5.342e-111.0178e-08       nan       nan       nan1.0924e-11   -0.9869         1
+                      avc       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+                      bvc  -0.83113   0.51432       nan   0.67231   0.67817   0.852942.8773e-103.6129e-09-2.3467e-10-9.0665e-11-7.9882e-10-2.2643e-10  -0.62805   0.39893       nan       nan       nan   0.53388-3.1975e-104.2246e-10       nan         1
+
+WARNING : Impossible to compute the eigen values of the correlation matrix.
+
+Elapsed time (seconds):    0.081
+Iterations:       52 (Autostop)
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :        1567.48
+Akaike Information Criteria               (AIC) :        1611.48
+Corrected Bayesian Information Criteria  (BICc) :        1667.89
+Bayesian Information Criteria             (BIC) :        1606.89
+
+Elapsed time                          (seconds) :           0.00
+CPU time                              (seconds) :           0.00
+MonteCarlo size (is):        1 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.000
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 6
+Number of observations (obsid cc): 48
+Number of observations (obsid vc): 48
+Number of doses: 0
+

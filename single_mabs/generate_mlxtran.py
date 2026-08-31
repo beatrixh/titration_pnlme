@@ -243,7 +243,13 @@ def generate_one(
     text = rewrite_relative_path(text, r"file=\{path='([^']*)'\}", template.parent, output_dir)
     text = rewrite_relative_path(text, r"file = '([^']*)'", template.parent, output_dir)
 
-    categories = {cov: extract_categories(text, cov) for cov in COVARIATE_ORDER}
+    # Only pull categories for covariates this model actually uses -- a
+    # project's template need not declare every covariate in COVARIATE_ORDER
+    # (e.g. no goes_down when the tracker never toggles it).
+    used_covs = {c for cfg in config.values() for c in cfg["covariates"]}
+    categories = {
+        cov: extract_categories(text, cov) for cov in COVARIATE_ORDER if cov in used_covs
+    }
     distributions = extract_distributions(text, param_order)
     existing = extract_existing_parameters(text)
 

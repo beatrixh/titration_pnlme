@@ -1,0 +1,19 @@
+DESCRIPTION:
+
+[LONGITUDINAL]
+input={U, L, alpha}
+
+PK:
+
+EQUATION:
+plate_col = 2
+E_ij = 1 - alpha*(
+	exp(-t) + exp(-(9 - t)) + exp(-plate_col) + exp(-(13-plate_col))
+	- 2*exp(-4.5) - 2*exp(-6.5)
+)
+
+RLU_vc = U*E_ij
+RLU_cc = L
+
+OUTPUT:
+output = {RLU_cc, RLU_vc}

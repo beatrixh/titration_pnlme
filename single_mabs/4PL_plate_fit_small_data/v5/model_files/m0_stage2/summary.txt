@@ -1,0 +1,233 @@
+********************************************************************************
+*                         m0_stage2.mlxtran                                    *
+*                         August 30, 2026 at 20:14:43                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------     se_sa    rse(%)   P2.5_sa  P97.5_sa
+f_pop                         :          1       nan         0       nan       nan
+beta_f_mab_virus_22_0_276     :          0      1.99       inf     -3.91      3.91
+beta_f_mab_virus_22_0_292     :          0      1.34       inf     -2.63      2.63
+beta_f_mab_virus_22_0_322     :          0      1.97       inf     -3.86      3.86
+beta_f_mab_virus_28_0_103     :          0       nan         0       nan       nan
+beta_f_mab_virus_28_0_276     :          0      1.86       inf     -3.64      3.64
+beta_f_mab_virus_28_0_292     :          0      1.74       inf     -3.42      3.42
+beta_f_mab_virus_28_0_322     :          0      1.74       inf     -3.42      3.42
+beta_f_mab_virus_32_0_292     :          0       nan         0       nan       nan
+beta_f_mab_virus_55_0_292     :          0      1.35       inf     -2.64      2.64
+beta_f_mab_virus_65_0_103     :          0       nan         0       nan       nan
+beta_f_mab_virus_65_0_276     :          0      1.52       inf     -2.98      2.98
+beta_f_mab_virus_65_0_292     :          0       1.4       inf     -2.75      2.75
+beta_f_mab_virus_65_0_322     :          0      1.42       inf     -2.78      2.78
+beta_f_mab_virus_69_0_103     :          0      2.88       inf     -5.65      5.65
+beta_f_mab_virus_69_0_274     :          0       nan         0       nan       nan
+beta_f_mab_virus_69_0_276     :          0      2.83       inf     -5.54      5.54
+beta_f_mab_virus_69_0_292     :          0      2.42       inf     -4.75      4.75
+beta_f_mab_virus_69_0_322     :          0       nan         0       nan       nan
+beta_f_mab_virus_70_0_274     :          0     0.856       inf     -1.68      1.68
+h_pop                         :       1.59   2.3e-07  1.44e-05      1.59      1.59
+beta_h_mab_virus_22_0_276     :      0.119  1.53e-07  0.000128     0.119     0.119
+beta_h_mab_virus_22_0_292     :      0.121       nan         0       nan       nan
+beta_h_mab_virus_22_0_322     :     -0.433       nan         0       nan       nan
+beta_h_mab_virus_28_0_103     :      0.138  1.81e-07  0.000131     0.138     0.138
+beta_h_mab_virus_28_0_276     :     0.0997   1.5e-07  0.000151    0.0997    0.0997
+beta_h_mab_virus_28_0_292     :      0.155  1.51e-07  9.69e-05     0.155     0.155
+beta_h_mab_virus_28_0_322     :     -0.346  1.58e-07  4.55e-05    -0.346    -0.346
+beta_h_mab_virus_32_0_292     :      0.223  1.54e-07   6.9e-05     0.223     0.223
+beta_h_mab_virus_55_0_292     :      -1.41  3.88e-07  2.75e-05     -1.41     -1.41
+beta_h_mab_virus_65_0_103     :     0.0467  1.53e-07  0.000328    0.0467    0.0467
+beta_h_mab_virus_65_0_276     :      0.132  1.56e-07  0.000118     0.132     0.132
+beta_h_mab_virus_65_0_292     :     0.0015   1.5e-07      0.01    0.0015    0.0015
+beta_h_mab_virus_65_0_322     :     -0.311       nan         0       nan       nan
+beta_h_mab_virus_69_0_103     :      -1.32  1.47e-07  1.12e-05     -1.32     -1.32
+beta_h_mab_virus_69_0_274     :     -0.711  1.49e-07   2.1e-05    -0.711    -0.711
+beta_h_mab_virus_69_0_276     :       0.14  1.61e-07  0.000115      0.14      0.14
+beta_h_mab_virus_69_0_292     :      -1.68  1.49e-07  8.86e-06     -1.68     -1.68
+beta_h_mab_virus_69_0_322     :      0.981  1.53e-07  1.56e-05     0.981     0.981
+beta_h_mab_virus_70_0_274     :      -0.11  1.84e-07  0.000166     -0.11     -0.11
+L_gap_pop                     :      0.614       nan         0       nan       nan
+beta_L_gap_mab_virus_22_0_276 :     0.0775       nan         0       nan       nan
+beta_L_gap_mab_virus_22_0_292 :       1.51       nan         0       nan       nan
+beta_L_gap_mab_virus_22_0_322 :      -1.13       nan         0       nan       nan
+beta_L_gap_mab_virus_28_0_103 :     -0.885       nan         0       nan       nan
+beta_L_gap_mab_virus_28_0_276 :     -0.641  9.23e-08  1.44e-05    -0.641    -0.641
+beta_L_gap_mab_virus_28_0_292 :     -0.889  8.15e-08  9.17e-06    -0.889    -0.889
+beta_L_gap_mab_virus_28_0_322 :      -1.22  1.67e-07  1.37e-05     -1.22     -1.22
+beta_L_gap_mab_virus_32_0_292 :       -1.6       nan         0       nan       nan
+beta_L_gap_mab_virus_55_0_292 :      -1.06       nan         0       nan       nan
+beta_L_gap_mab_virus_65_0_103 :      0.796       nan         0       nan       nan
+beta_L_gap_mab_virus_65_0_276 :     -0.727  1.01e-07  1.39e-05    -0.727    -0.727
+beta_L_gap_mab_virus_65_0_292 :     0.0444       nan         0       nan       nan
+beta_L_gap_mab_virus_65_0_322 :      0.982       nan         0       nan       nan
+beta_L_gap_mab_virus_69_0_103 :       5.86       nan         0       nan       nan
+beta_L_gap_mab_virus_69_0_274 :       1.63       nan         0       nan       nan
+beta_L_gap_mab_virus_69_0_276 :       2.18       nan         0       nan       nan
+beta_L_gap_mab_virus_69_0_292 :       1.52  4.29e-08  2.83e-06      1.52      1.52
+beta_L_gap_mab_virus_69_0_322 :       1.72  1.65e-07  9.63e-06      1.72      1.72
+beta_L_gap_mab_virus_70_0_274 :     -0.459  9.38e-07  0.000204    -0.459    -0.459
+beta_L_gap_run_id_1159        :     -0.849       nan         0       nan       nan
+beta_L_gap_run_id_1197        :      -2.41       nan         0       nan       nan
+beta_L_gap_run_id_152         :      0.351  1.53e-07  4.37e-05     0.351     0.351
+beta_L_gap_run_id_411         :       1.17       nan         0       nan       nan
+beta_L_gap_run_id_462         :       0.37       nan         0       nan       nan
+
+Standard Deviation of the Random Effects -
+omega_f                       :       2.43     0.568      23.4      1.56      3.78
+omega_h                       :   3.46e-08       nan         0       nan       nan
+omega_L_gap                   :   5.05e-08       nan         0       nan       nan
+
+Error Model Parameters -------------------
+a                             :       80.9      9.01      11.1      65.1       100
+b                             :      0.131   0.00605      4.63     0.119     0.143
+
+Elapsed time (seconds):       21
+Exploratory phase iterations:     1010 (Autostop)
+Smoothing phase iterations:        123 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Distribution ------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+f     :         0.019         0.223          10.3          18.5           119          47.4
+h     :         0.296         0.424          1.29          1.83          4.24          91.1
+L_gap :        0.0227         0.324          4.05          5.42          19.4          90.8
+
+Elapsed time (seconds):      2.2
+Iterations:      194 (Autostop)
+
+ -------------------------------------------------------------------------------
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+f     :        0.0187         0.221             1             1          1.01          47.9
+h     :         0.296         0.424          1.29          1.83          4.24           100
+L_gap :        0.0227         0.324          4.05          5.42          19.4           100
+
+Elapsed time (seconds):    0.088
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE FISHER INFORMATION MATRIX ____________________________________
+
+
+Estimation of the Fisher information matrix by Stochastic Approximation --------
+
+Correlation Matrix :
+                        f_pop       nan
+    beta_f_mab_virus_22_0_276       nan         1
+    beta_f_mab_virus_22_0_292       nan    0.2117         1
+    beta_f_mab_virus_22_0_322       nan   0.24517   0.20164         1
+    beta_f_mab_virus_28_0_103       nan       nan       nan       nan       nan
+    beta_f_mab_virus_28_0_276       nan    0.3823   0.31619   0.36617       nan         1
+    beta_f_mab_virus_28_0_292       nan   0.36258   0.29988   0.34728       nan   0.54154         1
+    beta_f_mab_virus_28_0_322       nan    0.3626   0.29989    0.3473       nan   0.54155   0.51362         1
+    beta_f_mab_virus_32_0_292       nan       nan       nan       nan       nan       nan       nan       nan       nan
+    beta_f_mab_virus_55_0_292       nan   0.20342   0.16822   0.19493       nan   0.30384   0.28817    0.2882       nan         1
+    beta_f_mab_virus_65_0_103       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+    beta_f_mab_virus_65_0_276       nan   0.30421    0.2516   0.29137       nan   0.45435   0.43091   0.43092       nan   0.24178       nan         1
+    beta_f_mab_virus_65_0_292       nan   0.25288   0.20915   0.24222       nan   0.37769   0.35821   0.35822       nan   0.20102       nan   0.30054         1
+    beta_f_mab_virus_65_0_322       nan   0.26065   0.21556   0.24975       nan   0.38929   0.36921   0.36923       nan   0.20717       nan   0.30977   0.25751         1
+    beta_f_mab_virus_69_0_103       nan  0.015526  0.012841  0.014871       nan  0.023189  0.021992  0.021993       nan  0.012339       nan  0.018452  0.015338   0.01581         1
+    beta_f_mab_virus_69_0_274       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+    beta_f_mab_virus_69_0_276       nan  0.023412  0.019363  0.022424       nan  0.034967  0.033163  0.033164       nan  0.018606       nan  0.027824  0.023129   0.02384   0.00142       nan         1
+    beta_f_mab_virus_69_0_292       nan   0.12931   0.10694   0.12385       nan   0.19313   0.18316   0.18317       nan   0.10276       nan   0.15367   0.12775   0.13167 0.0078431       nan  0.011827         1
+    beta_f_mab_virus_69_0_322       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+    beta_f_mab_virus_70_0_274       nan   0.22159   0.18328   0.21221       nan   0.33095   0.31388   0.31388       nan    0.1758       nan   0.26334    0.2189   0.22563   0.01344       nan  0.020267   0.11194       nan         1
+                        h_pop       nan 0.0043754   0.03423 -0.032595       nan 0.0065395 0.0061926 0.0061992       nan  0.002791       nan 0.0051957 0.0042657 0.00407160.00026729       nan0.00040305 0.0022261       nan 0.0038987         1
+    beta_h_mab_virus_22_0_276       nan-0.0050846 -0.032367  0.030792       nan-0.0062074-0.0058786-0.0058823       nan-0.0025912       nan-0.0049317 -0.004047-0.0038655-0.00025374       nan-0.00038263-0.0021133       nan-0.0037321  -0.94508         1
+    beta_h_mab_virus_22_0_292       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+    beta_h_mab_virus_22_0_322       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+    beta_h_mab_virus_28_0_103       nan 0.0033183 -0.021688  0.032511       nan 0.0049346 0.0046924 0.0046684       nan 0.0028406       nan 0.0039329 0.0033043 0.00366940.00019903       nan0.00030012 0.0016576       nan 0.0029896  -0.79816   0.75428       nan       nan         1
+    beta_h_mab_virus_28_0_276       nan-0.0043652 -0.033012  0.031133       nan -0.007093-0.0061831-0.0061951       nan-0.0030085       nan -0.005189-0.0042712-0.0040836-0.00026662       nan-0.00040204-0.0022205       nan-0.0038023  -0.96054   0.90777       nan       nan   0.76675         1
+    beta_h_mab_virus_28_0_292       nan -0.004252 -0.032839  0.031154       nan-0.0063563-0.0079978-0.0060274       nan-0.0028294       nan-0.0050511-0.0041542-0.0039653-0.0002596       nan-0.00039145 -0.002162       nan-0.0037547  -0.95792   0.90531       nan       nan   0.76456   0.92017         1
+    beta_h_mab_virus_28_0_322       nan-0.0040903 -0.031406  0.029755       nan-0.0061142  -0.00579-0.0047283       nan-0.0026584       nan-0.0048581-0.0039913 -0.003815-0.00024983       nan-0.00037673-0.0020807       nan-0.0036279  -0.91546   0.86518       nan       nan    0.7307   0.87936   0.87695         1
+    beta_h_mab_virus_32_0_292       nan-0.0062564 -0.033952  0.028624       nan-0.0093375-0.0088482-0.0088427       nan-0.0039561       nan-0.0074211 -0.006103-0.0059963-0.00038115       nan-0.00057475-0.0031744       nan-0.0056828  -0.94004   0.88844       nan       nan   0.75007   0.90285   0.90043   0.86056         1
+    beta_h_mab_virus_55_0_292       nan-0.0013756 -0.012724  0.013073       nan-0.0019048-0.0018203-0.0016628       nan    0.1117       nan-0.0014913-0.0010005-0.0010669-8.265e-05       nan-0.00012463-0.00068835       nan-0.0034583  -0.37708   0.35682       nan       nan   0.29849   0.36074   0.36041   0.34494   0.35719         1
+    beta_h_mab_virus_65_0_103       nan-0.0018868 -0.030378  0.032798       nan  -0.00283-0.0026743-0.0026884       nan -0.001129       nan-0.0022457-0.0018289-0.0015699-0.00011626       nan-0.00017531-0.00096828       nan-0.0016224  -0.94145   0.88972       nan       nan    0.7516   0.90439   0.90189   0.86188   0.88484   0.35297         1
+    beta_h_mab_virus_65_0_276       nan-0.0040272 -0.031604  0.030108       nan-0.0060229-0.0057028-0.0057128       nan-0.0026846       nan-0.0056851-0.0039338-0.0037508-0.00024608       nan-0.00037106-0.0020494       nan-0.0035362  -0.92366   0.87292       nan       nan    0.7373   0.88725   0.88481   0.84558   0.86821   0.34743   0.86963         1
+    beta_h_mab_virus_65_0_292       nan-0.0042285 -0.032988  0.031396       nan-0.0063177-0.0059828-0.0059868       nan-0.0026203       nan-0.0050191-0.0037881-0.0039332-0.00025829       nan-0.00038949-0.0021512       nan-0.0038016  -0.96338   0.91047       nan       nan    0.7689   0.92534   0.92283   0.88193   0.90566   0.36385   0.90694   0.88982         1
+    beta_h_mab_virus_65_0_322       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+    beta_h_mab_virus_69_0_103       nan -0.011743 -0.039696  0.024785       nan -0.017543 -0.016629 -0.016636       nan-0.0086603       nan -0.013952 -0.011546 -0.011582  -0.01317       nan-0.0010768-0.0059476       nan -0.010274  -0.97965   0.92584       nan       nan   0.78172     0.941   0.93843   0.89683   0.92097    0.3694   0.92223   0.90486   0.94377       nan         1
+    beta_h_mab_virus_69_0_274       nan -0.037278 -0.060458-0.00010043       nan  -0.05568 -0.052799 -0.052807       nan -0.028961       nan -0.044298 -0.036773 -0.037588-0.0022629       nan-0.0034123 -0.018847       nan -0.032378  -0.96844   0.91525       nan       nan    0.7721   0.93025    0.9277   0.88658   0.91065   0.36514   0.91145   0.89451   0.93297       nan   0.94969         1
+    beta_h_mab_virus_69_0_276       nan  0.019832 -0.011042  0.051974       nan  0.029615  0.028096  0.028091       nan  0.016376       nan  0.023572  0.019643  0.020538 0.0012012       nan   0.22865  0.010004       nan  0.017068  -0.89613   0.84691       nan       nan   0.71589   0.86076   0.85842   0.82036    0.8422   0.33794   0.84387   0.82772   0.86331       nan    0.8772   0.86478         1
+    beta_h_mab_virus_69_0_292       nan -0.028713 -0.053391 0.0081216       nan -0.042889 -0.040667 -0.040675       nan -0.022155       nan  -0.03412 -0.028312 -0.028866-0.0017434       nan -0.002629 -0.097533       nan -0.024964  -0.96881    0.9156       nan       nan   0.77262    0.9306   0.92805   0.88692   0.91092   0.36529   0.91187   0.89485   0.93333       nan    0.9498   0.94139    0.8659         1
+    beta_h_mab_virus_69_0_322       nan  0.010728 -0.019931  0.044888       nan  0.016018  0.015201  0.015195       nan 0.0091713       nan  0.012753  0.010652  0.0112850.00064889       nan0.00097848 0.0054043       nan 0.0091822  -0.94068   0.88902       nan       nan   0.75122   0.90356    0.9011   0.86116   0.88416   0.35473   0.88574   0.86887   0.90623       nan   0.92111   0.90908   0.84435   0.90992         1
+    beta_h_mab_virus_70_0_274       nan-0.0042897  -0.02744  0.023957       nan-0.0066516-0.0062634-0.0065247       nan -0.010068       nan-0.0053112-0.0046555-0.0043458-0.00026612       nan-0.00040128-0.0022163       nan  0.012243  -0.78261   0.73892       nan       nan   0.62923   0.75372   0.75052    0.7168   0.73185   0.24238   0.73954    0.7241   0.75314       nan   0.76671   0.75803   0.70123   0.75829   0.73613         1
+                    L_gap_pop       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_22_0_276       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_22_0_292       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_22_0_322       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_28_0_103       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_28_0_276       nan0.000284310.000200610.00035874       nan  0.0048630.000412590.00042311       nan0.00069853       nan0.000348730.000313850.00030577 1.706e-05       nan2.5725e-050.00014208       nan6.9183e-05 -0.0010050.00098241       nan       nan0.00073398 -0.0348740.000847770.00089224 0.0011941 0.00387310.000746970.00085135 0.0010235       nan 0.00097620.00093638 0.00092710.000946320.00096194-0.0035407       nan       nan       nan       nan       nan         1
+beta_L_gap_mab_virus_28_0_292       nan0.000286050.000219140.00029699       nan0.00042306 0.00367150.00039863       nan0.00022955       nan 0.00033750.000284690.000289811.6996e-05       nan2.5629e-050.00014155       nan0.00027835-0.000577080.00053536       nan       nan0.000635890.00054241 -0.0459730.00052468 0.00054090.000258320.000529550.000536080.00055788       nan0.000557090.000522360.000543370.000532040.00055924 0.0010293       nan       nan       nan       nan       nan9.2921e-05         1
+beta_L_gap_mab_virus_28_0_322       nan -0.002437  -0.01792  0.011634       nan-0.0036218-0.0034334-0.0042315       nan-0.00098858       nan-0.0028759-0.0023403 -0.010935-0.00014839       nan-0.00022376-0.0012359       nan-0.0024462  -0.51938   0.49092       nan       nan   0.41415   0.49873   0.49747   0.45598   0.48856   0.20018   0.48875   0.47963   0.50043       nan   0.50882   0.50301   0.46542    0.5032   0.48857   0.39997       nan       nan       nan       nan       nan0.000866190.00023983         1
+beta_L_gap_mab_virus_32_0_292       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_55_0_292       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_65_0_103       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_65_0_276       nan0.000103390.000104892.4227e-05       nan0.000136880.000132090.00011353       nan-0.00048443       nan 0.00182296.5089e-058.3816e-056.0426e-06       nan9.1118e-065.0326e-05       nan0.000341880.00047636-0.0005023       nan       nan-7.2366e-05-0.00029746-0.00037513-0.00040725-0.00075094-0.0043378-0.00022529  -0.21631-0.00052309       nan-0.0004695-0.00047391-0.00041783-0.00047082-0.00044245 0.0055776       nan       nan       nan       nan       nan-0.000371671.2474e-05-0.0007386       nan       nan       nan         1
+beta_L_gap_mab_virus_65_0_292       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_65_0_322       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_69_0_103       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_69_0_274       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_69_0_276       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+beta_L_gap_mab_virus_69_0_292       nan  0.048772  0.040337  0.046713       nan  0.072843  0.069086  0.069088       nan  0.038761       nan  0.057963  0.048183  0.049664 0.0029582       nan 0.0044608   0.21451       nan  0.0422210.00083964-0.00079709       nan       nan0.00062522-0.00083753-0.00081548-0.00078481-0.0011973-0.00025963-0.00036521-0.00077301-0.00081138       nan-0.0022433-0.0071085 0.0037733 -0.087389 0.0020384-0.00083596       nan       nan       nan       nan       nan5.3591e-055.3391e-05-0.00046615       nan       nan       nan1.8982e-05       nan       nan       nan       nan       nan         1
+beta_L_gap_mab_virus_69_0_322       nan -0.020881 -0.033328 -0.005917       nan -0.031176 -0.029565 -0.029556       nan -0.015855       nan -0.024802 -0.020575 -0.029808-0.0012673       nan -0.001911 -0.010555       nan -0.018311  -0.52479   0.49601       nan       nan   0.41813   0.50399   0.50267   0.48042   0.49368   0.20065   0.49376   0.48466   0.50562       nan   0.51465   0.51063   0.46856    0.5102   0.56616   0.40665       nan       nan       nan       nan       nan0.000735920.00025257   0.85091       nan       nan       nan-0.00057125       nan       nan       nan       nan       nan -0.003981         1
+beta_L_gap_mab_virus_70_0_274       nan 0.0018968 0.0012691 0.0032864       nan 0.0032452 0.0030139 0.0034519       nan  0.013859       nan 0.0026248 0.0026678 0.00241030.00012254       nan0.00018478 0.0010206       nan -0.025621-0.0062067 0.0070735       nan       nan-0.0028417 0.0025477   0.00449 0.0050761  0.012411  0.092817 0.0011233 0.0036036 0.0073662       nan 0.0060207 0.0057465  0.005752 0.0058173 0.0059573  -0.54572       nan       nan       nan       nan       nan 0.0074614-0.00095555  0.014365       nan       nan       nan -0.010209       nan       nan       nan       nan       nan0.00038493  0.010177         1
+       beta_L_gap_run_id_1159       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+       beta_L_gap_run_id_1197       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+        beta_L_gap_run_id_152       nan 0.0025707  0.019452 -0.012733       nan 0.0038284 0.0036276 0.0036168       nan 0.0012446       nan 0.0030404 0.0024812  0.0118380.00015675       nan0.00023637 0.0013055       nan 0.0024785   0.56589  -0.53485       nan       nan  -0.45141  -0.54345  -0.54203  -0.51803  -0.53218  -0.21639   -0.5326  -0.52262  -0.54521       nan  -0.55438  -0.54804   -0.5071  -0.54825  -0.53232  -0.43842       nan       nan       nan       nan       nan-0.00081598-0.00029437  -0.91791       nan       nan       nan 0.0006086       nan       nan       nan       nan       nan0.00049241  -0.92699 -0.011138       nan       nan         1
+        beta_L_gap_run_id_411       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+        beta_L_gap_run_id_462       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+                      omega_f       nan   0.50594   0.41844   0.48458       nan   0.75564   0.71666   0.71668       nan   0.40208       nan   0.60127   0.49983   0.51519  0.030687       nan  0.046274   0.25558       nan   0.43798   0.00871-0.0082686       nan       nan 0.0064857-0.0086882-0.0084594-0.0081412  -0.01242-0.0026933-0.0037886-0.0080188-0.0084169       nan -0.023271  -0.07374  0.039142 -0.056812  0.021145-0.0086718       nan       nan       nan       nan       nan0.000555930.00055385-0.0048356       nan       nan       nan0.00019691       nan       nan       nan       nan       nan  0.096399 -0.041297 0.0039931       nan       nan  0.005108       nan       nan         1
+                      omega_h       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+                  omega_L_gap       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan       nan
+                            a       nan-0.0013537-0.0031176 0.0020804       nan-0.0021655-0.0018916-0.0020662       nan 0.0076548       nan-0.0016053-0.00057548-0.0011996-0.00011332       nan-0.00017087-0.00094375       nan-0.0019563 -0.064135  0.060416       nan       nan  0.062989  0.058052  0.055826  0.057936  0.064924  0.090616   0.05544  0.058086  0.062942       nan  0.062876  0.062316  0.057326  0.062286  0.060239   0.01744       nan       nan       nan       nan       nan  0.014652 0.0093281  0.034845       nan       nan       nan-0.0057582       nan       nan       nan       nan       nan-0.00035596  0.035581  0.059617       nan       nan -0.038245       nan       nan-0.0036926       nan       nan         1
+                            b       nan 0.0016421 0.0024504-0.0021552       nan 0.0016836 0.00168040.00086914       nan -0.025042       nan 0.0012267-0.000122020.000691269.2891e-05       nan0.000140070.00077364       nan  0.012808  0.028481 -0.029227       nan       nan -0.010361 -0.019789 -0.023017 -0.024694 -0.040839  -0.20436 -0.016295 -0.021854 -0.030441       nan -0.027943 -0.027764 -0.025392 -0.027727  -0.02671   0.24779       nan       nan       nan       nan       nan -0.018289-0.00049364 -0.036953       nan       nan       nan  0.021409       nan       nan       nan       nan       nan 0.0002918 -0.029317  -0.46374       nan       nan  0.031513       nan       nan  0.003027       nan       nan  -0.37017         1
+
+WARNING : Impossible to compute the eigen values of the correlation matrix.
+
+Elapsed time (seconds):  1.6e+02
+Iterations:      200 (Stopped at the maximum number of iterations/Fisher matrix was not correctly estimated)
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       10373.09
+Akaike Information Criteria               (AIC) :       10513.09
+Corrected Bayesian Information Criteria  (BICc) :       10733.11
+Bayesian Information Criteria             (BIC) :       10726.58
+
+Elapsed time                          (seconds) :          10.69
+CPU time                              (seconds) :          10.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.095
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 156
+Number of observations (rlu): 576
+Number of doses: 0
+

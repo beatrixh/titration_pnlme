@@ -1,0 +1,4 @@
+parameters,shrinkage_mode,shrinkage_mean,shrinkage_condDist
+f,47.8659,47.4125,6.31207
+h,99.9986,91.0901,-1.55837
+L_gap,99.999,90.8008,0.116135

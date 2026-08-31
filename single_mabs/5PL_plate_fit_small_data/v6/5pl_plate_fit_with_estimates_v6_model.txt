@@ -1,0 +1,33 @@
+DESCRIPTION:
+
+[LONGITUDINAL]
+input={f, h, s, L_gap, plate_row, plate_col, binary_vc, binary_cc, binary_sample, U_estimate, L_estimate, alpha_estimate}
+
+plate_row = {use=regressor}
+plate_col = {use=regressor}
+binary_vc = {use=regressor}
+binary_cc = {use=regressor}
+binary_sample = {use=regressor}
+U_estimate = {use=regressor}
+L_estimate = {use=regressor}
+alpha_estimate = {use=regressor}
+
+PK:
+
+EQUATION:
+E_ij = 1 - alpha_estimate*(
+	exp(-plate_row) + exp(-(9 - plate_row)) + exp(-plate_col) + exp(-(13-plate_col))
+	- 2*exp(-4.5) - 2*exp(-6.5)
+)
+
+L = L_estimate + exp(L_gap)
+
+RLU_vc = U_estimate*E_ij
+RLU_cc = L_estimate*E_ij
+RLU_sample = (L + (U_estimate-L)/(1 + exp(h*(log(t) - log(f))))^s)*E_ij
+
+RLU_all = binary_vc*RLU_vc + binary_cc*RLU_cc + binary_sample*RLU_sample
+
+
+OUTPUT: 
+output = {RLU_all}

@@ -1,0 +1,66 @@
+<DATAFILE>
+
+[FILEINFO]
+file={path='../../../../input_data/retagged_data/six_plates_controls_only_2026-08-29.csv'}
+delimiter = comma
+header={run_id, run_name, plate_row, plate_col, rlu, min_diff, specrole, run, virus_name, concentration, monolix_id, rlu_max, rlu_min, rlu_norm, virus_col, mab, mablot, mab_virus, goes_down, virus_cc, id_unique, monolix_id_update, id_unique_update, mean_vc, mean_cc, binary_vc, binary_cc, binary_sample}
+
+[CONTENT]
+run_id = {use=identifier}
+plate_row = {use=time}
+rlu = {use=observation, yname={'cc', 'vc'}, type={continuous, continuous}}
+specrole = {use=observationtype}
+
+<MODEL>
+
+[INDIVIDUAL]
+input = {L_pop, omega_L, U_pop, omega_U, alpha_pop, omega_alpha}
+
+DEFINITION:
+L = {distribution=normal, typical=L_pop, sd=omega_L}
+U = {distribution=normal, typical=U_pop, sd=omega_U}
+alpha = {distribution=logNormal, typical=alpha_pop, sd=omega_alpha}
+
+[LONGITUDINAL]
+input = {acc, bcc, avc, bvc}
+
+file = '../dist_to_nearest_edge_controls_model.txt'
+
+DEFINITION:
+ycc = {distribution=normal, prediction=RLU_cc, errorModel=combined1(acc, bcc)}
+yvc = {distribution=normal, prediction=RLU_vc, errorModel=combined1(avc, bvc)}
+
+<FIT>
+data = {'cc', 'vc'}
+model = {ycc, yvc}
+
+<PARAMETER>
+L_pop = {value=702.3, method=MLE}
+U_pop = {value=120017, method=MLE}
+acc = {value=1, method=MLE}
+alpha_pop = {value=0.5, method=MLE}
+avc = {value=1, method=MLE}
+bcc = {value=0.3, method=MLE}
+bvc = {value=0.3, method=MLE}
+ccc = {value=1, method=FIXED}
+cvc = {value=1, method=FIXED}
+omega_L = {value=1, method=MLE}
+omega_U = {value=1, method=MLE}
+omega_alpha = {value=1, method=MLE}
+
+<MONOLIX>
+
+[TASKS]
+populationParameters()
+individualParameters(method = {conditionalMean, conditionalMode })
+fim(method = StochasticApproximation)
+logLikelihood(method = ImportanceSampling)
+
+[PLOTS]
+run = true
+plots = {indfits = {selected = true}, parameterdistribution = {selected = true}, obspred = {selected = true}, covariancemodeldiagnosis = {selected = true}, covariatemodeldiagnosis = {selected = true}, vpc = {selected = true}, residualsscatter = {selected = true}, residualsdistribution = {selected = true}, randomeffects = {selected = true}, saemresults = {selected = true}}
+
+[SETTINGS]
+GLOBAL:
+exportpath = 'm0'
+

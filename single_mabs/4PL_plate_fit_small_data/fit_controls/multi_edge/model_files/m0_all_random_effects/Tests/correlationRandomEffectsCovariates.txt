@@ -1,0 +1,4 @@
+eta,covariate,statistics,p-value,test
+eta_U,mean_cc,0,nan,Anova
+eta_L,mean_cc,0,nan,Anova
+eta_alpha,mean_cc,0,nan,Anova
