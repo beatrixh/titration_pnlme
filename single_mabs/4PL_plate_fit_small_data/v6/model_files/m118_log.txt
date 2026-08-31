@@ -1,3 +1,5 @@
 [2026-08-31 01:02:46] m118 :: 380.6 MB
 [2026-08-31 01:02:46] project loaded :: 380.6 MB
 [2026-08-31 01:02:46] starting runPopulationParameterEstimation :: 380.6 MB
+[2026-08-31 01:03:53] finished runPopulationParameterEstimation :: 380.6 MB
+[2026-08-31 01:03:53] finished runConditionalModeEstimation :: 380.6 MB
