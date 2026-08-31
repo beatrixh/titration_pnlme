@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 
 import openpyxl
@@ -78,7 +79,9 @@ def read_model_tracker(path: Path) -> pd.DataFrame:
 def discover_models(models_dir: Path) -> list[str]:
     names = [
         d.name for d in models_dir.iterdir()
-        if d.is_dir() and (d / "LogLikelihood" / "logLikelihood.txt").exists()
+        if d.is_dir()
+        and re.fullmatch(r"m\d+", d.name)  # skip stage-export dirs like m1_stage2
+        and (d / "LogLikelihood" / "logLikelihood.txt").exists()
     ]
     return sorted(names, key=lambda n: int(n[1:]) if n[1:].isdigit() else 10**9)
 
