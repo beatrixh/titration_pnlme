@@ -1,3 +1,8 @@
 [2026-08-30 23:12:12] m203 :: 326.6 MB
 [2026-08-30 23:12:12] project loaded :: 326.6 MB
 [2026-08-30 23:12:12] starting runPopulationParameterEstimation :: 326.6 MB
+[2026-08-30 23:20:23] finished runPopulationParameterEstimation :: 326.6 MB
+[2026-08-30 23:20:23] finished runConditionalModeEstimation :: 326.6 MB
+[2026-08-30 23:20:23] finished runLogLikelihoodEstimation :: 326.6 MB
+[2026-08-30 23:20:23] saved project :: 326.7 MB
+[2026-08-30 23:20:23] COMPLETE (total runtime 8.2 min) :: 326.7 MB
