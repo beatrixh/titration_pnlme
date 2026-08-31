@@ -12,10 +12,21 @@ library(dplyr)
 
 models_dir <- "/home/bhaddock/repos/titration_pnlme/single_mabs/5PL_plate_fit_small_data/v6/model_files"
 model_files <- list.files(models_dir, pattern = "^m[0-9]+\\.mlxtran$")
-model_names <- sub("^(m[0-9]+)\\.mlxtran$", "\\1", model_files)
-model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
+# model_names <- sub("^(m[0-9]+)\\.mlxtran$", "\\1", model_files)
+# model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 
-model_names <- paste0("m", 1:512)
+# model_names <- paste0("m", 1:512)
+
+# --- select only outstanding models (no _complete.flag yet) ---
+all_models <- paste0("m", 1:512)
+
+is_complete <- function(m) file.exists(file.path(models_dir, m, "_complete.flag"))
+done        <- all_models[vapply(all_models, is_complete, logical(1))]
+model_names <- all_models[!all_models %in% done]
+
+cat(sprintf("complete: %d/%d | outstanding: %d\n",
+            length(done), length(all_models), length(model_names)))
+writeLines(model_names, file.path(dirname(models_dir), "outstanding_models.txt"))
 
 run_one_model <- function(model_name, models_dir) {
   library(lixoftConnectors)
