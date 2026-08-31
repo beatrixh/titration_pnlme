@@ -1,0 +1,101 @@
+********************************************************************************
+*                         m114.mlxtran                                         *
+*                         August 31, 2026 at 00:55:01                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+f_pop                     :         0.0282
+beta_f_mab_virus_22_0_276 :           1.37
+beta_f_mab_virus_22_0_292 :           2.33
+beta_f_mab_virus_22_0_322 :           1.64
+beta_f_mab_virus_28_0_103 :         -0.294
+beta_f_mab_virus_28_0_276 :          0.607
+beta_f_mab_virus_28_0_292 :          0.878
+beta_f_mab_virus_28_0_322 :          0.862
+beta_f_mab_virus_32_0_292 :         -0.377
+beta_f_mab_virus_55_0_292 :           6.28
+beta_f_mab_virus_65_0_103 :          0.085
+beta_f_mab_virus_65_0_276 :           1.55
+beta_f_mab_virus_65_0_292 :           2.23
+beta_f_mab_virus_65_0_322 :           1.89
+beta_f_mab_virus_69_0_103 :          -1.99
+beta_f_mab_virus_69_0_274 :         -0.306
+beta_f_mab_virus_69_0_276 :           2.04
+beta_f_mab_virus_69_0_292 :          0.998
+beta_f_mab_virus_69_0_322 :          0.983
+beta_f_mab_virus_70_0_274 :           2.78
+h_pop                     :           1.78
+beta_h_run_id_1159        :       8.67e-07
+beta_h_run_id_1197        :       7.58e-06
+beta_h_run_id_152         :         -0.663
+beta_h_run_id_411         :         -0.336
+beta_h_run_id_462         :         0.0144
+L_gap_pop                 :          -13.1
+beta_L_gap_run_id_1159    :      -3.88e-10
+beta_L_gap_run_id_1197    :         -0.424
+beta_L_gap_run_id_152     :       6.57e-07
+beta_L_gap_run_id_411     :      -1.47e-05
+beta_L_gap_run_id_462     :      -0.000711
+
+Standard Deviation of the Random Effects -
+omega_f                   :         0.0912
+
+Error Model Parameters -------------------
+a                         :           53.9
+b                         :          0.183
+
+Elapsed time (seconds):       86
+CPU time     (seconds):       77
+Exploratory phase iterations:      242 (Autostop)
+Smoothing phase iterations:         92 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+f     :       0.00384        0.0224        0.0764          0.19            15          51.6
+h     :          1.12          1.44          1.78          1.78          1.79           nan
+L_gap :         -13.5         -13.1         -13.1         -13.1         -13.1           nan
+
+Elapsed time (seconds):    0.013
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       10688.61
+Akaike Information Criteria               (AIC) :       10758.61
+Corrected Bayesian Information Criteria  (BICc) :       10884.95
+Bayesian Information Criteria             (BIC) :       10865.36
+
+Elapsed time                          (seconds) :           9.76
+CPU time                              (seconds) :           8.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.038
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 156
+Number of observations (rlu): 576
+Number of doses: 0
+
