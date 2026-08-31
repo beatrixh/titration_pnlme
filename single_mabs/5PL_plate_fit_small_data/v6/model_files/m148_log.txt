@@ -1,0 +1,8 @@
+[2026-08-31 07:04:49] m148 :: 423.8 MB
+[2026-08-31 07:04:49] project loaded :: 423.8 MB
+[2026-08-31 07:04:49] starting runPopulationParameterEstimation :: 423.8 MB
+[2026-08-31 07:12:36] finished runPopulationParameterEstimation :: 423.8 MB
+[2026-08-31 07:12:36] finished runConditionalModeEstimation :: 423.8 MB
+[2026-08-31 07:12:42] finished runLogLikelihoodEstimation :: 423.8 MB
+[2026-08-31 07:12:43] saved project :: 423.8 MB
+[2026-08-31 07:12:43] COMPLETE (total runtime 7.9 min) :: 423.8 MB

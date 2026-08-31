@@ -1,0 +1,8 @@
+[2026-08-31 09:42:31] m468 :: 369.9 MB
+[2026-08-31 09:42:31] project loaded :: 369.9 MB
+[2026-08-31 09:42:31] starting runPopulationParameterEstimation :: 369.9 MB
+[2026-08-31 09:43:50] finished runPopulationParameterEstimation :: 369.9 MB
+[2026-08-31 09:43:50] finished runConditionalModeEstimation :: 369.9 MB
+[2026-08-31 09:43:54] finished runLogLikelihoodEstimation :: 369.9 MB
+[2026-08-31 09:43:54] saved project :: 369.9 MB
+[2026-08-31 09:43:54] COMPLETE (total runtime 1.4 min) :: 369.9 MB

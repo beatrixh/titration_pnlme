@@ -1,0 +1,8 @@
+[2026-08-31 06:04:34] m44 :: 382.1 MB
+[2026-08-31 06:04:34] project loaded :: 382.1 MB
+[2026-08-31 06:04:34] starting runPopulationParameterEstimation :: 382.1 MB
+[2026-08-31 06:20:17] finished runPopulationParameterEstimation :: 382.1 MB
+[2026-08-31 06:20:17] finished runConditionalModeEstimation :: 382.1 MB
+[2026-08-31 06:20:23] finished runLogLikelihoodEstimation :: 382.1 MB
+[2026-08-31 06:20:24] saved project :: 382.1 MB
+[2026-08-31 06:20:24] COMPLETE (total runtime 15.8 min) :: 382.1 MB

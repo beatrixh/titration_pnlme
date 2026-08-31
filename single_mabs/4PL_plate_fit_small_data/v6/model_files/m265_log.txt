@@ -1,0 +1,8 @@
+[2026-08-31 02:44:26] m265 :: 381.6 MB
+[2026-08-31 02:44:26] project loaded :: 381.6 MB
+[2026-08-31 02:44:26] starting runPopulationParameterEstimation :: 381.6 MB
+[2026-08-31 02:45:03] finished runPopulationParameterEstimation :: 381.6 MB
+[2026-08-31 02:45:03] finished runConditionalModeEstimation :: 381.6 MB
+[2026-08-31 02:45:10] finished runLogLikelihoodEstimation :: 381.6 MB
+[2026-08-31 02:45:10] saved project :: 381.6 MB
+[2026-08-31 02:45:10] COMPLETE (total runtime 0.7 min) :: 381.6 MB

@@ -1,0 +1,8 @@
+[2026-08-31 08:13:34] m233 :: 346.0 MB
+[2026-08-31 08:13:34] project loaded :: 346.0 MB
+[2026-08-31 08:13:34] starting runPopulationParameterEstimation :: 346.0 MB
+[2026-08-31 08:15:50] finished runPopulationParameterEstimation :: 346.0 MB
+[2026-08-31 08:15:50] finished runConditionalModeEstimation :: 346.0 MB
+[2026-08-31 08:15:55] finished runLogLikelihoodEstimation :: 346.0 MB
+[2026-08-31 08:15:55] saved project :: 346.0 MB
+[2026-08-31 08:15:55] COMPLETE (total runtime 2.4 min) :: 346.0 MB

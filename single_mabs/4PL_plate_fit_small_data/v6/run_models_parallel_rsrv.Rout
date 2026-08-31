@@ -58,10 +58,26 @@ The following objects are masked from ‘package:base’:
 > 
 > models_dir <- "/home/bhaddock/repos/titration_pnlme/single_mabs/4PL_plate_fit_small_data/v6/model_files"
 > model_files <- list.files(models_dir, pattern = "^m[0-9]+\\.mlxtran$")
-> model_names <- sub("^(m[0-9]+)\\.mlxtran$", "\\1", model_files)
-> model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
+> # model_names <- sub("^(m[0-9]+)\\.mlxtran$", "\\1", model_files)
+> # model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 > 
-> model_names <- paste0("m", 16:512)
+> # model_names <- paste0("m", 16:512)
+> 
+> 
+> 
+> # --- select only outstanding models (no _complete.flag yet) ---
+> all_models <- paste0("m", 16:512)
+> 
+> is_complete <- function(m) file.exists(file.path(models_dir, m, "_complete.flag"))
+> done        <- all_models[vapply(all_models, is_complete, logical(1))]
+> model_names <- all_models[!all_models %in% done]
+> 
+> cat(sprintf("complete: %d/%d | outstanding: %d\n",
++             length(done), length(all_models), length(model_names)))
+complete: 127/497 | outstanding: 370
+> writeLines(model_names, file.path(dirname(models_dir), "outstanding_models.txt"))
+> 
+> 
 > 
 > run_one_model <- function(model_name, models_dir) {
 +   library(lixoftConnectors)
@@ -154,7 +170,7 @@ The following objects are masked from ‘package:base’:
 +   invisible(model_name)
 + }
 > 
-> n_workers <- 4 
+> n_workers <- 2
 > cl <- makeCluster(n_workers)
 > 
 > results <- tryCatch(
@@ -163,7 +179,4 @@ The following objects are masked from ‘package:base’:
 +     models_dir = models_dir
 +   ),
 +   finally = stopCluster(cl)
-+ > 
-> proc.time()
-   user  system elapsed 
- 14.578   0.827 539.891 
++ )

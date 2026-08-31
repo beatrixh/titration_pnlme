@@ -1,0 +1,8 @@
+[2026-08-31 07:59:52] m241 :: 423.6 MB
+[2026-08-31 07:59:52] project loaded :: 423.6 MB
+[2026-08-31 07:59:52] starting runPopulationParameterEstimation :: 423.6 MB
+[2026-08-31 08:02:08] finished runPopulationParameterEstimation :: 423.6 MB
+[2026-08-31 08:02:08] finished runConditionalModeEstimation :: 423.6 MB
+[2026-08-31 08:02:15] finished runLogLikelihoodEstimation :: 423.6 MB
+[2026-08-31 08:02:15] saved project :: 423.6 MB
+[2026-08-31 08:02:15] COMPLETE (total runtime 2.4 min) :: 423.6 MB

@@ -1,0 +1,8 @@
+[2026-08-31 02:43:56] m264 :: 381.6 MB
+[2026-08-31 02:43:56] project loaded :: 381.6 MB
+[2026-08-31 02:43:56] starting runPopulationParameterEstimation :: 381.6 MB
+[2026-08-31 02:44:18] finished runPopulationParameterEstimation :: 381.6 MB
+[2026-08-31 02:44:18] finished runConditionalModeEstimation :: 381.6 MB
+[2026-08-31 02:44:26] finished runLogLikelihoodEstimation :: 381.6 MB
+[2026-08-31 02:44:26] saved project :: 381.6 MB
+[2026-08-31 02:44:26] COMPLETE (total runtime 0.5 min) :: 381.6 MB

@@ -1,0 +1,101 @@
+********************************************************************************
+*                         m334.mlxtran                                         *
+*                         August 31, 2026 at 06:14:05                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+f_pop                      :         0.105
+beta_f_run_id_1159         :          0.81
+beta_f_run_id_1197         :         -1.44
+beta_f_run_id_152          :          1.24
+beta_f_run_id_411          :          1.72
+beta_f_run_id_462          :          4.71
+h_pop                      :          1.76
+beta_h_run_id_1159         :      1.13e-06
+beta_h_run_id_1197         :      1.28e-06
+beta_h_run_id_152          :       2.2e-06
+beta_h_run_id_411          :      1.89e-07
+beta_h_run_id_462          :     -9.94e-07
+L_gap_pop                  :         -24.2
+beta_L_gap_run_id_1159     :        0.0652
+beta_L_gap_run_id_1197     :          1.75
+beta_L_gap_run_id_152      :         -2.31
+beta_L_gap_run_id_411      :         -1.98
+beta_L_gap_run_id_462      :         -4.51
+eta_alpha_pop              :        0.0349
+beta_eta_alpha_run_id_1159 :       -0.0124
+beta_eta_alpha_run_id_1197 :       -0.0197
+beta_eta_alpha_run_id_152  :      -0.00739
+beta_eta_alpha_run_id_411  :       -0.0136
+beta_eta_alpha_run_id_462  :      -0.00272
+
+Standard Deviation of the Random Effects -
+omega_h                    :      2.42e-08
+omega_L_gap                :       9.3e-08
+
+Error Model Parameters -------------------
+acc                        :          40.6
+bcc                        :      2.22e-16
+asample                    :      2.22e-16
+bsample                    :         0.371
+avc                        :      2.22e-16
+bvc                        :        0.0439
+
+Elapsed time (seconds):  1.2e+02
+CPU time     (seconds):  1.6e+02
+Exploratory phase iterations:     2000 (Stopped at the maximum number of iterations/auto-stop criteria have not been reached)
+Smoothing phase iterations:        200 (Stopped at the maximum number of iterations)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                      min            Q1        median            Q3           max  shrinkage(%)
+f         :        0.0248         0.105           0.3         0.586          11.7           nan
+h         :          1.76          1.76          1.76          1.76          1.76          99.9
+L_gap     :         -28.7         -26.5         -25.2         -24.2         -22.5          99.9
+eta_alpha :        0.0153        0.0214         0.025        0.0322        0.0349           nan
+
+Elapsed time (seconds):    0.024
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       10745.48
+Akaike Information Criteria               (AIC) :       10809.48
+Corrected Bayesian Information Criteria  (BICc) :       10923.92
+Bayesian Information Criteria             (BIC) :       10882.33
+
+Elapsed time                          (seconds) :           4.40
+CPU time                              (seconds) :           5.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.263
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 72
+Number of observations (obsid cc): 48
+Number of observations (obsid sample): 480
+Number of observations (obsid vc): 48
+Number of doses: 0
+

@@ -1,0 +1,95 @@
+********************************************************************************
+*                         m14_fitted.mlxtran                                   *
+*                         August 31, 2026 at 01:29:30                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+f_pop                      :        0.0834
+beta_f_run_id_1159         :         0.777
+beta_f_run_id_1197         :         -1.46
+beta_f_run_id_152          :          1.12
+beta_f_run_id_411          :          1.71
+beta_f_run_id_462          :          4.65
+h_pop                      :          1.51
+L_gap_pop                  :         -24.2
+beta_L_gap_run_id_1159     :        0.0652
+beta_L_gap_run_id_1197     :          1.75
+beta_L_gap_run_id_152      :         -2.31
+beta_L_gap_run_id_411      :         -1.98
+beta_L_gap_run_id_462      :         -4.51
+eta_alpha_pop              :        0.0209
+beta_eta_alpha_run_id_1159 :       0.00539
+beta_eta_alpha_run_id_1197 :       2.5e-05
+beta_eta_alpha_run_id_152  :        0.0141
+beta_eta_alpha_run_id_411  :       0.00619
+beta_eta_alpha_run_id_462  :        0.0102
+
+Standard Deviation of the Random Effects -
+omega_L_gap                :      2.67e-08
+
+Error Model Parameters -------------------
+acc                        :          40.6
+bcc                        :      2.22e-16
+asample                    :      2.22e-16
+bsample                    :         0.368
+avc                        :      2.22e-16
+bvc                        :         0.044
+
+Elapsed time (seconds):       43
+CPU time     (seconds):       37
+Exploratory phase iterations:      222 (Autostop)
+Smoothing phase iterations:        200 (Stopped at the maximum number of iterations)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                      min            Q1        median            Q3           max  shrinkage(%)
+f         :        0.0194        0.0834         0.219         0.462          8.69           nan
+h         :          1.51          1.51          1.51          1.51          1.51           nan
+L_gap     :         -28.7         -26.5         -25.2         -24.2         -22.5          99.9
+eta_alpha :        0.0209        0.0209        0.0266         0.031         0.035           nan
+
+Elapsed time (seconds):    0.021
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       11005.72
+Akaike Information Criteria               (AIC) :       11057.72
+Corrected Bayesian Information Criteria  (BICc) :       11158.51
+Bayesian Information Criteria             (BIC) :       11116.92
+
+Elapsed time                          (seconds) :           7.43
+CPU time                              (seconds) :           5.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.414
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 72
+Number of observations (obsid cc): 48
+Number of observations (obsid sample): 480
+Number of observations (obsid vc): 48
+Number of doses: 0
+

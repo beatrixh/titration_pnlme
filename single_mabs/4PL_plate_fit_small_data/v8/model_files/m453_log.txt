@@ -1,0 +1,8 @@
+[2026-08-31 09:12:48] m453 :: 369.3 MB
+[2026-08-31 09:12:48] project loaded :: 369.3 MB
+[2026-08-31 09:12:48] starting runPopulationParameterEstimation :: 369.3 MB
+[2026-08-31 09:13:48] finished runPopulationParameterEstimation :: 369.3 MB
+[2026-08-31 09:13:48] finished runConditionalModeEstimation :: 369.3 MB
+[2026-08-31 09:13:53] finished runLogLikelihoodEstimation :: 369.3 MB
+[2026-08-31 09:13:53] saved project :: 369.3 MB
+[2026-08-31 09:13:53] COMPLETE (total runtime 1.1 min) :: 369.3 MB

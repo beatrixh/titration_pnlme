@@ -1,0 +1,103 @@
+********************************************************************************
+*                         m129.mlxtran                                         *
+*                         August 31, 2026 at 04:34:10                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+f_pop                     :          0.144
+h_pop                     :           1.55
+beta_h_mab_virus_22_0_276 :           1.29
+beta_h_mab_virus_22_0_292 :          -2.07
+beta_h_mab_virus_22_0_322 :       1.29e-14
+beta_h_mab_virus_28_0_103 :       3.18e-07
+beta_h_mab_virus_28_0_276 :           3.72
+beta_h_mab_virus_28_0_292 :           0.17
+beta_h_mab_virus_28_0_322 :          0.483
+beta_h_mab_virus_32_0_292 :           9.22
+beta_h_mab_virus_55_0_292 :          -3.31
+beta_h_mab_virus_65_0_103 :           7.59
+beta_h_mab_virus_65_0_276 :           1.04
+beta_h_mab_virus_65_0_292 :          -1.89
+beta_h_mab_virus_65_0_322 :      -5.19e-11
+beta_h_mab_virus_69_0_103 :      -4.27e-08
+beta_h_mab_virus_69_0_274 :       -3.8e-10
+beta_h_mab_virus_69_0_276 :      -5.43e-12
+beta_h_mab_virus_69_0_292 :       1.62e-07
+beta_h_mab_virus_69_0_322 :       0.000924
+beta_h_mab_virus_70_0_274 :         -0.409
+beta_h_run_id_1159        :           2.16
+beta_h_run_id_1197        :      -9.79e-13
+beta_h_run_id_152         :       2.12e-12
+beta_h_run_id_411         :       5.06e-13
+beta_h_run_id_462         :           2.26
+s_pop                     :          0.754
+L_gap_pop                 :          -3.07
+beta_L_gap_run_id_1159    :          -3.65
+beta_L_gap_run_id_1197    :          -5.01
+beta_L_gap_run_id_152     :           2.67
+beta_L_gap_run_id_411     :          -2.29
+beta_L_gap_run_id_462     :         -0.564
+
+Standard Deviation of the Random Effects -
+omega_L_gap               :           0.42
+
+Error Model Parameters -------------------
+a                         :           8.44
+b                         :          0.323
+
+Elapsed time (seconds):  1.1e+02
+CPU time     (seconds):  1.3e+02
+Exploratory phase iterations:      422 (Autostop)
+Smoothing phase iterations:        118 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+f     :         0.144         0.144         0.144         0.144         0.144           nan
+h     :         0.499          1.55          1.55          3.71            13           nan
+s     :         0.754         0.754         0.754         0.754         0.754           nan
+L_gap :         -8.09         -6.72          -4.5         -3.07        -0.398           100
+
+Elapsed time (seconds):    0.014
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       11270.75
+Akaike Information Criteria               (AIC) :       11342.75
+Corrected Bayesian Information Criteria  (BICc) :       11491.73
+Bayesian Information Criteria             (BIC) :       11452.55
+
+Elapsed time                          (seconds) :           6.92
+CPU time                              (seconds) :           8.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.044
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 156
+Number of observations (rlu): 576
+Number of doses: 0
+
