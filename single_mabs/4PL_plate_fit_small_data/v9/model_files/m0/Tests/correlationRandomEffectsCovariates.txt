@@ -1,0 +1,11 @@
+eta,covariate,statistics,p-value,test
+eta_f,mab_virus,96.193,<2.2e-16,Anova
+eta_f,run_id,5.54262,0.000254063,Anova
+eta_h,mab_virus,0.776807,0.721962,Anova
+eta_h,run_id,0.305202,0.908107,Anova
+eta_L_gap,mab_virus,0.881661,0.605397,Anova
+eta_L_gap,run_id,0.719035,0.61144,Anova
+eta_eta_alpha,mab_virus,0.344612,0.993453,Anova
+eta_eta_alpha,run_id,0.714829,0.614509,Anova
+eta_eta_U,mab_virus,0.74384,0.757143,Anova
+eta_eta_U,run_id,0.305656,0.907839,Anova
