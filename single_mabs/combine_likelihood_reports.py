@@ -27,9 +27,19 @@ def main() -> None:
 
     reports = []
     for project in args.projects:
-        report = build_report(project)
+        try:
+            report = build_report(project)
+        except SystemExit as e:
+            # No completed models yet for this project -- skip it rather than
+            # aborting the whole combine (common mid-run, e.g. one arm of a
+            # 4PL/5PL pair has started fitting and the other hasn't).
+            print(f"skipping {project}: {e}")
+            continue
         report.insert(0, "project", project)
         reports.append(report)
+
+    if not reports:
+        raise SystemExit("no projects had completed models")
 
     # pd.concat aligns on column name and fills any column missing from one
     # side (e.g. s_random/s_mab_virus/s_goes_down, which only 5PL has) with
