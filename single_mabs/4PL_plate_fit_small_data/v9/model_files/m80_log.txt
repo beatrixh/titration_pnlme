@@ -1,0 +1,5 @@
+[2026-08-31 13:17:37] m80 :: 376.9 MB
+[2026-08-31 13:17:37] project loaded :: 376.9 MB
+[2026-08-31 13:17:37] starting runPopulationParameterEstimation :: 376.9 MB
+[2026-08-31 13:18:06] finished runPopulationParameterEstimation :: 376.9 MB
+[2026-08-31 13:18:06] finished runConditionalModeEstimation :: 376.9 MB
