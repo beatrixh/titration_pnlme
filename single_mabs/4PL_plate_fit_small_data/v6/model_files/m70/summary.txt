@@ -1,0 +1,82 @@
+********************************************************************************
+*                         m70.mlxtran                                          *
+*                         August 31, 2026 at 00:49:37                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+f_pop                  :             0.174
+h_pop                  :              2.31
+beta_h_run_id_1159     :            -0.806
+beta_h_run_id_1197     :              7.56
+beta_h_run_id_152      :             -1.08
+beta_h_run_id_411      :             -1.39
+beta_h_run_id_462      :            -0.685
+L_gap_pop              :             -9.58
+beta_L_gap_run_id_1159 :              4.79
+beta_L_gap_run_id_1197 :              6.96
+beta_L_gap_run_id_152  :              5.71
+beta_L_gap_run_id_411  :             -4.13
+beta_L_gap_run_id_462  :              16.4
+
+Standard Deviation of the Random Effects -
+omega_L_gap            :                 3
+
+Error Model Parameters -------------------
+a                      :          2.22e-16
+b                      :             0.356
+
+Elapsed time (seconds):       33
+CPU time     (seconds):       30
+Exploratory phase iterations:      151 (Autostop)
+Smoothing phase iterations:         89 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+f     :         0.174         0.174         0.174         0.174         0.174           nan
+h     :          0.92          1.23          1.57          2.31          9.87           nan
+L_gap :         -13.7         -9.58         -4.33         -2.62          10.6          75.6
+
+Elapsed time (seconds):    0.011
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       11427.59
+Akaike Information Criteria               (AIC) :       11459.59
+Corrected Bayesian Information Criteria  (BICc) :       11521.45
+Bayesian Information Criteria             (BIC) :       11508.38
+
+Elapsed time                          (seconds) :           8.34
+CPU time                              (seconds) :           7.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.057
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 156
+Number of observations (rlu): 576
+Number of doses: 0
+

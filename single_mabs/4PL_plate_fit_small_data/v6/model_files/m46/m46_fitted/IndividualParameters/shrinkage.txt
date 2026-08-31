@@ -1,0 +1,4 @@
+parameters,shrinkage_mode
+f,39.9075
+h,nan
+L_gap,68.3909

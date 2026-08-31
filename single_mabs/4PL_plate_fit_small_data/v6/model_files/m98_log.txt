@@ -1,0 +1,8 @@
+[2026-08-31 00:19:14] m98 :: 355.1 MB
+[2026-08-31 00:19:14] project loaded :: 355.1 MB
+[2026-08-31 00:19:14] starting runPopulationParameterEstimation :: 355.1 MB
+[2026-08-31 00:20:55] finished runPopulationParameterEstimation :: 355.1 MB
+[2026-08-31 00:20:55] finished runConditionalModeEstimation :: 355.1 MB
+[2026-08-31 00:21:04] finished runLogLikelihoodEstimation :: 355.1 MB
+[2026-08-31 00:21:04] saved project :: 355.1 MB
+[2026-08-31 00:21:04] COMPLETE (total runtime 1.8 min) :: 355.1 MB

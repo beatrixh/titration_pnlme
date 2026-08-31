@@ -1,0 +1,83 @@
+********************************************************************************
+*                         m109.mlxtran                                         *
+*                         August 31, 2026 at 00:46:03                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+f_pop              :                0.0957
+beta_f_run_id_1159 :                 0.433
+beta_f_run_id_1197 :                 -1.27
+beta_f_run_id_152  :                 0.262
+beta_f_run_id_411  :                  1.56
+beta_f_run_id_462  :                -0.233
+h_pop              :                  1.81
+beta_h_run_id_1159 :               -0.0739
+beta_h_run_id_1197 :             -0.000367
+beta_h_run_id_152  :                 -0.69
+beta_h_run_id_411  :                -0.346
+beta_h_run_id_462  :                0.0405
+L_gap_pop          :                 -14.1
+
+Standard Deviation of the Random Effects -
+omega_f            :                 0.632
+omega_L_gap        :                  13.5
+
+Error Model Parameters -------------------
+a                  :                  69.2
+b                  :                 0.147
+
+Elapsed time (seconds):       53
+CPU time     (seconds):       48
+Exploratory phase iterations:      238 (Autostop)
+Smoothing phase iterations:        104 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                  min            Q1        median            Q3           max  shrinkage(%)
+f     :        0.0185        0.0729         0.124         0.166         0.619          38.5
+h     :          1.12          1.46          1.77          1.81          1.85           nan
+L_gap :         -14.1         -14.1         -14.1         -14.1          10.8          70.9
+
+Elapsed time (seconds):    0.037
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       10734.90
+Akaike Information Criteria               (AIC) :       10768.90
+Corrected Bayesian Information Criteria  (BICc) :       10833.81
+Bayesian Information Criteria             (BIC) :       10820.75
+
+Elapsed time                          (seconds) :           9.71
+CPU time                              (seconds) :           8.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.105
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 156
+Number of observations (rlu): 576
+Number of doses: 0
+
