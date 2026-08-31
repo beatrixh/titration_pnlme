@@ -1,0 +1,4 @@
+parameter,statistics,p-value,test
+f,0.537862,4.44089e-16,Kolmogorov-Smirnov
+h,0.0924766,0.338518,Kolmogorov-Smirnov
+L_gap,0.0994051,0.25884,Kolmogorov-Smirnov

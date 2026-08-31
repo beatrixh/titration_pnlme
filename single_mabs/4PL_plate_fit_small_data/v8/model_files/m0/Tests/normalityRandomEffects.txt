@@ -1,0 +1,4 @@
+eta,statistics,p-value
+eta_f,0.901561,4.86485e-06
+eta_h,0.978773,0.137257
+eta_L_gap,0.980872,0.186193
