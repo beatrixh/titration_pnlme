@@ -1,0 +1,6 @@
+parameters,shrinkage_mode
+f,28.9831
+h,nan
+s,48.7913
+L_gap,99.9999
+eta_alpha,50.5143

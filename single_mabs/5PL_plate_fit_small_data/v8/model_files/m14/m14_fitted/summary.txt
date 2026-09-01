@@ -1,0 +1,143 @@
+********************************************************************************
+*                         m14_fitted.mlxtran                                   *
+*                         August 31, 2026 at 21:02:05                          *
+*                         Monolix version : 2024R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+f_pop                         :      0.168
+beta_f_run_id_1159            :      0.795
+beta_f_run_id_1197            :       -1.3
+beta_f_run_id_152             :       2.14
+beta_f_run_id_411             :       2.25
+beta_f_run_id_462             :  -0.000441
+h_pop                         :       1.16
+beta_h_mab_virus_22_0_276     :       0.18
+beta_h_mab_virus_22_0_292     :     0.0502
+beta_h_mab_virus_22_0_322     :     -0.598
+beta_h_mab_virus_28_0_103     :      0.281
+beta_h_mab_virus_28_0_276     :       0.16
+beta_h_mab_virus_28_0_292     :      0.151
+beta_h_mab_virus_28_0_322     :     -0.618
+beta_h_mab_virus_32_0_292     :      0.325
+beta_h_mab_virus_55_0_292     :      -1.37
+beta_h_mab_virus_65_0_103     :   -0.00357
+beta_h_mab_virus_65_0_276     :      0.189
+beta_h_mab_virus_65_0_292     :      0.136
+beta_h_mab_virus_65_0_322     :     -0.612
+beta_h_mab_virus_69_0_103     :       4.82
+beta_h_mab_virus_69_0_274     :        2.6
+beta_h_mab_virus_69_0_276     :      -1.89
+beta_h_mab_virus_69_0_292     :      -4.95
+beta_h_mab_virus_69_0_322     :       1.64
+beta_h_mab_virus_70_0_274     :     -0.255
+s_pop                         :          1
+beta_s_run_id_1159            :          0
+beta_s_run_id_1197            :          0
+beta_s_run_id_152             :          0
+beta_s_run_id_411             :          0
+beta_s_run_id_462             :          0
+L_gap_pop                     :       -156
+beta_L_gap_mab_virus_22_0_276 :      -20.8
+beta_L_gap_mab_virus_22_0_292 :      -3.72
+beta_L_gap_mab_virus_22_0_322 :      -2.96
+beta_L_gap_mab_virus_28_0_103 :      -7.61
+beta_L_gap_mab_virus_28_0_276 :      -21.8
+beta_L_gap_mab_virus_28_0_292 :      -6.89
+beta_L_gap_mab_virus_28_0_322 :      -1.91
+beta_L_gap_mab_virus_32_0_292 :      -1.82
+beta_L_gap_mab_virus_55_0_292 :      -5.48
+beta_L_gap_mab_virus_65_0_103 :      -9.41
+beta_L_gap_mab_virus_65_0_276 :      -18.7
+beta_L_gap_mab_virus_65_0_292 :      -7.55
+beta_L_gap_mab_virus_65_0_322 :       -7.5
+beta_L_gap_mab_virus_69_0_103 :      -5.43
+beta_L_gap_mab_virus_69_0_274 :      -5.91
+beta_L_gap_mab_virus_69_0_276 :      -22.2
+beta_L_gap_mab_virus_69_0_292 :      -3.72
+beta_L_gap_mab_virus_69_0_322 :      -3.13
+beta_L_gap_mab_virus_70_0_274 :      -7.07
+beta_L_gap_run_id_1159        :      -12.3
+beta_L_gap_run_id_1197        :      -14.7
+beta_L_gap_run_id_152         :      -15.5
+beta_L_gap_run_id_411         :        -13
+beta_L_gap_run_id_462         :      -16.9
+eta_alpha_pop                 :     -0.038
+beta_eta_alpha_run_id_1159    :    -0.0246
+beta_eta_alpha_run_id_1197    :     0.0709
+beta_eta_alpha_run_id_152     :     0.0517
+beta_eta_alpha_run_id_411     :   -0.00224
+beta_eta_alpha_run_id_462     :     0.0448
+
+Standard Deviation of the Random Effects -
+omega_h                       :   3.88e-08
+omega_s                       :       1.09
+omega_L_gap                   :   4.72e-08
+omega_eta_alpha               :    0.00127
+
+Error Model Parameters -------------------
+acc                           :       40.6
+bcc                           :   2.22e-16
+asample                       :   2.22e-16
+bsample                       :      0.214
+avc                           :   2.22e-16
+bvc                           :     0.0443
+
+Elapsed time (seconds):       65
+CPU time     (seconds):       92
+Exploratory phase iterations:      708 (Autostop)
+Smoothing phase iterations:        200 (Stopped at the maximum number of iterations)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+                      min            Q1        median            Q3           max  shrinkage(%)
+f         :        0.0459         0.168          0.27          1.43          1.59           nan
+h         :         -3.79          0.55          1.18          1.34          5.98           100
+s         :         0.161          1.29          1.87          3.24           7.7          31.4
+L_gap     :          -180          -178          -176          -174          -171           100
+eta_alpha :       -0.0626       -0.0402       -0.0156        0.0137        0.0329          99.1
+
+Elapsed time (seconds):    0.054
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :       10600.12
+Akaike Information Criteria               (AIC) :       10746.12
+Corrected Bayesian Information Criteria  (BICc) :       10945.59
+Bayesian Information Criteria             (BIC) :       10912.32
+
+Elapsed time                          (seconds) :           5.73
+CPU time                              (seconds) :           7.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 2.235
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 72
+Number of observations (obsid cc): 48
+Number of observations (obsid sample): 480
+Number of observations (obsid vc): 48
+Number of doses: 0
+

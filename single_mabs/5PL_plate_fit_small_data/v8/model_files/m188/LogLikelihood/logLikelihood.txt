@@ -1,0 +1,6 @@
+criteria,importanceSampling
+OFV,10822.502930
+AIC,11022.502930
+BIC,11250.169542
+BICc,11322.949996
+standardError,1.490037

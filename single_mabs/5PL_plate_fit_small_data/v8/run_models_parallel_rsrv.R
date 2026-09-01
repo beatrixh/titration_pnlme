@@ -1,0 +1,131 @@
+# Installed once here, sequentially, before any workers are spun up --
+# install.packages() writes to a shared library path, so running it inside
+# run_one_model() would have every worker try to install concurrently into
+# the same location, risking a corrupted/partial install.
+install.packages("/usr/local/Lixoft/MonolixSuite2024R1/connectors/lixoftConnectors.tar.gz",
+                 repos = NULL, type="source", INSTALL_opts ="--no-multiarch")
+
+library(lixoftConnectors)
+library(ps)
+library(parallel)
+library(dplyr)
+
+models_dir <- "/home/bhaddock/repos/titration_pnlme/single_mabs/5PL_plate_fit_small_data/v8/model_files"
+model_files <- list.files(models_dir, pattern = "^m[0-9]+\\.mlxtran$")
+# model_names <- sub("^(m[0-9]+)\\.mlxtran$", "\\1", model_files)
+# model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
+
+# model_names <- paste0("m", 1:512)
+
+# --- select only outstanding models (no _complete.flag yet) ---
+all_models <- paste0("m", 1:400)
+
+is_complete <- function(m) file.exists(file.path(models_dir, m, "_complete.flag"))
+done        <- all_models[vapply(all_models, is_complete, logical(1))]
+model_names <- all_models[!all_models %in% done]
+
+cat(sprintf("complete: %d/%d | outstanding: %d\n",
+            length(done), length(all_models), length(model_names)))
+writeLines(model_names, file.path(dirname(models_dir), "outstanding_models.txt"))
+
+run_one_model <- function(model_name, models_dir) {
+  library(lixoftConnectors)
+  initializeLixoftConnectors(software = "monolix", force = T,
+                             path = "/usr/local/Lixoft/MonolixSuite2024R1/")
+
+  library(dplyr)
+  library(ps)
+
+
+  log_path <- file.path(models_dir, paste0(model_name, "_log.txt"))
+  log_step <- function(step) {
+    mem_mb <- round(as.numeric(ps::ps_memory_info(ps::ps_handle())["rss"]) / 1024^2, 1)
+    cat(sprintf("[%s] %s :: %.1f MB\n", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), step, mem_mb),
+        file = log_path, append = TRUE)
+  }
+
+
+  mlxtran_path <- file.path(models_dir, paste0(model_name, ".mlxtran"))
+  savedir <- file.path(models_dir, model_name)
+
+  already_done <- file.exists(file.path(savedir, "_complete.flag"))
+
+  if (file.exists(mlxtran_path) && !already_done) {
+    start_time <- Sys.time()
+    tryCatch({
+      loadProject(mlxtran_path)
+      log_step(model_name)
+      log_step("project loaded")
+
+      # autoInitValues <- getFixedEffectsByAutoInit()
+      # setPopulationParameterInformation(autoInitValues)
+      # log_step("initial values configured")
+
+      # popParams <- getPopulationParameterInformation()
+
+      # betaRows <- grepl("^beta_", popParams$name)
+      # popParams$initialValue[betaRows] <- 0
+
+      # omegaRows <- grepl("^omega_", popParams$name)
+      # popParams$initialValue[omegaRows] <- 1
+
+      # popParams <- popParams %>%
+      #   rows_update(autoInitValues, by = "name")
+      # setPopulationParameterInformation(popParams)
+
+      # defaults <- c(a = 1, b = 0.3, c = 1)
+      # for (nm in names(defaults)) {
+      #   if (nm %in% popParams$name) {
+      #     popParams$initialValue[popParams$name == nm] <- defaults[nm]
+      #   }
+      # }
+      # setPopulationParameterInformation(popParams)
+
+      setConditionalModeEstimationSettings(
+        nboptimizationiterationsmode = 2000
+      )
+
+      log_step("starting runPopulationParameterEstimation")
+      runPopulationParameterEstimation()
+      log_step("finished runPopulationParameterEstimation")
+      runConditionalModeEstimation()
+      log_step("finished runConditionalModeEstimation")
+      runLogLikelihoodEstimation()
+      log_step("finished runLogLikelihoodEstimation")
+
+      pop <- getEstimatedPopulationParameters()
+      ind <- getEstimatedIndividualParameters()
+      loglik <- getEstimatedLogLikelihood()
+
+      dir.create(savedir, recursive = TRUE)
+      saveProject(file.path(savedir, paste0(model_name, "_fitted.mlxtran")))
+      log_step("saved project")
+
+      write.csv(pop, file.path(savedir, "pop.csv"), row.names = FALSE)
+      for (nm in names(ind)) {
+        write.csv(ind[[nm]], file.path(savedir, paste0("ind_", nm, ".csv")), row.names = FALSE)
+      }
+      write.csv(data.frame(as.list(unlist(loglik))), file.path(savedir, "loglik.csv"), row.names = FALSE)
+      file.create(file.path(savedir, "_complete.flag"))
+      elapsed <- round(as.numeric(difftime(Sys.time(), start_time, units = "mins")), 1)
+      log_step(sprintf("COMPLETE (total runtime %.1f min)", elapsed))
+    }, error = function(e) {
+      elapsed <- round(as.numeric(difftime(Sys.time(), start_time, units = "mins")), 1)
+      log_step(sprintf("FAILED after %.1f min: %s", elapsed, conditionMessage(e)))
+      message(sprintf("[%s] failed: %s", model_name, conditionMessage(e)))
+    })
+  }
+
+  invisible(model_name)
+}
+
+n_workers <- 4
+cl <- makeCluster(n_workers)
+
+results <- tryCatch(
+  parLapplyLB(
+    cl, model_names, run_one_model,
+    models_dir = models_dir
+  ),
+  finally = stopCluster(cl)
+)

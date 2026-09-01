@@ -1,0 +1,8 @@
+[2026-08-31 22:14:46] m320 :: 398.2 MB
+[2026-08-31 22:14:46] project loaded :: 398.2 MB
+[2026-08-31 22:14:46] starting runPopulationParameterEstimation :: 398.2 MB
+[2026-08-31 22:15:04] finished runPopulationParameterEstimation :: 398.2 MB
+[2026-08-31 22:15:04] finished runConditionalModeEstimation :: 398.2 MB
+[2026-08-31 22:15:10] finished runLogLikelihoodEstimation :: 398.2 MB
+[2026-08-31 22:15:11] saved project :: 398.2 MB
+[2026-08-31 22:15:11] COMPLETE (total runtime 0.4 min) :: 398.2 MB

@@ -1,0 +1,8 @@
+[2026-08-31 22:45:43] m370 :: 386.2 MB
+[2026-08-31 22:45:43] project loaded :: 386.2 MB
+[2026-08-31 22:45:43] starting runPopulationParameterEstimation :: 386.2 MB
+[2026-08-31 22:56:11] finished runPopulationParameterEstimation :: 386.2 MB
+[2026-08-31 22:56:11] finished runConditionalModeEstimation :: 386.2 MB
+[2026-08-31 22:56:14] finished runLogLikelihoodEstimation :: 386.2 MB
+[2026-08-31 22:56:14] saved project :: 386.2 MB
+[2026-08-31 22:56:14] COMPLETE (total runtime 10.5 min) :: 386.2 MB

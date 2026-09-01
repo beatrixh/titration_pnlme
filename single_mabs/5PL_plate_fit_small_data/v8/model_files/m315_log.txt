@@ -1,0 +1,8 @@
+[2026-08-31 22:10:39] m315 :: 397.9 MB
+[2026-08-31 22:10:39] project loaded :: 397.9 MB
+[2026-08-31 22:10:39] starting runPopulationParameterEstimation :: 397.9 MB
+[2026-08-31 22:12:00] finished runPopulationParameterEstimation :: 397.9 MB
+[2026-08-31 22:12:00] finished runConditionalModeEstimation :: 397.9 MB
+[2026-08-31 22:12:06] finished runLogLikelihoodEstimation :: 397.9 MB
+[2026-08-31 22:12:06] saved project :: 397.9 MB
+[2026-08-31 22:12:06] COMPLETE (total runtime 1.5 min) :: 397.9 MB

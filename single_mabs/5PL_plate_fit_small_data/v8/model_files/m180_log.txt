@@ -1,0 +1,8 @@
+[2026-08-31 20:56:04] m180 :: 379.2 MB
+[2026-08-31 20:56:04] project loaded :: 379.2 MB
+[2026-08-31 20:56:04] starting runPopulationParameterEstimation :: 379.2 MB
+[2026-08-31 20:57:40] finished runPopulationParameterEstimation :: 379.2 MB
+[2026-08-31 20:57:41] finished runConditionalModeEstimation :: 379.2 MB
+[2026-08-31 20:57:47] finished runLogLikelihoodEstimation :: 379.2 MB
+[2026-08-31 20:57:47] saved project :: 379.2 MB
+[2026-08-31 20:57:47] COMPLETE (total runtime 1.7 min) :: 379.2 MB
