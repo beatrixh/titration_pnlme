@@ -1,0 +1,8 @@
+[2026-08-31 15:07:47] m433 :: 426.4 MB
+[2026-08-31 15:07:47] project loaded :: 426.4 MB
+[2026-08-31 15:07:47] starting runPopulationParameterEstimation :: 426.4 MB
+[2026-08-31 15:11:15] finished runPopulationParameterEstimation :: 426.4 MB
+[2026-08-31 15:11:15] finished runConditionalModeEstimation :: 426.4 MB
+[2026-08-31 15:11:21] finished runLogLikelihoodEstimation :: 426.4 MB
+[2026-08-31 15:11:21] saved project :: 426.4 MB
+[2026-08-31 15:11:21] COMPLETE (total runtime 3.6 min) :: 426.4 MB

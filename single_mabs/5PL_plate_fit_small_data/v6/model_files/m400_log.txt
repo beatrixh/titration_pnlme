@@ -1,0 +1,8 @@
+[2026-08-31 15:05:35] m400 :: 440.6 MB
+[2026-08-31 15:05:35] project loaded :: 440.6 MB
+[2026-08-31 15:05:35] starting runPopulationParameterEstimation :: 440.6 MB
+[2026-08-31 15:06:00] finished runPopulationParameterEstimation :: 440.6 MB
+[2026-08-31 15:06:01] finished runConditionalModeEstimation :: 440.6 MB
+[2026-08-31 15:06:08] finished runLogLikelihoodEstimation :: 440.6 MB
+[2026-08-31 15:06:08] saved project :: 440.6 MB
+[2026-08-31 15:06:08] COMPLETE (total runtime 0.5 min) :: 440.6 MB

@@ -174,3 +174,7 @@ complete: 33/512 | outstanding: 479
 +   ),
 +   finally = stopCluster(cl)
 + )
+> 
+> proc.time()
+     user    system   elapsed 
+   15.480     1.019 62032.233 

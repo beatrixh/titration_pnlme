@@ -1,0 +1,8 @@
+[2026-08-31 15:04:52] m342 :: 441.0 MB
+[2026-08-31 15:04:52] project loaded :: 441.0 MB
+[2026-08-31 15:04:52] starting runPopulationParameterEstimation :: 441.0 MB
+[2026-08-31 15:05:03] finished runPopulationParameterEstimation :: 441.0 MB
+[2026-08-31 15:05:03] finished runConditionalModeEstimation :: 441.0 MB
+[2026-08-31 15:05:11] finished runLogLikelihoodEstimation :: 441.0 MB
+[2026-08-31 15:05:12] saved project :: 441.0 MB
+[2026-08-31 15:05:12] COMPLETE (total runtime 0.3 min) :: 441.0 MB
