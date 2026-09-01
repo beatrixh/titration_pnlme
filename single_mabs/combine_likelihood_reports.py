@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 
 import pandas as pd
@@ -8,6 +9,26 @@ import pandas as pd
 from report_likelihood import PROJECTS, build_report
 
 OUT_PATH = Path("/mnt/c/Users/bhaddock/repos/titration_pnlme/single_mabs/combined_likelihood_report.csv")
+
+
+def project_datafile(project: str) -> str:
+    """The observation datafile a project is fit to, read from its template
+    (model_files/m0.mlxtran, else the lowest-numbered m*.mlxtran). AIC/BICc are
+    only comparable across projects sharing a datafile *and* observation
+    structure, so surfacing this as a column keeps the combined report honest.
+    """
+    mf = PROJECTS[project] / "model_files"
+    candidates = [mf / "m0.mlxtran"] + sorted(
+        (p for p in mf.glob("m*.mlxtran") if re.fullmatch(r"m\d+\.mlxtran", p.name)),
+        key=lambda p: int(p.stem[1:]),
+    )
+    for tmpl in candidates:
+        if not tmpl.exists():
+            continue
+        m = re.search(r"file\s*=\s*\{path='([^']*)'\}", tmpl.read_text())
+        if m:
+            return Path(m.group(1)).name
+    return ""
 
 
 def main() -> None:
@@ -36,6 +57,7 @@ def main() -> None:
             print(f"skipping {project}: {e}")
             continue
         report.insert(0, "project", project)
+        report.insert(1, "datafile", project_datafile(project))
         reports.append(report)
 
     if not reports:
@@ -46,7 +68,7 @@ def main() -> None:
     # NaN for the other project's rows.
     combined = pd.concat(reports, ignore_index=True, sort=False)
 
-    front = ["project", "model"]
+    front = ["project", "datafile", "model"]
     toggle_cols = [c for c in combined.columns if c not in front + ["AIC", "BICc"]]
     combined = combined[front + toggle_cols + ["AIC", "BICc"]]
     combined = combined.sort_values("BICc", na_position="last").reset_index(drop=True)

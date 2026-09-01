@@ -1,0 +1,172 @@
+<DATAFILE>
+
+[FILEINFO]
+file={path='../../input_data/retagged_data/33_plates_controls_only_2026-08-31.csv'}
+delimiter = comma
+header={run_id, run_name, plate_row, plate_col, rlu, min_diff, specrole, run, virus_name, concentration, monolix_id, rlu_max, rlu_min, rlu_norm, virus_col, mab, mablot, mab_virus, goes_down, virus_cc, id_unique, monolix_id_update, id_unique_update, mean_vc, mean_cc, binary_vc, binary_cc, binary_sample}
+
+[CONTENT]
+run_id = {use=identifier}
+plate_row = {use=time}
+rlu = {use=observation, yname={'cc', 'vc'}, type={continuous, continuous}}
+specrole = {use=observationtype}
+mean_cc = {use=covariate, type=categorical}
+
+<MODEL>
+
+[COVARIATE]
+input = mean_cc
+
+mean_cc = {type=categorical, categories={'254.219875', '266.9225', '295.221875', '335.306375', '362.242', '363.422375', '377.072125', '389.553125', '445.75', '468.5', '476.5', '485.0', '489.0', '503.381125', '523.5', '528.25', '553.0', '572.0039999999999', '607.0', '636.5', '643.5', '654.75', '670.5', '671.0', '687.0', '695.25', '697.25', '701.5', '713.75', '737.5', '740.5', '744.25', '910.0'}}
+
+[INDIVIDUAL]
+input = {L_pop, U_pop, alpha_pop, mean_cc, beta_U_mean_cc_266_9225, beta_U_mean_cc_295_221875, beta_U_mean_cc_335_306375, beta_U_mean_cc_362_242, beta_U_mean_cc_363_422375, beta_U_mean_cc_377_072125, beta_U_mean_cc_389_553125, beta_U_mean_cc_445_75, beta_U_mean_cc_468_5, beta_U_mean_cc_476_5, beta_U_mean_cc_485_0, beta_U_mean_cc_489_0, beta_U_mean_cc_503_381125, beta_U_mean_cc_523_5, beta_U_mean_cc_528_25, beta_U_mean_cc_553_0, beta_U_mean_cc_572_0039999999999, beta_U_mean_cc_607_0, beta_U_mean_cc_636_5, beta_U_mean_cc_643_5, beta_U_mean_cc_654_75, beta_U_mean_cc_670_5, beta_U_mean_cc_671_0, beta_U_mean_cc_687_0, beta_U_mean_cc_695_25, beta_U_mean_cc_697_25, beta_U_mean_cc_701_5, beta_U_mean_cc_713_75, beta_U_mean_cc_737_5, beta_U_mean_cc_740_5, beta_U_mean_cc_744_25, beta_U_mean_cc_910_0, beta_L_mean_cc_266_9225, beta_L_mean_cc_295_221875, beta_L_mean_cc_335_306375, beta_L_mean_cc_362_242, beta_L_mean_cc_363_422375, beta_L_mean_cc_377_072125, beta_L_mean_cc_389_553125, beta_L_mean_cc_445_75, beta_L_mean_cc_468_5, beta_L_mean_cc_476_5, beta_L_mean_cc_485_0, beta_L_mean_cc_489_0, beta_L_mean_cc_503_381125, beta_L_mean_cc_523_5, beta_L_mean_cc_528_25, beta_L_mean_cc_553_0, beta_L_mean_cc_572_0039999999999, beta_L_mean_cc_607_0, beta_L_mean_cc_636_5, beta_L_mean_cc_643_5, beta_L_mean_cc_654_75, beta_L_mean_cc_670_5, beta_L_mean_cc_671_0, beta_L_mean_cc_687_0, beta_L_mean_cc_695_25, beta_L_mean_cc_697_25, beta_L_mean_cc_701_5, beta_L_mean_cc_713_75, beta_L_mean_cc_737_5, beta_L_mean_cc_740_5, beta_L_mean_cc_744_25, beta_L_mean_cc_910_0, beta_alpha_mean_cc_266_9225, beta_alpha_mean_cc_295_221875, beta_alpha_mean_cc_335_306375, beta_alpha_mean_cc_362_242, beta_alpha_mean_cc_363_422375, beta_alpha_mean_cc_377_072125, beta_alpha_mean_cc_389_553125, beta_alpha_mean_cc_445_75, beta_alpha_mean_cc_468_5, beta_alpha_mean_cc_476_5, beta_alpha_mean_cc_485_0, beta_alpha_mean_cc_489_0, beta_alpha_mean_cc_503_381125, beta_alpha_mean_cc_523_5, beta_alpha_mean_cc_528_25, beta_alpha_mean_cc_553_0, beta_alpha_mean_cc_572_0039999999999, beta_alpha_mean_cc_607_0, beta_alpha_mean_cc_636_5, beta_alpha_mean_cc_643_5, beta_alpha_mean_cc_654_75, beta_alpha_mean_cc_670_5, beta_alpha_mean_cc_671_0, beta_alpha_mean_cc_687_0, beta_alpha_mean_cc_695_25, beta_alpha_mean_cc_697_25, beta_alpha_mean_cc_701_5, beta_alpha_mean_cc_713_75, beta_alpha_mean_cc_737_5, beta_alpha_mean_cc_740_5, beta_alpha_mean_cc_744_25, beta_alpha_mean_cc_910_0}
+
+mean_cc = {type=categorical, categories={'254.219875', '266.9225', '295.221875', '335.306375', '362.242', '363.422375', '377.072125', '389.553125', '445.75', '468.5', '476.5', '485.0', '489.0', '503.381125', '523.5', '528.25', '553.0', '572.0039999999999', '607.0', '636.5', '643.5', '654.75', '670.5', '671.0', '687.0', '695.25', '697.25', '701.5', '713.75', '737.5', '740.5', '744.25', '910.0'}}
+
+DEFINITION:
+L = {distribution=normal, typical=L_pop, covariate=mean_cc, coefficient={0, beta_L_mean_cc_266_9225, beta_L_mean_cc_295_221875, beta_L_mean_cc_335_306375, beta_L_mean_cc_362_242, beta_L_mean_cc_363_422375, beta_L_mean_cc_377_072125, beta_L_mean_cc_389_553125, beta_L_mean_cc_445_75, beta_L_mean_cc_468_5, beta_L_mean_cc_476_5, beta_L_mean_cc_485_0, beta_L_mean_cc_489_0, beta_L_mean_cc_503_381125, beta_L_mean_cc_523_5, beta_L_mean_cc_528_25, beta_L_mean_cc_553_0, beta_L_mean_cc_572_0039999999999, beta_L_mean_cc_607_0, beta_L_mean_cc_636_5, beta_L_mean_cc_643_5, beta_L_mean_cc_654_75, beta_L_mean_cc_670_5, beta_L_mean_cc_671_0, beta_L_mean_cc_687_0, beta_L_mean_cc_695_25, beta_L_mean_cc_697_25, beta_L_mean_cc_701_5, beta_L_mean_cc_713_75, beta_L_mean_cc_737_5, beta_L_mean_cc_740_5, beta_L_mean_cc_744_25, beta_L_mean_cc_910_0}, no-variability}
+U = {distribution=normal, typical=U_pop, covariate=mean_cc, coefficient={0, beta_U_mean_cc_266_9225, beta_U_mean_cc_295_221875, beta_U_mean_cc_335_306375, beta_U_mean_cc_362_242, beta_U_mean_cc_363_422375, beta_U_mean_cc_377_072125, beta_U_mean_cc_389_553125, beta_U_mean_cc_445_75, beta_U_mean_cc_468_5, beta_U_mean_cc_476_5, beta_U_mean_cc_485_0, beta_U_mean_cc_489_0, beta_U_mean_cc_503_381125, beta_U_mean_cc_523_5, beta_U_mean_cc_528_25, beta_U_mean_cc_553_0, beta_U_mean_cc_572_0039999999999, beta_U_mean_cc_607_0, beta_U_mean_cc_636_5, beta_U_mean_cc_643_5, beta_U_mean_cc_654_75, beta_U_mean_cc_670_5, beta_U_mean_cc_671_0, beta_U_mean_cc_687_0, beta_U_mean_cc_695_25, beta_U_mean_cc_697_25, beta_U_mean_cc_701_5, beta_U_mean_cc_713_75, beta_U_mean_cc_737_5, beta_U_mean_cc_740_5, beta_U_mean_cc_744_25, beta_U_mean_cc_910_0}, no-variability}
+alpha = {distribution=logNormal, typical=alpha_pop, covariate=mean_cc, coefficient={0, beta_alpha_mean_cc_266_9225, beta_alpha_mean_cc_295_221875, beta_alpha_mean_cc_335_306375, beta_alpha_mean_cc_362_242, beta_alpha_mean_cc_363_422375, beta_alpha_mean_cc_377_072125, beta_alpha_mean_cc_389_553125, beta_alpha_mean_cc_445_75, beta_alpha_mean_cc_468_5, beta_alpha_mean_cc_476_5, beta_alpha_mean_cc_485_0, beta_alpha_mean_cc_489_0, beta_alpha_mean_cc_503_381125, beta_alpha_mean_cc_523_5, beta_alpha_mean_cc_528_25, beta_alpha_mean_cc_553_0, beta_alpha_mean_cc_572_0039999999999, beta_alpha_mean_cc_607_0, beta_alpha_mean_cc_636_5, beta_alpha_mean_cc_643_5, beta_alpha_mean_cc_654_75, beta_alpha_mean_cc_670_5, beta_alpha_mean_cc_671_0, beta_alpha_mean_cc_687_0, beta_alpha_mean_cc_695_25, beta_alpha_mean_cc_697_25, beta_alpha_mean_cc_701_5, beta_alpha_mean_cc_713_75, beta_alpha_mean_cc_737_5, beta_alpha_mean_cc_740_5, beta_alpha_mean_cc_744_25, beta_alpha_mean_cc_910_0}, no-variability}
+
+[LONGITUDINAL]
+input = {acc, bcc, avc, bvc}
+
+file = '../../4PL_plate_fit_small_data/fit_controls/multi_edge/multi_edge_model.txt'
+
+DEFINITION:
+ycc = {distribution=normal, prediction=RLU_cc, errorModel=combined1(acc, bcc)}
+yvc = {distribution=normal, prediction=RLU_vc, errorModel=combined1(avc, bvc)}
+
+<FIT>
+data = {'cc', 'vc'}
+model = {ycc, yvc}
+
+<PARAMETER>
+L_pop = {value=523.8, method=MLE}
+U_pop = {value=55119, method=MLE}
+acc = {value=1, method=MLE}
+alpha_pop = {value=0.445, method=MLE}
+avc = {value=1, method=MLE}
+bcc = {value=0.3, method=MLE}
+beta_L_mean_cc_266_9225 = {value=0, method=MLE}
+beta_L_mean_cc_295_221875 = {value=0, method=MLE}
+beta_L_mean_cc_335_306375 = {value=0, method=MLE}
+beta_L_mean_cc_362_242 = {value=0, method=MLE}
+beta_L_mean_cc_363_422375 = {value=0, method=MLE}
+beta_L_mean_cc_377_072125 = {value=0, method=MLE}
+beta_L_mean_cc_389_553125 = {value=0, method=MLE}
+beta_L_mean_cc_445_75 = {value=0, method=MLE}
+beta_L_mean_cc_468_5 = {value=0, method=MLE}
+beta_L_mean_cc_476_5 = {value=0, method=MLE}
+beta_L_mean_cc_485_0 = {value=0, method=MLE}
+beta_L_mean_cc_489_0 = {value=0, method=MLE}
+beta_L_mean_cc_503_381125 = {value=0, method=MLE}
+beta_L_mean_cc_523_5 = {value=0, method=MLE}
+beta_L_mean_cc_528_25 = {value=0, method=MLE}
+beta_L_mean_cc_553_0 = {value=0, method=MLE}
+beta_L_mean_cc_572_0039999999999 = {value=0, method=MLE}
+beta_L_mean_cc_607_0 = {value=0, method=MLE}
+beta_L_mean_cc_636_5 = {value=0, method=MLE}
+beta_L_mean_cc_643_5 = {value=0, method=MLE}
+beta_L_mean_cc_654_75 = {value=0, method=MLE}
+beta_L_mean_cc_670_5 = {value=0, method=MLE}
+beta_L_mean_cc_671_0 = {value=0, method=MLE}
+beta_L_mean_cc_687_0 = {value=0, method=MLE}
+beta_L_mean_cc_695_25 = {value=0, method=MLE}
+beta_L_mean_cc_697_25 = {value=0, method=MLE}
+beta_L_mean_cc_701_5 = {value=0, method=MLE}
+beta_L_mean_cc_713_75 = {value=0, method=MLE}
+beta_L_mean_cc_737_5 = {value=0, method=MLE}
+beta_L_mean_cc_740_5 = {value=0, method=MLE}
+beta_L_mean_cc_744_25 = {value=0, method=MLE}
+beta_L_mean_cc_910_0 = {value=0, method=MLE}
+beta_U_mean_cc_266_9225 = {value=0, method=MLE}
+beta_U_mean_cc_295_221875 = {value=0, method=MLE}
+beta_U_mean_cc_335_306375 = {value=0, method=MLE}
+beta_U_mean_cc_362_242 = {value=0, method=MLE}
+beta_U_mean_cc_363_422375 = {value=0, method=MLE}
+beta_U_mean_cc_377_072125 = {value=0, method=MLE}
+beta_U_mean_cc_389_553125 = {value=0, method=MLE}
+beta_U_mean_cc_445_75 = {value=0, method=MLE}
+beta_U_mean_cc_468_5 = {value=0, method=MLE}
+beta_U_mean_cc_476_5 = {value=0, method=MLE}
+beta_U_mean_cc_485_0 = {value=0, method=MLE}
+beta_U_mean_cc_489_0 = {value=0, method=MLE}
+beta_U_mean_cc_503_381125 = {value=0, method=MLE}
+beta_U_mean_cc_523_5 = {value=0, method=MLE}
+beta_U_mean_cc_528_25 = {value=0, method=MLE}
+beta_U_mean_cc_553_0 = {value=0, method=MLE}
+beta_U_mean_cc_572_0039999999999 = {value=0, method=MLE}
+beta_U_mean_cc_607_0 = {value=0, method=MLE}
+beta_U_mean_cc_636_5 = {value=0, method=MLE}
+beta_U_mean_cc_643_5 = {value=0, method=MLE}
+beta_U_mean_cc_654_75 = {value=0, method=MLE}
+beta_U_mean_cc_670_5 = {value=0, method=MLE}
+beta_U_mean_cc_671_0 = {value=0, method=MLE}
+beta_U_mean_cc_687_0 = {value=0, method=MLE}
+beta_U_mean_cc_695_25 = {value=0, method=MLE}
+beta_U_mean_cc_697_25 = {value=0, method=MLE}
+beta_U_mean_cc_701_5 = {value=0, method=MLE}
+beta_U_mean_cc_713_75 = {value=0, method=MLE}
+beta_U_mean_cc_737_5 = {value=0, method=MLE}
+beta_U_mean_cc_740_5 = {value=0, method=MLE}
+beta_U_mean_cc_744_25 = {value=0, method=MLE}
+beta_U_mean_cc_910_0 = {value=0, method=MLE}
+beta_alpha_mean_cc_266_9225 = {value=0, method=MLE}
+beta_alpha_mean_cc_295_221875 = {value=0, method=MLE}
+beta_alpha_mean_cc_335_306375 = {value=0, method=MLE}
+beta_alpha_mean_cc_362_242 = {value=0, method=MLE}
+beta_alpha_mean_cc_363_422375 = {value=0, method=MLE}
+beta_alpha_mean_cc_377_072125 = {value=0, method=MLE}
+beta_alpha_mean_cc_389_553125 = {value=0, method=MLE}
+beta_alpha_mean_cc_445_75 = {value=0, method=MLE}
+beta_alpha_mean_cc_468_5 = {value=0, method=MLE}
+beta_alpha_mean_cc_476_5 = {value=0, method=MLE}
+beta_alpha_mean_cc_485_0 = {value=0, method=MLE}
+beta_alpha_mean_cc_489_0 = {value=0, method=MLE}
+beta_alpha_mean_cc_503_381125 = {value=0, method=MLE}
+beta_alpha_mean_cc_523_5 = {value=0, method=MLE}
+beta_alpha_mean_cc_528_25 = {value=0, method=MLE}
+beta_alpha_mean_cc_553_0 = {value=0, method=MLE}
+beta_alpha_mean_cc_572_0039999999999 = {value=0, method=MLE}
+beta_alpha_mean_cc_607_0 = {value=0, method=MLE}
+beta_alpha_mean_cc_636_5 = {value=0, method=MLE}
+beta_alpha_mean_cc_643_5 = {value=0, method=MLE}
+beta_alpha_mean_cc_654_75 = {value=0, method=MLE}
+beta_alpha_mean_cc_670_5 = {value=0, method=MLE}
+beta_alpha_mean_cc_671_0 = {value=0, method=MLE}
+beta_alpha_mean_cc_687_0 = {value=0, method=MLE}
+beta_alpha_mean_cc_695_25 = {value=0, method=MLE}
+beta_alpha_mean_cc_697_25 = {value=0, method=MLE}
+beta_alpha_mean_cc_701_5 = {value=0, method=MLE}
+beta_alpha_mean_cc_713_75 = {value=0, method=MLE}
+beta_alpha_mean_cc_737_5 = {value=0, method=MLE}
+beta_alpha_mean_cc_740_5 = {value=0, method=MLE}
+beta_alpha_mean_cc_744_25 = {value=0, method=MLE}
+beta_alpha_mean_cc_910_0 = {value=0, method=MLE}
+bvc = {value=0.3, method=MLE}
+ccc = {value=1, method=FIXED}
+cvc = {value=1, method=FIXED}
+
+<MONOLIX>
+
+[TASKS]
+populationParameters()
+individualParameters(method = {conditionalMean, conditionalMode })
+fim(method = StochasticApproximation)
+logLikelihood(method = ImportanceSampling)
+
+[PLOTS]
+run = true
+plots = {indfits = {selected = true}, parameterdistribution = {selected = true}, obspred = {selected = true}, covariancemodeldiagnosis = {selected = true}, covariatemodeldiagnosis = {selected = true}, vpc = {selected = true}, residualsscatter = {selected = true}, residualsdistribution = {selected = true}, randomeffects = {selected = true}, saemresults = {selected = true}}
+
+[SETTINGS]
+GLOBAL:
+exportpath = 'm0_all_covs'
+
+POPULATION:
+smoothingiterations = 500
+exploratoryiterations = 2000
+simulatedannealingiterations = 2000
+
