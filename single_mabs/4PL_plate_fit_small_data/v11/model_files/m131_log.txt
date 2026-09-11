@@ -1,0 +1,8 @@
+[2026-09-10 23:18:39] m131 :: 314.3 MB
+[2026-09-10 23:18:39] project loaded :: 314.3 MB
+[2026-09-10 23:18:39] starting runPopulationParameterEstimation :: 314.3 MB
+[2026-09-10 23:20:55] finished runPopulationParameterEstimation :: 314.3 MB
+[2026-09-10 23:20:55] finished runConditionalModeEstimation :: 314.3 MB
+[2026-09-10 23:20:55] finished runLogLikelihoodEstimation :: 314.3 MB
+[2026-09-10 23:20:55] saved project :: 314.3 MB
+[2026-09-10 23:20:55] COMPLETE (total runtime 2.3 min) :: 314.3 MB

@@ -1,5 +1,0 @@
-parameters,shrinkage_mode,shrinkage_mean,shrinkage_condDist
-f,nan,nan,nan
-h,99.9137,83.692,0.381565
-L_gap,99.9229,89.233,4.37703
-eta_alpha,nan,nan,nan

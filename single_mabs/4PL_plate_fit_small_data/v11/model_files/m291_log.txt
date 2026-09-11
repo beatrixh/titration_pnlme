@@ -1,0 +1,8 @@
+[2026-09-11 02:00:32] m291 :: 343.2 MB
+[2026-09-11 02:00:32] project loaded :: 343.2 MB
+[2026-09-11 02:00:32] starting runPopulationParameterEstimation :: 343.2 MB
+[2026-09-11 02:01:56] finished runPopulationParameterEstimation :: 343.2 MB
+[2026-09-11 02:01:56] finished runConditionalModeEstimation :: 343.2 MB
+[2026-09-11 02:02:00] finished runLogLikelihoodEstimation :: 343.2 MB
+[2026-09-11 02:02:00] saved project :: 343.2 MB
+[2026-09-11 02:02:00] COMPLETE (total runtime 1.5 min) :: 343.2 MB
