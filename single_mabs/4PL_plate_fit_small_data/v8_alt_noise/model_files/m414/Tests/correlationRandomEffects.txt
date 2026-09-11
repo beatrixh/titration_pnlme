@@ -1,0 +1,2 @@
+eta1,eta2,coeff,statistics,p-value
+eta_h,eta_L_gap,0,0.749393,0.456096
