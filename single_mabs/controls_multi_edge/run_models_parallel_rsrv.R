@@ -17,7 +17,7 @@ model_files <- list.files(models_dir, pattern = "^m[0-9]+\\.mlxtran$")
 
 # model_names <- paste0("m", 16:512)
 
-model_names <- c("m0_all_covs.mlxtran")
+model_names <- c("m0_all_covs")
 
 
 
