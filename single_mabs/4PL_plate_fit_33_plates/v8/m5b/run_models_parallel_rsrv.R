@@ -16,9 +16,17 @@ model_names <- sub("^(m[0-9]+)\\.mlxtran$", "\\1", model_files)
 model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 
 model_names <- paste0("m", 1:512)
-# Top 20 4PL_plate_fit_small_data v8 models by BICc (see combined_likelihood_report_4PL_5PL.csv)
+# Top 100 4PL_plate_fit_small_data v8 models by BICc (see combined_likelihood_report_4PL_5PL.csv)
 model_names <- c("m414", "m407", "m472", "m189", "m424", "m471", "m480", "m165", "m406", "m495",
-                  "m429", "m493", "m479", "m470", "m408", "m415", "m432", "m486", "m245", "m342")
+                  "m429", "m493", "m479", "m470", "m408", "m415", "m432", "m486", "m245", "m342",
+                  "m421", "m422", "m423", "m487", "m416", "m101", "m485", "m503", "m114", "m502",
+                  "m440", "m177", "m413", "m496", "m510", "m181", "m237", "m229", "m50", "m417",
+                  "m478", "m113", "m473", "m447", "m185", "m241", "m494", "m178", "m501", "m337",
+                  "m143", "m104", "m511", "m166", "m410", "m249", "m124", "m186", "m509", "m253",
+                  "m431", "m122", "m242", "m121", "m230", "m57", "m175", "m430", "m250", "m150",
+                  "m173", "m490", "m338", "m231", "m168", "m439", "m109", "m238", "m360", "m375",
+                  "m489", "m469", "m169", "m481", "m366", "m418", "m95", "m383", "m179", "m37",
+                  "m343", "m123", "m49", "m438", "m504", "m170", "m233", "m426", "m22", "m477")
 
 run_one_model <- function(model_name, models_dir) {
   library(lixoftConnectors)
