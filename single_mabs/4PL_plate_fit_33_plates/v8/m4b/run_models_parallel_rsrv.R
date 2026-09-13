@@ -16,7 +16,9 @@ model_names <- sub("^(m[0-9]+)\\.mlxtran$", "\\1", model_files)
 model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 
 model_names <- paste0("m", 1:512)
-model_names <- c("m414")
+# Top 20 4PL_plate_fit_small_data v8 models by BICc (see combined_likelihood_report_4PL_5PL.csv)
+model_names <- c("m414", "m407", "m472", "m189", "m424", "m471", "m480", "m165", "m406", "m495",
+                  "m429", "m493", "m479", "m470", "m408", "m415", "m432", "m486", "m245", "m342")
 
 run_one_model <- function(model_name, models_dir) {
   library(lixoftConnectors)
