@@ -18,7 +18,7 @@ model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 model_names <- paste0("m", 1:512)
 # Top 30 4PL_plate_fit_small_data v11 models by BICc, generated from the
 # m0.mlxtran template + edited model_tracker.xlsx
-model_names <- c("m151", "m173", "m150", "m287", "m143", "m177", "m181", "m185", "m178", "m124",
+model_names <- c("m151", "m173", "m150", "m287", "m143", "m177", "m181", "m185", "m124",
                   "m114", "m174", "m49", "m121", "m278", "m22", "m175", "m45", "m57", "m165",
                   "m169", "m109", "m102", "m50", "m113", "m179", "m182", "m170", "m161", "m180")
 
@@ -113,7 +113,7 @@ run_one_model <- function(model_name, models_dir) {
   invisible(model_name)
 }
 
-n_workers <- 1 
+n_workers <- 2 
 cl <- makeCluster(n_workers)
 
 results <- tryCatch(
