@@ -1,0 +1,8 @@
+[2026-09-13 13:53:09] m429 :: 602.9 MB
+[2026-09-13 13:53:09] project loaded :: 602.9 MB
+[2026-09-13 13:53:09] starting runPopulationParameterEstimation :: 602.9 MB
+[2026-09-13 14:03:48] finished runPopulationParameterEstimation :: 602.9 MB
+[2026-09-13 14:03:49] finished runConditionalModeEstimation :: 602.9 MB
+[2026-09-13 14:04:15] finished runLogLikelihoodEstimation :: 602.9 MB
+[2026-09-13 14:04:15] saved project :: 602.9 MB
+[2026-09-13 14:04:15] COMPLETE (total runtime 11.1 min) :: 602.9 MB

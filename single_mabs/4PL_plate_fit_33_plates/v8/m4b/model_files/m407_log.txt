@@ -1,0 +1,8 @@
+[2026-09-13 14:56:35] m407 :: 509.1 MB
+[2026-09-13 14:56:35] project loaded :: 509.1 MB
+[2026-09-13 14:56:35] starting runPopulationParameterEstimation :: 509.1 MB
+[2026-09-13 16:13:01] finished runPopulationParameterEstimation :: 509.1 MB
+[2026-09-13 16:13:01] finished runConditionalModeEstimation :: 509.1 MB
+[2026-09-13 16:13:22] finished runLogLikelihoodEstimation :: 509.1 MB
+[2026-09-13 16:13:23] saved project :: 509.1 MB
+[2026-09-13 16:13:23] COMPLETE (total runtime 76.8 min) :: 509.1 MB
