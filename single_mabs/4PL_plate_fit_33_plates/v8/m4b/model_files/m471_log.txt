@@ -1,3 +1,8 @@
 [2026-09-13 18:13:29] m471 :: 603.4 MB
 [2026-09-13 18:13:29] project loaded :: 603.4 MB
 [2026-09-13 18:13:29] starting runPopulationParameterEstimation :: 603.4 MB
+[2026-09-13 19:26:34] finished runPopulationParameterEstimation :: 603.4 MB
+[2026-09-13 19:26:34] finished runConditionalModeEstimation :: 603.4 MB
+[2026-09-13 19:26:54] finished runLogLikelihoodEstimation :: 603.4 MB
+[2026-09-13 19:26:55] saved project :: 603.4 MB
+[2026-09-13 19:26:55] COMPLETE (total runtime 73.4 min) :: 603.4 MB
