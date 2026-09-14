@@ -1,0 +1,31 @@
+DESCRIPTION:
+
+[LONGITUDINAL]
+input={f, h, L_gap, eta_alpha, eta_U, plate_row, plate_col, c_m5b, cc_mean, a_m5b, m_m5b}
+
+plate_row = {use=regressor}
+plate_col = {use=regressor}
+c_m5b = {use=regressor}
+cc_mean = {use=regressor}
+a_m5b = {use=regressor}
+m_m5b = {use=regressor}
+
+PK:
+
+EQUATION:
+alpha = a_m5b + eta_alpha
+U = c_m5b + eta_U
+
+E_ij = 1 - alpha*(
+	exp(-plate_row) + exp(-(9 - plate_row)) + exp(-plate_col) + exp(-(13-plate_col))
+	- 2*exp(-4.5) - 2*exp(-6.5)
+) + m_m5b*(plate_row - 4.5)
+
+L = cc_mean + exp(L_gap)
+
+RLU_vc = c_m5b*E_ij
+RLU_cc = cc_mean
+RLU_sample = L + (U-L)/(1 + exp(h*(log(t) - log(f))))*E_ij
+
+OUTPUT: 
+output = {RLU_cc, RLU_vc, RLU_sample}
