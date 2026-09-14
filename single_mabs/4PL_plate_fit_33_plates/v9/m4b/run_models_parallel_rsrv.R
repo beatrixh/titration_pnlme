@@ -15,12 +15,9 @@ model_files <- list.files(models_dir, pattern = "^m[0-9]+\\.mlxtran$")
 model_names <- sub("^(m[0-9]+)\\.mlxtran$", "\\1", model_files)
 model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 
+# Top 20 4PL_plate_fit_small_data v9 models by BICc
 model_names <- c("m5", "m6", "m7", "m13", "m8", "m69", "m14", "m65", "m70", "m18",
-                  "m41", "m15", "m9", "m71", "m16", "m72", "m17", "m50", "m77", "m53",
-                  "m1", "m78", "m54", "m61", "m33", "m73", "m79", "m55", "m4", "m80",
-                  "m56", "m25", "m29", "m57", "m60", "m34", "m49", "m26", "m63", "m30",
-                  "m67", "m64", "m62", "m35", "m51", "m68", "m28", "m31", "m43", "m32",
-                  "m3", "m45", "m27", "m46", "m37", "m2", "m58", "m21", "m36", "m10")
+                  "m41", "m15", "m9", "m71", "m16", "m72", "m17", "m50", "m77", "m53")
 
 run_one_model <- function(model_name, models_dir) {
   library(lixoftConnectors)
