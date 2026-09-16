@@ -15,7 +15,7 @@ model_files <- list.files(models_dir, pattern = "^m[0-9]+\\.mlxtran$")
 model_names <- sub("^(m[0-9]+)\\.mlxtran$", "\\1", model_files)
 model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 
-model_names <- c("m0", "m1")
+model_names <- c("m2", "m3")
 
 run_one_model <- function(model_name, models_dir) {
   library(lixoftConnectors)
