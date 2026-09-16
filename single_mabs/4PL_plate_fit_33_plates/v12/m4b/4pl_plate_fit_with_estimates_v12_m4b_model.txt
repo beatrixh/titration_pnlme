@@ -1,0 +1,24 @@
+DESCRIPTION:
+
+[LONGITUDINAL]
+input={f, h, L_plate, L_gap, U, alpha, concentration, plate_row, plate_col}
+
+concentration = {use=regressor}
+plate_row = {use=regressor}
+plate_col = {use=regressor}
+
+PK:
+
+EQUATION:
+E_ij = 1 - alpha*(
+	exp(-plate_row) + exp(-(9 - plate_row)) + exp(-plate_col) + exp(-(13-plate_col))
+	- 2*exp(-4.5) - 2*exp(-6.5)
+)
+
+L = L_plate + exp(L_gap)
+
+RLU_cc = L_plate
+RLU_sample_vc = L + (U-L)/(1 + exp(h*(log(concentration) - log(f))))*E_ij
+
+OUTPUT: 
+output = {RLU_cc, RLU_sample_vc}
