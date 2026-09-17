@@ -17,6 +17,8 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
+[Previously saved workspace restored]
+
 > # Installed once here, sequentially, before any workers are spun up --
 > # install.packages() writes to a shared library path, so running it inside
 > # run_one_model() would have every worker try to install concurrently into
@@ -59,7 +61,7 @@ The following objects are masked from ‘package:base’:
 > model_names <- sub("^(m[0-9]+)\\.mlxtran$", "\\1", model_files)
 > model_names <- model_names[order(as.integer(sub("^m", "", model_names)))]
 > 
-> model_names <- c("m0", "m1")
+> model_names <- c("m2", "m3")
 > 
 > run_one_model <- function(model_name, models_dir) {
 +   library(lixoftConnectors)
@@ -138,3 +140,7 @@ The following objects are masked from ‘package:base’:
 +   ),
 +   finally = stopCluster(cl)
 + )
+> 
+> proc.time()
+    user   system  elapsed 
+  16.438    0.944 6461.586 
