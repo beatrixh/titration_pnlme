@@ -1,0 +1,8 @@
+parameters,shrinkage_mode,shrinkage_mean,shrinkage_condDist
+f,43.221,47.6101,38.109
+h,56.0492,62.6147,53.6933
+L_plate,nan,nan,nan
+L_gap,99.9997,92.3364,3.56279
+U,nan,nan,nan
+alpha,nan,nan,nan
+m,nan,nan,nan
