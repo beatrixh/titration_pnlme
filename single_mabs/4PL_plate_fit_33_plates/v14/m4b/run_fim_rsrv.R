@@ -1,7 +1,8 @@
 # Re-estimates the Fisher information matrix (standard errors) for an
-# already-fitted model on rsrv.
+# already-fitted model on rsrv, by linearization only (cheaper in memory and
+# time than the stochastic approximation FIM).
 #
-# Monolix's SA FIM needs SAEM to have been run in the current session. The
+# Monolix's FIM needs SAEM to have been run in the current session. The
 # saved local results can't stand in for that (their .Internals/state.dat is
 # empty, so loading them gives "SAEM must be launched before!"). Instead this
 # warm-starts SAEM from the local estimates (<model_name>/populationParameters.txt)
@@ -28,11 +29,6 @@ out_name <- paste0(model_name, "_fim")
 # Short warm-start SAEM from the converged estimates.
 warm_exploratory_iterations <- 100
 warm_smoothing_iterations <- 200
-# Stochastic approximation FIM settings. The local run used maxiterations = 5000.
-fim_miniterations <- 100
-fim_maxiterations <- 10000
-# Also compute the linearization FIM (fast; useful cross-check of the SA one).
-also_linearization <- TRUE
 
 to_long_df <- function(x, value_col = "value") {
   if (is.data.frame(x)) return(x)
@@ -88,8 +84,6 @@ tryCatch({
     smoothingautostop = FALSE,
     simulatedannealing = FALSE
   )
-  setStandardErrorEstimationSettings(miniterations = fim_miniterations,
-                                     maxiterations = fim_maxiterations)
   saveProject(file.path(models_dir, paste0(out_name, ".mlxtran")))
 
   log_step("starting warm-start runPopulationParameterEstimation")
@@ -104,17 +98,15 @@ tryCatch({
   write.csv(drift, file.path(savedir, "pop_estimate_drift.csv"), row.names = FALSE)
   log_step(sprintf("max |estimate drift| = %.4g", max(drift$abs_diff, na.rm = TRUE)))
 
-  log_step("starting runStandardErrorEstimation (SA)")
-  runStandardErrorEstimation(linearization = FALSE)
-  log_step("finished runStandardErrorEstimation (SA)")
-  write_se("sa")
+  # Linearization FIM is evaluated at the conditional modes (EBEs).
+  log_step("starting runConditionalModeEstimation")
+  runConditionalModeEstimation()
+  log_step("finished runConditionalModeEstimation")
 
-  if (also_linearization) {
-    log_step("starting runStandardErrorEstimation (lin)")
-    runStandardErrorEstimation(linearization = TRUE)
-    log_step("finished runStandardErrorEstimation (lin)")
-    write_se("lin")
-  }
+  log_step("starting runStandardErrorEstimation (lin)")
+  runStandardErrorEstimation(linearization = TRUE)
+  log_step("finished runStandardErrorEstimation (lin)")
+  write_se("lin")
 
   saveProject(file.path(models_dir, paste0(out_name, ".mlxtran")))
   log_step("saved project")
