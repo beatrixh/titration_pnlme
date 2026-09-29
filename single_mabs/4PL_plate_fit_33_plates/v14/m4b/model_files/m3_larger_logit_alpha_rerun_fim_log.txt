@@ -1,0 +1,28 @@
+[2026-09-28 21:49:46] m3_larger_logit_alpha_rerun :: 326.1 MB
+[2026-09-28 21:49:46] project loaded :: 326.1 MB
+[2026-09-28 21:49:46] backed up previous FIM to FisherInformation_local_20260928_214946 :: 326.2 MB
+[2026-09-28 21:49:46] starting runStandardErrorEstimation (SA) :: 326.4 MB
+[2026-09-28 21:49:46] finished runStandardErrorEstimation (SA) :: 326.8 MB
+[2026-09-28 21:49:46] starting runStandardErrorEstimation (lin) :: 327.1 MB
+[2026-09-28 21:49:46] finished runStandardErrorEstimation (lin) :: 327.1 MB
+[2026-09-28 21:49:46] saved project :: 328.2 MB
+[2026-09-28 21:49:46] COMPLETE (total runtime 0.0 min) :: 328.2 MB
+[2026-09-28 21:55:23] m3_larger_logit_alpha_rerun :: 327.3 MB
+[2026-09-28 21:55:23] project loaded :: 327.3 MB
+[2026-09-28 21:55:23] initial values set to local estimates :: 329.7 MB
+[2026-09-28 21:55:23] starting warm-start runPopulationParameterEstimation :: 329.8 MB
+[2026-09-28 21:55:43] finished warm-start runPopulationParameterEstimation :: 331.3 MB
+[2026-09-28 21:55:43] max |estimate drift| = 11.2 :: 331.3 MB
+[2026-09-28 21:55:43] starting runStandardErrorEstimation (SA) :: 331.3 MB
+[2026-09-28 22:20:51] m3_larger_logit_alpha_rerun :: 327.2 MB
+[2026-09-28 22:20:51] project loaded :: 327.3 MB
+[2026-09-28 22:20:51] initial values set to local estimates :: 329.6 MB
+[2026-09-28 22:20:51] starting warm-start runPopulationParameterEstimation :: 329.7 MB
+[2026-09-28 22:21:12] finished warm-start runPopulationParameterEstimation :: 331.2 MB
+[2026-09-28 22:21:12] max |estimate drift| = 11.2 :: 331.2 MB
+[2026-09-28 22:21:12] starting runConditionalModeEstimation :: 331.2 MB
+[2026-09-28 22:21:12] finished runConditionalModeEstimation :: 331.3 MB
+[2026-09-28 22:21:12] starting runStandardErrorEstimation (lin) :: 331.3 MB
+[2026-09-28 22:21:17] finished runStandardErrorEstimation (lin) :: 334.9 MB
+[2026-09-28 22:21:18] saved project :: 335.6 MB
+[2026-09-28 22:21:18] COMPLETE (total runtime 0.5 min) :: 335.6 MB
