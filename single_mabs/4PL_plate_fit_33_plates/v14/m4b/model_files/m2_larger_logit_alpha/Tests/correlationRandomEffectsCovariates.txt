@@ -1,0 +1,16 @@
+eta,covariate,statistics,p-value,test
+eta_f,mab,8.67868,8.66474e-12,Anova
+eta_f,mab_virus,7.56594,<2.2e-16,Anova
+eta_f,run_id,8.86894,<2.2e-16,Anova
+eta_h,mab,9.70825,2.76335e-13,Anova
+eta_h,mab_virus,4.46826,<2.2e-16,Anova
+eta_h,run_id,6.83772,<2.2e-16,Anova
+eta_eta_L,mab,1.30877,0.230696,Anova
+eta_eta_L,mab_virus,1.2198,0.123762,Anova
+eta_eta_L,run_id,1.32833,0.115744,Anova
+eta_eta_U,mab,0.429636,0.918899,Anova
+eta_eta_U,mab_virus,0.765744,0.920633,Anova
+eta_eta_U,run_id,0.671993,0.913497,Anova
+eta_alpha,mab,2.85907,0.00288265,Anova
+eta_alpha,mab_virus,5.80826,<2.2e-16,Anova
+eta_alpha,run_id,16.8176,<2.2e-16,Anova

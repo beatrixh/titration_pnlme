@@ -1,0 +1,25 @@
+DESCRIPTION:
+
+[LONGITUDINAL]
+input={f, h, eta_L, eta_U, alpha, concentration, plate_row, plate_col, c_m5b, cc_mean}
+
+concentration = {use=regressor}
+plate_row = {use=regressor}
+plate_col = {use=regressor}
+c_m5b = {use=regressor}
+cc_mean = {use=regressor}
+
+PK:
+
+EQUATION:
+E_ij = 1 - alpha*(
+	exp(-plate_row) + exp(-(9 - plate_row)) + exp(-plate_col) + exp(-(13-plate_col))
+	- 2*exp(-4.5) - 2*exp(-6.5)
+)
+
+U = c_m5b + eta_U
+L = cc_mean + eta_L
+RLU_sample_vc = (L + (U-L)/(1 + exp(h*(log(concentration) - log(f)))))*E_ij
+
+OUTPUT: 
+output = {RLU_sample_vc}
